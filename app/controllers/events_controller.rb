@@ -3,16 +3,16 @@ class EventsController < ApplicationController
     @event = Event.new
   end
 
-  # def create
-  #   @event = Event.new(params[:id])
+  def create
+    @event = Event.new(event_params)
 
-  #   if @event.save
-  #     redirect_to event_path(@event)
-  #   else
-  #     render form
-  #   end
+    if @event.save
+      redirect_to event_path(@event), notice: "#{@event.name} was successfully created"
+    else
+      render :new, status: :unprocessable_entity
+    end
 
-  # end
+  end
 
   # def show
   #   @event = Event.find(params[:id])
@@ -21,4 +21,10 @@ class EventsController < ApplicationController
   # def delete
 
   # end
+
+  private
+
+  def event_params
+    params.require(:event).permit(:name, :location, :event_date, :period )
+  end
 end

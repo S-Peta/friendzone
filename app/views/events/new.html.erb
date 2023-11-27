@@ -1,9 +1,9 @@
 <div class="container">
-  <% simple_form_for @event do |f| %>
+  <%= simple_form_for @event do |f| %>
     <%= f.input :name %>
     <%= f.input :location %>
     <%= f.input :event_date %>
-    <%= f.input :period %>
+    <%= f.input :period, collection: Event::PERIOD %>
     <%= f.button :submit %>
   <% end %>
 </div>
