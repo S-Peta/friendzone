@@ -1,4 +1,10 @@
 class EventsController < ApplicationController
+  # skip_before_action :authenticate_user!, only: [ :home ]
+
+  def index
+    @events = Event.all
+  end
+
   def new
     @event = Event.new
   end
