@@ -12,6 +12,10 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "last-name" }%>
+    <%= f.input :nickname,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "nickname" }%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -31,3 +35,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+.
