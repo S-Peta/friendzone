@@ -8,5 +8,5 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\.[a-zA-Z]+\z/, message: "Invalid email format" }
   validates :encrypted_password, presence: true, length: { minimum: 6 }
-  validates :nickname, presence: true
+  validates :nickname, presence: true, uniqueness: true
 end
