@@ -2,6 +2,7 @@
   <%= simple_form_for @event do |f| %>
     <%= f.input :name %>
     <%= f.input :location %>
+    <%= f.input :category, collection: Event::CATEGORY %>
     <%= f.input :event_date %>
     <%= f.input :period, collection: Event::PERIOD %>
     <%= f.button :submit %>
