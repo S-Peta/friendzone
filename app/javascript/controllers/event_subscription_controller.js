@@ -9,18 +9,16 @@ export default class extends Controller {
   connect() {
     this.channel = createConsumer().subscriptions.create(
       { channel:"EventChannel", id: this.eventIdValue },
-      { received: data =>
-        this.#insertMessageAndScrollDown(data)
-      }
+      { received: data => this.#insertMessageAndScrollDown(data) }
     )
-
-    console.log('hello');
   }
-
-
 
   #insertMessageAndScrollDown(data){
     this.messagesTarget.insertAdjacentHTML("beforeend", data)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
+  }
+
+  resetForm(event) {
+    event.target.reset()
   }
 }
