@@ -23,6 +23,12 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def filter
+    # o filtro é uma página onde são mostrados todos os resultados dos eventos
+    # filtrados por alguns elementos
+  # confirmar o elementos, mas pode ser data, periodo, categoria, e por distância da localização
+  end
+
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
