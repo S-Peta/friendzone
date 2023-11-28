@@ -27,7 +27,35 @@ class EventsController < ApplicationController
   def filter
     # o filtro é uma página onde são mostrados todos os resultados dos eventos
     # filtrados por alguns elementos
-  # confirmar o elementos, mas pode ser data, periodo, categoria, e por distância da localização
+     # confirmar o elementos, mas pode ser data, periodo, categoria, e por distância da localização
+
+    @events = Event.all
+    # usar ajax em cada filtro
+
+
+    @events = @events.where(category: params[:category]) if params[:category].present?
+
+
+    if params[:event_date].present?
+      @events = @events.where(event_date: params[:event_date])
+    end
+
+    if params[:period].present?
+      @events = @events.where(period: params[:period])
+    end
+
+    if params[:name].present?
+      @events = @events.where(name: params[:name])
+
+      # PGSearch com ilike
+    end
+
+    if params[:location].present?
+      @events = @events.where(location: params[:location])
+
+      #geocoding
+
+    end
   end
 
   def destroy
@@ -39,6 +67,6 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:name, :location, :event_date, :period)
+    params.require(:event).permit(:name, :location, :event_date, :period, :category)
   end
 end

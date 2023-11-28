@@ -1,0 +1,44 @@
+<html>
+VIEW DE TESTE - filter
+<% permited_params = params.permit(:category, :event_date, :period, :name, :location) %>
+<hr>
+
+Data - calendário
+<hr>
+
+periodo
+<ul>
+  <% Event::PERIOD.each do |period| %>
+    <li><%= link_to period, filter_events_path(permited_params.merge(period: period)) %></li>
+  <% end %>
+</ul>
+<hr>
+
+
+catagoria
+<ul>
+  <% Event::CATEGORY.each do |category| %>
+    <li><%= link_to category, filter_events_path(permited_params.merge(category: category)) %></li>
+  <% end %>
+</ul>
+<hr>
+
+
+distância (localização)
+MAPA
+# colocar a localização desejada
+#clocaar distancia
+
+each com Event.near
+
+
+<hr>
+
+EVENTOS SELECIONADOS
+<ul>
+  <% @events.each do |event| %>
+    <li><%= event.name %></li>
+  <% end %>
+</ul>
+
+</html>
