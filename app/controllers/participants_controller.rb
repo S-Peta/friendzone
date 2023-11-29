@@ -10,9 +10,9 @@ class ParticipantsController < ApplicationController
     redirect_to event_chat_path(@event) #fix path to filter or index
   end
 
-  # def destroy
-  #   @participant = Participant.find(params[:id])
-  #   @participant.destroy
-  #   redirect_to events_path, status: :see_other
-  # end
+  def destroy
+    @participant = Participant.find(params[:id])
+    @participant.destroy
+    redirect_to events_path, status: :see_other
+  end
 end
