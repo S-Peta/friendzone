@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :events, only: %i[new create index show delete] do
     resources :messages, only: %i[new create]
-    resources :participants, only: %i[new create destroy]
+    resources :participants, only: %i[new create]
   end
+
+  # resources :participants, only: %i[destroy]
 end
