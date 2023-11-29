@@ -25,6 +25,33 @@ class EventsController < ApplicationController
     @participant = @event.participants
   end
 
+  def filter
+    @events = Event.all
+    # usar ajax em cada filtro ?
+
+    if params[:category].present?
+      @events = @events.where(category: params[:category])
+    end
+
+    if params[:event_date].present?
+      @events = @events.where(event_date: params[:event_date])
+    end
+
+    if params[:period].present?
+      @events = @events.where(period: params[:period])
+    end
+
+    if params[:name].present?
+      @events = @events.where(name: params[:name])
+
+      # PGSearch com ilike
+    end
+
+    if params[:location].present?
+      @events = @events.near(params[:location], (params[:distance].present? ? params[:distance] : 10), unit: :km)
+    end
+  end
+
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
