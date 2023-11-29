@@ -30,6 +30,10 @@ class EventsController < ApplicationController
     @participant = @event.participants
   end
 
+  def user
+    @events = current_user.events.all
+  end
+
   def filter
     @events = Event.all
     # usar ajax em cada filtro ?
