@@ -5,6 +5,10 @@ import flatpickr from "flatpickr";
 export default class extends Controller {
   connect() {
     console.log('conectou date-picker')
-    flatpickr(this.element)
+    flatpickr(this.element, {
+      mode: "range",
+      minDate: "today",
+      dateFormat: "Y/d/m",
+  })
   }
 }
