@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only: [ :chat ]
+  # before_action :authenticate_user!, only: [ :chat ]
 
   def index
     @events = Event.all
