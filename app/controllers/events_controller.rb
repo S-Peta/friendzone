@@ -26,6 +26,7 @@ class EventsController < ApplicationController
   def chat
     @event = Event.find(params[:event_id])
     @message = Message.new
+    @participant = @event.participants
   end
 
   def filter

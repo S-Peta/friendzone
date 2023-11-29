@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
     resources :participants, only: %i[new create]
   end
+
+  # resources :participants, only: %i[destroy]
 end
