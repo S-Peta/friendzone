@@ -11,8 +11,6 @@ Rails.application.routes.draw do
       get :filter
     end
 
-
-
     resources :participants, only: %i[new create]
   end
 end

@@ -1,23 +1,2 @@
-<div class="container chatroom" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.id %>">
-  <h1><%= @event.name %></h1>
-
-  <div class="messages" data-event-subscription-target="messages">
-    <% @event.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
-    <% end %>
-  </div>
-
-  <%= simple_form_for [@event, @message],
-    html: { data: { action: "turbo:submit-end->event-subscription#resetForm" }, class: "d-flex" } do |f|
-  %>
-    <%= f.input :content,
-      label: false,
-      placeholder: "Message #{@event.name}",
-      wrapper_html: {class: "flex-grow-1"}
-    %>
-    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
-  <% end %>
-</div>
-
-
-<%# <%= link_to 'Delete Event', event_path %>
+hello
+<%= link_to 'Join this event', event_chat_path(@event) %>
