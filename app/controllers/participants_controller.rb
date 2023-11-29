@@ -7,7 +7,7 @@ class ParticipantsController < ApplicationController
     @participant.user = current_user
     @participant.event = @event
 
-    @participant.save!
+    @participant.save
     redirect_to event_chat_path(@event) #fix path to filter or index
   end
 
