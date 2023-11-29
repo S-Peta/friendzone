@@ -9,7 +9,7 @@ class ParticipantsController < ApplicationController
     @participant.event = Event.find(params[:event_id])
 
     @participant.save
-    redirect_to event_path(@participant.event) #fix path to filter or index
+    redirect_to event_chat_path(@participant.event) #fix path to filter or index
   end
 
   # def destroy

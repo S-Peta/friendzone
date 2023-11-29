@@ -21,6 +21,10 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+  end
+
+  def chat
+    @event = Event.find(params[:event_id])
     @message = Message.new
     @participant = @event.participants
   end
