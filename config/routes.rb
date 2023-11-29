@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get :filter
     end
 
-    resources :participants, only: %i[new create]
+    resources :participants, only: %i[create]
   end
 
   # resources :participants, only: %i[destroy]

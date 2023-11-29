@@ -1,3 +1,4 @@
 hello
-<%= link_to 'Join this event', event_chat_path(@event) %>
-
+<%= simple_form_for [@event, @participant] do |f| %>
+  <%= f.submit 'Join this event', class: "btn btn-primary" %>
+<% end %>

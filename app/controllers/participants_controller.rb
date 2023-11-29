@@ -1,15 +1,14 @@
 class ParticipantsController < ApplicationController
-  def new
-    @participant = Participant.new
-  end
 
   def create
+
+    @event = Event.find(params[:event_id])
     @participant = Participant.new
     @participant.user = current_user
-    @participant.event = Event.find(params[:event_id])
+    @participant.event = @event
 
-    @participant.save
-    redirect_to event_chat_path(@participant.event) #fix path to filter or index
+    @participant.save!
+    redirect_to event_chat_path(@event) #fix path to filter or index
   end
 
   # def destroy
