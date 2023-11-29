@@ -21,6 +21,10 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    if Participant.find_by(event: @event, user: current_user).present?
+      redirect_to event_chat_path(@event)
+      return
+    end
     @participant = Participant.new
   end
 
