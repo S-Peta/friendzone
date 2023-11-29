@@ -1,7 +1,6 @@
 class ParticipantsController < ApplicationController
 
   def create
-
     @event = Event.find(params[:event_id])
     @participant = Participant.new
     @participant.user = current_user
