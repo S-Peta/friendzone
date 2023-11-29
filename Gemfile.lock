@@ -96,6 +96,8 @@ GEM
     bootstrap (5.3.2)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.8, < 3)
+    bootstrap-datepicker-rails (1.10.0.1)
+      railties (>= 3.0)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -131,6 +133,7 @@ GEM
     ffi (1.16.3)
     font-awesome-sass (6.4.2)
       sassc (~> 2.0)
+    geocoder (1.8.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -287,12 +290,14 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   bootstrap (~> 5.2)
+  bootstrap-datepicker-rails
   capybara
   debug
   devise
   dotenv-rails
   error_highlight (>= 0.4.0)
   font-awesome-sass (~> 6.1)
+  geocoder
   importmap-rails
   jbuilder
   pg (~> 1.1)
