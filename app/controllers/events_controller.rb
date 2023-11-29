@@ -44,17 +44,6 @@ class EventsController < ApplicationController
       @events = @events.where(event_date: start_date..end_date)
     end
 
-    # if params[:event_date].present?
-    #   start_date, end_date = params[:event_date].split('to').map { |date| Date.strptime(date, '%m/%d/%Y') }
-
-    #   @events = @events.where(event_date: start_date..end_date)
-    # end
-
-
-    #split de virgula
-    #each
-    #date parse
-
     if params[:period].present?
       @events = @events.where(period: params[:period])
     end
