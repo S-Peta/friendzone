@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [ :home ]
+  before_action :authenticate_user!, only: [ :chat ]
 
   def index
     @events = Event.all
@@ -68,4 +68,10 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:name, :location, :event_date, :period, :category)
   end
+
+  # def authenticate_user!
+  #   unless user_signed_in?
+  #     redirect_to new_user_session_path, alert: 'You need to sign in to access this page.'
+  #   end
+  # end
 end
