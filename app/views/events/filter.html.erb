@@ -1,9 +1,21 @@
 <html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
 VIEW DE TESTE - filter
-<% permited_params = params.permit(:category, :event_date, :period, :name, :location) %>
+<% permited_params = params.permit(:category, :event_date, :period, :name, :location, :distance) %>
 <hr>
 
 Data - calendário
+
+
+
+
+<%#
+<%= simple_form_for(@events.event_date) do |f|  %>
+  <%# <%= f.input :opening_date, as: :string, input_html: { data: { controller: "datepicker" } } %>
+
+<%# <% end %>
 <hr>
 
 periodo
@@ -24,12 +36,18 @@ catagoria
 <hr>
 
 
-distância (localização)
-MAPA
-# colocar a localização desejada
-#clocaar distancia
 
-each com Event.near
+<%= form_with(url: filter_events_path, method: :get, local: false) do |form| %>
+  <%= form.text_field :location, placeholder: 'Choose a location' %>
+  <%= form.number_field :distance, placeholder: 'Range' %>
+    <%= form.hidden_field :category, value: params[:category] if params[:category].present? %>
+    <%= form.hidden_field :period, value: params[:period] if params[:period].present? %>
+  <%= form.submit "Pin a location", onclick: 'removeEmptyDistance();' %>
+<% end %>
+
+<%# como remover &commit=Pin+a+location da url %>
+<%# como remover distance= da url %>
+
 
 
 <hr>

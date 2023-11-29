@@ -25,16 +25,12 @@ class EventsController < ApplicationController
   end
 
   def filter
-    # o filtro é uma página onde são mostrados todos os resultados dos eventos
-    # filtrados por alguns elementos
-     # confirmar o elementos, mas pode ser data, periodo, categoria, e por distância da localização
-
     @events = Event.all
-    # usar ajax em cada filtro
+    # usar ajax em cada filtro ?
 
-
-    @events = @events.where(category: params[:category]) if params[:category].present?
-
+    if params[:category].present?
+      @events = @events.where(category: params[:category])
+    end
 
     if params[:event_date].present?
       @events = @events.where(event_date: params[:event_date])
@@ -51,10 +47,7 @@ class EventsController < ApplicationController
     end
 
     if params[:location].present?
-      @events = @events.where(location: params[:location])
-
-      #geocoding
-
+      @events = @events.near(params[:location], (params[:distance].present? ? params[:distance] : 10), unit: :km)
     end
   end
 
