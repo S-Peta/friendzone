@@ -3,7 +3,10 @@
     <%= @event.user.nickname %>
     <% @participant.each do |p|%>
       <%= p.user.nickname %>
-      <%= link_to 'Leave this event',events_path  %>
+    <% end %>
+    <% unless @event.user == current_user %>
+      <% current_participant = @participant.select { |p| p.user == current_user }.first %>
+      <%= link_to 'Leave this event', participant_path(current_participant), data: { turbo_method: :delete } %>
     <% end %>
   </div>
 
