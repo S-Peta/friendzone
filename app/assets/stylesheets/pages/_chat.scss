@@ -1,0 +1,35 @@
+.row {
+  display: flex;
+  scrollbar-gutter: 0;
+}
+
+.chat-row {
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230814/pngtree-the-gray-abstract-texture-of-the-polished-concrete-image_13053271.jpg);
+  padding: 30px;
+}
+
+.event-row{
+  padding: 30px;
+}
+
+.col-6 {
+  padding: 0 0;
+}
+
+
+.messages .message:nth-child(even) {
+  background-color: black;
+  color: white;
+}
+
+.message {
+  padding: 1rem;
+
+  p {
+    margin: 0;
+  }
+}
+// .message, .p :nth-child(odd) {
+//   background-color: white;
+//   color: black;
+// }

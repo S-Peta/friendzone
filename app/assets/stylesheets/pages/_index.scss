@@ -1,2 +1,32 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: bottom;
+  padding: 150px 0;
+  margin-bottom: 30px;
+  z-index: 1;
+  h3 {
+    color: #fff;
+  }
+}
+
+.logo-home {
+  height: 100px;
+}
+
+.box-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pack-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style-type: none;
+  gap: 20px;
+  margin: 20px;
+}
