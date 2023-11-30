@@ -55,17 +55,17 @@
 <div class="container">
   <div class="pack-grid">
     <% @events.each do |event| %>
-      <div class="event-card border">
+      <div class="event-card">
         <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg" alt="...">
-        <div class="card-info">
+        <div class="card-info text-center">
           <% if event.user == current_user %>
-            <h2><%= link_to event.name, event_chat_path(event) %></h2>
+            <h4><%= link_to event.name, event_chat_path(event) %></h4>
           <% else %>
-            <h2><%= link_to event.name, event_path(event) %></h2>
+            <h4><%= link_to event.name, event_path(event) %></h4>
           <% end %>
           <p><%= event.event_date %></p>
+          <%= link_to 'Details', event_chat_path(event), class: 'custom-btn friend-btn' %>
         </div>
-        <button></button>
       </div>
     <% end %>
   </div>

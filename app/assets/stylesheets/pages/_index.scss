@@ -24,9 +24,11 @@
 }
 
 .inner-banner {
-  background-color: green;
+  background-image: url(https://images.unsplash.com/photo-1637545687492-981f216d79d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: bottom;
   height: 400px;
   width: 100%;
+  margin-bottom: 80px;
 }
 
 .pack-grid{
@@ -108,6 +110,77 @@
   width: 100%;
 }
 
+.card-info a{
+  text-decoration: none;
+  color: #303030;
+}
+
+.text-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color:  #303030;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.friend-btn {
+  background-color: #a9e159;
+  background-image: linear-gradient(315deg, #9fd554);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.friend-btn:hover{
+  background-color: #c8f885;;
+background-image: linear-gradient(315deg, rgb(148, 196, 82) 0%, rgb(201, 255, 126) 74%);
+}
+
+.friend-btn:before,
+.friend-btn:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
+            -4px -4px 6px 0 rgba(116, 125, 136, .2),
+  inset -4px -4px 6px 0 rgba(255,255,255,.9),
+  inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+  transition: all 0.3s ease;
+}
+.friend-btn:before {
+  height: 0%;
+  width: .1px;
+}
+.friend-btn:after {
+  width: 0%;
+  height: .1px;
+}
+.friend-btn:hover:before {
+  height: 100%;
+}
+.friend-btn:hover:after {
+  width: 100%;
+}
 
 @-webkit-keyframes pulse {
   0% {
