@@ -11,15 +11,6 @@
         <% end %>
       </div>
     </div>
-  <div class="d-flex flex-column">
-    <%= @event.user.nickname %>
-    <% @participant.each do |p|%>
-      <%= p.user.nickname %>
-    <% end %>
-    <% unless @event.user == current_user %>
-      <% current_participant = @participant.select { |p| p.user == current_user }.first %>
-      <%= link_to 'Leave this event', participant_path(current_participant), data: { turbo_method: :delete } %>
-    <% end %>
   </div>
 
   <div class="col-6">
