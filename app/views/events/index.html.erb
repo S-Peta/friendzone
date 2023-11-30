@@ -1,5 +1,38 @@
-<div class="banner">
+<div>
+  <div class="banner" data-navbar-target="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://img.freepik.com/fotos-premium/tampo-de-mesa-de-madeira-com-desfoque-de-iluminacao-em-cafe-restaurante-noturno_254791-1984.jpg?w=360);">
+    <div class="container box-banner">
+      <%= image_tag 'logo.png', class: "logo-home" %>
+      <h3>Find your people</h3>
+      <hr>
+      <%= form_with url: filter_events_path, method: :get, class: "d-flex flex-column" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            style: "width: 500px",
+            placeholder: "Type a keyword"
+      %>
+      <%= submit_tag "Search", name: "", class:"btn btn-outline-warning w-100 mt-4" %>
+    <% end %>
+    </div>
+  </div>
+</div>
 
+<div class="container">
+  <div class="cards-category">
+    <% @events.each do |event| %>
+    <div class="card-city">
+      <%= link_to event_path(event) do %>
+        <h2><%= event.location %></h2>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="inner-banner">
+  <div class="div">
+    carousel
+  </div>
 </div>
 
 <div class="container">

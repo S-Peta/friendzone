@@ -1,20 +1,26 @@
 <div class="row">
-  <div class="d-flex flex-column">
-    <%= @event.user.nickname %>
-    <% @participant.each do |p|%>
-      <%= p.user.nickname %>
-      <%= link_to 'Leave this event',events_path  %>
-    <% end %>
+  <div class="col-3 chat-row">
+    <div class="d-flex flex-column">
+      <h3> Join to another <%= @event.participants.count %> participants in this event</h3>
+      <h5><%= @event.user.nickname %></h5>
+      <hr>
+      <div>
+        <% @participant.each do |p|%>
+          <h5><%= p.user.nickname %></h5>
+          <hr>
+        <% end %>
+      </div>
+    </div>
   </div>
 
-  <div class="div">
-    <div class="container chatroom" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.id %>">
-      <h1><%= @event.name %></h1>
-
-      <div class="messages" data-event-subscription-target="messages">
-        <% @event.messages.each do |message| %>
-          <%= render "messages/message", message: message %>
-        <% end %>
+  <div class="col-6">
+    <div class="chatroom" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.id %>">
+      <div data-event-subscription-target="messages">
+        <div class="messages">
+          <% @event.messages.each do |message| %>
+            <%= render "messages/message", message: message %>
+          <% end %>
+        </div>
       </div>
 
       <%= simple_form_for [@event, @message],
@@ -28,10 +34,30 @@
         <%= f.submit "Send", class: "btn btn-primary mb-3" %>
       <% end %>
     </div>
+
+  </div>
+
+  <div class="col-3">
+    <div class="container event-row">
+      <h1><%= @event.name %></h1>
+      <h2><%= @event.event_date %></h2>
+      <p><%= @event.period %></p>
+      <p><%= @event.location %></p>
+      <%= link_to 'Leave this event', events_path  %>
+    </div>
   </div>
 </div>
 
 
+<%# <ul class="chat-thread">
+	<li>Are we meeting today?</li>
+	<li>yes, what time suits you?</li>
+	<li>I was thinking after lunch, I have a meeting in the morning</li>
+</ul>
+
+<form class="chat-window">
+	<input class="chat-window-message" name="chat-window-message" type="text" autocomplete="off" autofocus />
+</form> %>
 
 
 <%# <%= link_to 'Delete Event', event_path %>

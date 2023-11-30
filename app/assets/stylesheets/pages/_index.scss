@@ -1,2 +1,21 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+.logo-home {
+  height: 100px;
+}
+
+.box-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
