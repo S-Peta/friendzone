@@ -8,11 +8,11 @@ Rails.application.routes.draw do
     resources :messages, only: %i[new create]
 
     collection do
-      get :filter
+      get :filter, :user
     end
 
     resources :participants, only: %i[create]
   end
 
-  # resources :participants, only: %i[destroy]
+  resources :participants, only: %i[destroy]
 end
