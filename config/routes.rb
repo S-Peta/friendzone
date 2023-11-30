@@ -14,5 +14,5 @@ Rails.application.routes.draw do
     resources :participants, only: %i[create]
   end
 
-  # resources :participants, only: %i[destroy]
+  resources :participants, only: %i[destroy]
 end

@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
 
   def index
     @events = Event.all
@@ -21,6 +21,10 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    if Participant.find_by(event: @event, user: current_user).present?
+      redirect_to event_chat_path(@event)
+      return
+    end
     @participant = Participant.new
   end
 
@@ -74,4 +78,10 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:name, :location, :event_date, :period, :category)
   end
+
+  # def authenticate_user!
+  #   unless user_signed_in?
+  #     redirect_to new_user_session_path, alert: 'You need to sign in to access this page.'
+  #   end
+  # end
 end
