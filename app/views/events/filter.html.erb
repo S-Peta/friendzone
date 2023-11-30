@@ -26,18 +26,13 @@ catagoria
 calendário e local
 
 <%= form_with(url: filter_events_path, method: :get, local: false) do |form| %>
- <%= form.text_field :event_date, data: { controller: "datepicker"} %>
   <%= form.text_field :location, placeholder: 'Choose a location' %>
   <%= form.number_field :distance, placeholder: 'Range' %>
+  <%= form.text_field :event_date, data: { controller: "datepicker"} %>
     <%= form.hidden_field :category, value: params[:category] if params[:category].present? %>
     <%= form.hidden_field :period, value: params[:period] if params[:period].present? %>
   <%= form.submit "Pin a location", onclick: 'removeEmptyDistance();' %>
 <% end %>
-
-<%# como remover &commit=Pin+a+location da url %>
-<%# como remover distance= da url %>
-
-
 
 <hr>
 
