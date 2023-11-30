@@ -1,51 +1,19 @@
-* { box-sizing: border-box; }
-
 html,
 body {
-	font-family: 'Roboto', sans-serif;
 	height: 100%;
 }
 
-body {
+.wrapper-edit {
 	background-position: center center;
 	background-size: cover;
 	font-size: 16px;
 	margin: 0;
 }
 
-a {
-	color: #939398;
-}
-
-p {
-	margin: 0;
-}
-
-.mb-0 {
-	margin-bottom: 0 !important;
-}
-
-.mb-1 {
-	margin-bottom: 0.25rem !important;
-}
-
-.mb-2 {
-	margin-bottom: 2rem !important;
-}
-
-.text-left {
-	text-align: left;
-}
-
-.text-center {
-	text-align: center;
-}
-
 .w-100 {
 	width: 100%;
 }
 
-/* Check Icon */
 span.check-icon {
 	border: solid #48a64c;
 	border-top: 0;
@@ -55,7 +23,6 @@ span.check-icon {
 	width: 7.5px;
 	transform: rotate(45deg);
 }
-
 
 span.check-icon {
 	position: absolute;
@@ -67,7 +34,6 @@ input.valid ~ span.check-icon {
 	display: inline-block;
 }
 
-/* Menu */
 a.menu-toggle {
 	cursor: pointer;
 	position: absolute;
@@ -87,7 +53,6 @@ span.bar:last-child {
 	margin-bottom: 0;
 }
 
-
 .wrapper {
 	display: flex;
 	height: 100%;
@@ -98,7 +63,6 @@ span.bar:last-child {
 
 }
 
-/* Quote Wrapper */
 .quote-wrapper {
 	background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url('https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg') no-repeat center center;
 	background-size: cover;
@@ -134,8 +98,6 @@ h1.form-title {
 	font-size: 1.9rem;
 	margin-bottom: 50px;
 }
-
-/* Form */
 
 .form-wrapper {
 	background: #fff;
@@ -192,72 +154,7 @@ h1.form-title {
 	top: -25px;
 }
 
-
 .form-wrapper small {
 	color: #939398;
 	margin-top: 4px;
-}
-
-
-/* Media Queries */
-
-@media screen and (max-width: 687px) {
-	.wrapper {
-		max-width: 500px;
-	}
-
-	/* hide quote-wrapper */
-	.quote-wrapper {
-		display: none;
-	}
-
-	/* Form Wrapper */
-	.form-wrapper {
-		background: rgba(255, 255, 255, 0.7);
-		border-radius: 10px;
-		flex-basis: 500px;
-		margin: 0 auto;
-	}
-
-	.form-wrapper h1.form-title {
-		margin-top: 0;
-	}
-
-	.form-group input {
-		background-color: #fff;
-	}
-}
-
-
-@media screen and (max-width: 372px) {
-	a.menu-toggle {
-		right: 25px;
-	}
-
-	.wrapper {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	.form-wrapper {
-		border-radius: 0;
-		flex-basis: 1;
-	}
-}
-
-
-@media screen and (max-height: 500px) {
-	a.menu-toggle {
-		top: 15px;
-	}
-
-	.wrapper {
-		padding-bottom: 0;
-		padding-top: 0;
-	}
-
-	h1.form-title {
-		margin-bottom: 30px;
-		margin-top: 7px;
-	}
 }
