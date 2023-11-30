@@ -1,39 +1,58 @@
-<div class="container">
-  <h2>Sign up</h2>
+<div class="wrapper wrapper-edit">
+  <div class="quote-wrapper">
+    <blockquote>
+      <p>
+        "Paradise isn't a place. <br>
+          It's a feeling"
+      </p>
+      <p class="author">- L. Boyer</p>
+    </blockquote>
+  </div>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
+  <div class="form-wrapper">
+    <h1 class="form-title">Sign up</h1>
 
-    <div class="form-inputs">
-      <%= f.input :first_name,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "first-name" }%>
-      <%= f.input :last_name,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "last-name" }%>
-      <%= f.input :nickname,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "nickname" }%>
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-    </div>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+       <div class="form-group">
+        <%= f.label :first_name %>
+        <%= f.input :first_name, input_html: { class: 'w-100', autofocus: true } %>
+        <span class="check-icon"></span>
+      </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
-    </div>
-  <% end %>
+       <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.input :last_name, input_html: { class: 'w-100', autofocus: true } %>
+        <span class="check-icon"></span>
+      </div>
 
-  <%= render "devise/shared/links" %>
+      <div class="form-group">
+        <%= f.label :nickname %>
+        <%= f.input :nickname, input_html: { class: 'w-100', autofocus: true } %>
+        <span class="check-icon"></span>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.input :email, input_html: { class: 'w-100'} %>
+        <span class="check-icon"></span>
+      </div>
+
+      <div class="form-group mb-1">
+        <%= f.label :password %>
+        <%= f.input :password, input_html: { class: 'w-100', title: 'Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters', type: 'password' } %>
+        <span class="check-icon"></span>
+      </div>
+
+      <div class="form-group text-left mb-2">
+        <%= f.check_box :terms, checked: false %>
+        <%= f.label :terms, 'I agree to the Terms & Conditions'.html_safe %>
+      </div>
+
+      <div class="form-group mb-0">
+        <%= f.button :submit, 'Create account', class: 'w-100', id: 'submit' %>
+      </div>
+    <% end %>
+
+    <small>Have an account? <%= link_to 'Click here', new_user_session_path %></small>
+  </div>
 </div>
