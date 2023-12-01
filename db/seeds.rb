@@ -1,3 +1,5 @@
+require "open-uri"
+
 Event.destroy_all
 User.destroy_all
 Message.destroy_all
@@ -22,3 +24,42 @@ event8 = Event.create(name: "See the MASP Meseum", location: "Av. Paulista, 1578
 event9 = Event.create(name: "See a show at the Municipal Theatre of Sao Paulo", location: "Praça Ramos de Azevedo, s/n - República, São Paulo - SP, 01037-010", category: "Perfoming & Visual Arts", event_date: "12/30/2023", period: "Night", user_id: user3.id)
 event10 = Event.create(name: "See the Catedral da Se de Sao Paulo", location: "Praça da Sé - Sé, São Paulo - SP, 01001-000", category: "Religious", event_date: "12/10/2023", period: "Morning", user_id: user1.id)
 
+file1 = URI.open("https://img.freepik.com/fotos-premium/vista-aerea-do-parque-do-ibirapuera-em-sao-paulo-brasil-parque-com-area-verde-preservada_361869-826.jpg")
+event1.photo.attach(io: file1, filename: "nes.png", content_type: "image/png")
+event1.save
+
+file2 = URI.open("https://live.staticflickr.com/65535/40658807663_2d649cacc8_b.jpg")
+event2.photo.attach(io: file2, filename: "1.png", content_type: "image/png")
+event2.save
+
+file3 = URI.open("https://mobilidadesampa.com.br/wp-content/uploads/2016/06/grafite3.jpg")
+event3.photo.attach(io: file3, filename: "2.png", content_type: "image/png")
+event3.save
+
+file4 = URI.open("https://www.google.com/url?sa=i&url=https%3A%2F%2Fdirecaocultura.com.br%2Fprojetos%2Fmuseu-do-futebol%2F%3Ftp%3D1&psig=AOvVaw1FOFrRVHdWLcrb-YX2bS8S&ust=1701546997457000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCJD9_9GC74IDFQAAAAAdAAAAABAE")
+event4.photo.attach(io: file4, filename: "4.png", content_type: "image/png")
+event4.save
+
+file5 = URI.open("https://www.saopaulo.sp.gov.br/wp-content/uploads/2019/12/zoologico-sp.jpg")
+event5.photo.attach(io: file5, filename: "5.png", content_type: "image/png")
+event5.save
+
+file6 = URI.open("https://mingroneiluminacao.com.br/wp-content/uploads/2017/11/LumePalmeiras090-1.jpg")
+event6.photo.attach(io: file6, filename: "6.png", content_type: "image/png")
+event6.save
+
+file7 = URI.open("https://upload.wikimedia.org/wikipedia/commons/d/de/Mercado_Municipal%2C_fachada_rua_da_Cantareira_2.JPG")
+event7.photo.attach(io: file7, filename: "7.png", content_type: "image/png")
+event7.save
+
+file8 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/fe/64/8d/masp-en-la-avenida-paulista.jpg?w=1200&h=1200&s=1")
+event8.photo.attach(io: file8, filename: "8.png", content_type: "image/png")
+event8.save
+
+file9 = URI.open("https://c1.wallpaperflare.com/preview/18/66/445/brazil-drama-photo-municipal-thumbnail.jpg")
+event9.photo.attach(io: file9, filename: "9.png", content_type: "image/png")
+event9.save
+
+file10 = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0oBWqRed1Bv_HNWq4679VAJMOtKtX4ERvw-b4QOx0EZ4FW3i7JViH8hqEsXBTtzdWC5U&usqp=CAU")
+event10.photo.attach(io: file10, filename: "10.png", content_type: "image/png")
+event10.save
