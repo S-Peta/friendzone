@@ -7,7 +7,7 @@ VIEW DE TESTE - filter
 
 ###
 <% def toggle_period_query_values(new_value) %>
-  <% query_values = @permited_params[:period].split('&') %>
+  <% query_values = (@permited_params[:period] || "").split('&') %>
   <% query_values.include?(new_value) ? query_values.delete(new_value) : query_values.push(new_value) %>
   <% query = query_values.join('&') %>
   <% puts query %>
@@ -15,7 +15,7 @@ VIEW DE TESTE - filter
 <% end %>
 
 <% def toggle_category_query_values(new_value) %>
-  <% query_values = @permited_params[:category].split('&') %>
+  <% query_values = (@permited_params[:category] || "").split('&') %>
   <% query_values.include?(new_value) ? query_values.delete(new_value) : query_values.push(new_value) %>
   <% query = query_values.join('&') %>
   <% puts query %>
@@ -25,7 +25,7 @@ VIEW DE TESTE - filter
 periodo
 <ul>
   <% Event::PERIOD.each do |period| %>
-    <li><%= link_to period, filter_events_path(@permited_params.merge(period: toggle_period_query_values(period))), class: @permited_params[:period].include?(period) ? "toggle-link-active text-danger" : "toggle-link-inactive" %></li>
+    <li><%= link_to period, filter_events_path(@permited_params.merge(period: toggle_period_query_values(period))), class: (@permited_params[:period].present? && @permited_params[:period].include?(period) ? "toggle-link-active text-danger" : "toggle-link-inactive") %></li>
   <% end %>
   <%= @permited_params %>
 </ul>
@@ -36,7 +36,7 @@ periodo
 categoria
 <ul>
   <% Event::CATEGORY.each do |category| %>
-    <li><%= link_to category, filter_events_path(@permited_params.merge(category: toggle_category_query_values(category))), class: @permited_params[:category].include?(category) ? "text-danger" : "text-primary" %></li>
+    <li><%= link_to category, filter_events_path(@permited_params.merge(category: toggle_category_query_values(category))), class: @permited_params[:category].present? && (@permited_params[:category].include?(category) ? "text-danger" : "text-primary") %></li>
   <% end %>
 </ul>
 <hr>
