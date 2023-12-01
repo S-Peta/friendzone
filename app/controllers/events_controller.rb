@@ -43,7 +43,8 @@ class EventsController < ApplicationController
     # usar ajax em cada filtro ?
 
     if params[:category].present?
-      @events = @events.where(category: params[:category])
+      categories = params[:category].split('&')
+      @events = @events.where(category: categories)
     end
 
     if params[:event_date].present?
@@ -53,7 +54,8 @@ class EventsController < ApplicationController
     end
 
     if params[:period].present?
-      @events = @events.where(period: params[:period])
+      periods = params[:period].split('&')
+      @events = @events.where(period: periods)
     end
 
     if params[:name].present?
@@ -76,7 +78,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:name, :location, :event_date, :period, :category)
+    params.require(:event).permit(:name, :location, :event_date, :period, :category, :photo)
   end
 
   # def authenticate_user!

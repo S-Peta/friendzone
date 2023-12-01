@@ -5,6 +5,7 @@
     <%= f.input :category, collection: Event::CATEGORY %>
     <%= f.input :event_date %>
     <%= f.input :period, collection: Event::PERIOD %>
+    <%= f.input :photo, as: :file %>
     <%= f.button :submit %>
   <% end %>
 </div>
