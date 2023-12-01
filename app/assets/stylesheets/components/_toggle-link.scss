@@ -1,15 +1,16 @@
 .toggle-link  {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid #006400; /* Cor da borda verde */
-  border-radius: 20px; /* Cantos arredondados */
-  background-color: #4CAF50; /* Cor de fundo verde claro */
-  color: #006400; /* Cor do texto verde escuro */
+  border: 1px solid #9bcf52;
+  border-radius: 15px;
+  color: #505050;
+  background-color: #a9e159;
+  background-image: linear-gradient(315deg, #9fd554);
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave */
+  transition: background-color 0.3s, color 0.3s;
 
   &:hover {
     background-color: #45a049; /* Cor de fundo um pouco mais escura ao passar o mouse */
