@@ -20,5 +20,6 @@ export default class extends Controller {
 
   resetForm(event) {
     event.target.reset()
+    Turbo.visit(window.location.href, { action: "replace" });
   }
 }

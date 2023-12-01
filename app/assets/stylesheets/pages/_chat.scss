@@ -4,8 +4,10 @@
 }
 
 .chat-row {
-  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230814/pngtree-the-gray-abstract-texture-of-the-polished-concrete-image_13053271.jpg);
+  // background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230814/pngtree-the-gray-abstract-texture-of-the-polished-concrete-image_13053271.jpg);
+  background-color: rgb(50,50,50);
   padding: 30px;
+  color: #fff;
 }
 
 .event-row{
@@ -18,8 +20,13 @@
 
 
 .messages .message:nth-child(even) {
-  background-color: black;
-  color: white;
+  background-color: rgb(255, 255, 255);
+  color: rgb(50, 50, 50);
+}
+
+.messages .message:nth-child(odd) {
+  background-color: #f6fbee;
+  color: rgb(50, 50, 50);
 }
 
 .message {
