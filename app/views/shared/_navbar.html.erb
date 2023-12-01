@@ -1,22 +1,14 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%="nav-transparent" if @transparent%>" data-navbar-target="nav" data-action="scroll@window->navbar#updateColor">
   <div class="container-fluid">
     <%= link_to events_path, class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <%= image_tag "logo.png" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <%= form_with url: filter_events_path, method: :get, class: "search-bar" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            style: "width: 500px",
-            placeholder: "Type a keyword"
-        %>
-      <%= submit_tag "Search", name: "", class:"btn btn-outline-warning" %>
-    <% end %>
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">

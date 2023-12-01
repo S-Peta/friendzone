@@ -1,0 +1,16 @@
+<div class="container container-edit">
+
+<h1 class="text-center">Current Events</h1>
+
+  <div class="d-flex flex-column w-100 align-items-center">
+    <% @events.each do |event| %>
+      <div class="event-card-list">
+        <div class="event-card-list-infos">
+          <h2><%= event.name %></h2>
+          <p><%= event.event_date %> | <%= event.location %>
+          <%= link_to 'Event Chatroom', event_chat_path(event)%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
