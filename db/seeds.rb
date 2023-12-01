@@ -22,5 +22,3 @@ event8 = Event.create(name: "See the MASP Meseum", location: "Av. Paulista, 1578
 event9 = Event.create(name: "See a show at the Municipal Theatre of Sao Paulo", location: "Praça Ramos de Azevedo, s/n - República, São Paulo - SP, 01037-010", category: "Perfoming & Visual Arts", event_date: "12/30/2023", period: "Night", user_id: user3.id)
 event10 = Event.create(name: "See the Catedral da Se de Sao Paulo", location: "Praça da Sé - Sé, São Paulo - SP, 01001-000", category: "Religious", event_date: "12/10/2023", period: "Morning", user_id: user1.id)
 
-
---------------------
