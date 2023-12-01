@@ -1,4 +1,5 @@
 .filters {
+  margin: 30px auto;
   li {
     list-style: none
   }
@@ -29,4 +30,13 @@
 .category-item {
   margin-right: 10px;
   margin-bottom: 10px;
+}
+
+.form-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: auto;
+  gap: 20px;
 }
