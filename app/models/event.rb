@@ -2,6 +2,7 @@ class Event < ApplicationRecord
   belongs_to :user
   has_many :messages, dependent: :destroy
   has_many :participants, dependent: :destroy
+  has_one_attached :photo
 
   PERIOD = ['Morning', 'Afternoon', 'Night']
   CATEGORY = ['Nightlife', 'Visual Arts', 'Sports', 'Culinary', 'Sightseeing', 'Religious', 'Outdoors']
