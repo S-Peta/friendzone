@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%="nav-transparent" if @transparent%>" data-navbar-target="nav" data-action="scroll@window->navbar#updateColor">
   <div class="container-fluid">
     <%= link_to events_path, class: "navbar-brand" do %>
       <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>

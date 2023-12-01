@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'stimulus/navbar'
   root to: "events#index"
 
   devise_for :users

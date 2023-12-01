@@ -17,37 +17,54 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="cards-category">
-    <% @events.each do |event| %>
-    <div class="card-city">
-      <%= link_to event_path(event) do %>
-        <h2><%= event.location %></h2>
-      <% end %>
+<div class="cards-city">
+  <div class="card-2">
+    <div class="card-content2">
+      <h4 class="card-title">Sao Paulo</h4>
+      <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo quisquam totam minima non maxime ipsum laboriosam magnam tenetur consectetur modi possimus, suscipit nisi quis, impedit neque fugit. Harum, error?</p>
     </div>
-    <% end %>
+  </div>
+
+    <div class="card-2">
+    <div class="card-content2">
+      <h4 class="card-title">Rio de Janeiro</h4>
+      <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo quisquam totam minima non maxime ipsum laboriosam magnam tenetur consectetur modi possimus, suscipit nisi quis, impedit neque fugit. Harum, error?</p>
+    </div>
+  </div>
+
+    <div class="card-2">
+    <div class="card-content2">
+      <h4 class="card-title">Nova York</h4>
+      <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo quisquam totam minima non maxime ipsum laboriosam magnam tenetur consectetur modi possimus, suscipit nisi quis, impedit neque fugit. Harum, error?</p>
+    </div>
+  </div>
+
+    <div class="card-2">
+    <div class="card-content2">
+      <h4 class="card-title">Tokyo</h4>
+      <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo quisquam totam minima non maxime ipsum laboriosam magnam tenetur consectetur modi possimus, suscipit nisi quis, impedit neque fugit. Harum, error?</p>
+    </div>
   </div>
 </div>
 
 <div class="inner-banner">
   <div class="div">
-    carousel
   </div>
 </div>
 
 <div class="container">
   <div class="pack-grid">
     <% @events.each do |event| %>
-      <div class="card" style="width: 18rem;">
-        <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
+      <div class="event-card">
+        <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg" alt="...">
+        <div class="card-info text-center">
           <% if event.user == current_user %>
-            <h2 class="card-title"><%= link_to event.name, event_chat_path(event) %></h2>
+            <h4><%= link_to event.name, event_chat_path(event) %></h4>
           <% else %>
-            <h2 class="card-title"><%= link_to event.name, event_path(event) %></h2>
+            <h4><%= link_to event.name, event_path(event) %></h4>
           <% end %>
-          <p class="card-text"><%= event.event_date %></p>
-          <p class="card-text"><%= event.location %></p>
+          <p><%= event.event_date %></p>
+          <%= link_to 'Details', event_chat_path(event), class: 'custom-btn friend-btn' %>
         </div>
       </div>
     <% end %>
