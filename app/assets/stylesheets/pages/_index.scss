@@ -25,10 +25,18 @@
 
 .inner-banner {
   background-image: url(https://images.unsplash.com/photo-1637545687492-981f216d79d1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-position: bottom;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-position: 35% 85%;
   height: 400px;
   width: 100%;
   margin-bottom: 80px;
+  opacity: 0.4;
+}
+
+.inner-banner-box {
+  color: #505050;
+  justify-content: center;
+  margin-left: 80px;
 }
 
 .pack-grid{
@@ -52,8 +60,8 @@
   width: 350px;
   height: 330px;
   color: #a18a96;
-  background: url("https://www.visitdubai.com/-/media/gathercontent/poi/k/kite-beach/fallback-image/kite-beach-by-meraas-poi-shutterstock-v4.jpg") center no-repeat;
   background-size: cover;
+  background-position: center;
   border-radius: 15px;
   box-shadow: 20px 20px 30px -20px #00000040;
   overflow: hidden;
