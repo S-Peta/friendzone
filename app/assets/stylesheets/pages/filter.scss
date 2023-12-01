@@ -1,0 +1,32 @@
+.filters {
+  li {
+    list-style: none
+  }
+  li a{
+    text-decoration: none;
+  }
+}
+
+.filters .period-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.filters .period-item {
+  margin-right: 10px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
