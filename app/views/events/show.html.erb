@@ -10,9 +10,9 @@
             <table>
               <tr>
                 <td>
-                  <div class="month"><%= l(@event.event_date, format: '%b').slice(0, 3) %></div>
+                  <div class="month"><%# l(@event.event_date, format: '%b').slice(0, 3) %></div>
                   <div class="month-date-devider"></div>
-                  <div class="date"><%= l(@event.event_date, format: '%d')%></div>
+                  <div class="date"><%# l(@event.event_date, format: '%d')%></div>
                 </td>
             </table>
           </div>
@@ -41,7 +41,7 @@
                 <tr>
                   <td><i class="fa-solid fa-calendar-days p-1"></i></td>
                   <td>
-                    <div><%= l(@event.event_date, format: '%A, %b %d, %Y') %></div>
+                    <div><%# l(@event.event_date, format: '%A, %b %d, %Y') %></div>
                     <div data-livestamp="1517054400" class="dim-color"></div>
                   </td>
                 </tr>
