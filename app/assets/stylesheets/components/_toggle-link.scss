@@ -1,0 +1,29 @@
+.toggle-link, .toggle-link-inactive, .toggle-link-active  {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #006400; /* Cor da borda verde */
+  border-radius: 20px; /* Cantos arredondados */
+  background-color: #4CAF50; /* Cor de fundo verde claro */
+  color: #006400; /* Cor do texto verde escuro */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave */
+
+  &:hover {
+    background-color: #45a049; /* Cor de fundo um pouco mais escura ao passar o mouse */
+    color: #fff; /* Cor do texto branco ao passar o mouse */
+  }
+}
+
+.toggle-link-inactive {
+  @extend .toggle-link;
+}
+
+.toggle-link-active {
+  @extend .toggle-link;
+  background-color: #006400 !important;
+  color: #fff !important;
+  border: 2px solid #004d00 !important;
+}
