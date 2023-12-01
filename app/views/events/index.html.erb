@@ -62,13 +62,13 @@
            <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
          <% end %>
         <div class="card-info text-center">
-          <% if event.user == current_user %>
-            <h4><%= link_to event.name, event_chat_path(event) %></h4>
-          <% else %>
-            <h4><%= link_to event.name, event_path(event) %></h4>
-          <% end %>
+          <h4><%= event.name %></h4>
           <p><%= event.event_date %></p>
-          <%= link_to 'Details', event_chat_path(event), class: 'custom-btn friend-btn' %>
+          <% if event.user == current_user %>
+            <h4><%= link_to 'Chat', event_chat_path(event), class: 'custom-btn friend-btn' %></h4>
+          <% else %>
+            <h4><%= link_to 'Details', event_path(event), class: 'custom-btn friend-btn' %></h4>
+          <% end %>
         </div>
       </div>
     <% end %>
