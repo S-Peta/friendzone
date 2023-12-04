@@ -41,6 +41,18 @@
   gap: 20px;
 }
 
+.filter-fixed {
+  position: fixed;
+  top: 100px;
+}
+
+.fixed-cards {
+  // position: relative;
+  // left: 50%;
+  margin-left: 25%;
+  margin-top: 100px;
+}
+
 #card  {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
