@@ -16,14 +16,12 @@
       <%= devise_error_messages! %>
 
       <div class="form-group">
-        <%= f.label :email %>
-        <%= f.input :email, input_html: { class: 'w-100' } %>
+        <%= f.input :email, input_html: { class: 'w-100' }, wrapper_html: { class: 'd-flex flex-column align-items-center' }%>
         <span class="check-icon"></span>
       </div>
 
       <div class="form-group mb-1">
-        <%= f.label :password %>
-        <%= f.input :password, input_html: { class: 'w-100', title: 'Enter your password', type: 'password' } %>
+        <%= f.input :password, input_html: { class: 'w-100', title: 'Enter your password', type: 'password' }, wrapper_html: { class: 'd-flex flex-column align-items-center' } %>
         <span class="check-icon"></span>
       </div>
 
