@@ -47,16 +47,30 @@
   margin: 20px;
 }
 
+.cards-container {
+  width: 100%;
+  overflow: hidden;
+}
+
 .cards-city {
   display: flex;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-content: space-around;
   margin: 80px 100px;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.cards-city::-webkit-scrollbar {
+  display: none;
 }
 
 .card-2 {
   position: relative;
+  flex: 0 0 auto;
+  margin-right: 30px;
   width: 350px;
   height: 330px;
   color: #a18a96;
