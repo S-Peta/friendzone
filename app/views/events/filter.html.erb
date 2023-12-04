@@ -9,44 +9,32 @@
     </div>
   </div>
 
-  <div class="col-9 d-flex">
-    <ul>
-      <div class="container">
-        <div class="pack-grid">
-          <% @events.each do |event| %>
-          <div class="event-card">
-            <% if event.photo.attached? %>
-              <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
-            <% else %>
-              <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
-            <% end %>
-            <div class="card-info text-center">
-              <h4><%= event.name %></h4>
-              <p><%= event.event_date %></p>
-              <% if event.user == current_user %>
-                <h4><%= link_to 'Details', event_chat_path(event), class: 'custom-btn friend-btn' %></h4>
-              <% else %>
-                <h4><%= link_to 'Details', event_path(event), class: 'custom-btn friend-btn' %></h4>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
+<div id="card">
+  <% @events.each do |event| %>
+    <div class="card">
+      <div class="card-image">
+        <% if event.photo.attached? %>
+          <% cl_image_tag(event.photo.key, crop: :fill) %>
+        <% else %>
+          <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg" />
+        <% end %>
+      </div>
+      <div class="card-title">
+        <h2><%= event.name %></h2>
+      </div>
+      <div class="card-detail">
+        <h3>in | <span class="date"><%= event.event_date %></span></h3>
+      </div>
+      <div class="card-text">
+        <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+      </div>
+      <div class="card-product-price">
+        <% if event.user == current_user %>
+          <%= link_to 'Buy Now', event_chat_path(event), class: 'custom-btn friend-btn' %>
+        <% else %>
+          <%= link_to 'Buy Now', event_path(event), class: 'custom-btn friend-btn' %>
+        <% end %>
       </div>
     </div>
-    </ul>
-  </div>
-</div>
-
-<div  id="card">
-  <div class="card">
-    <div class="card-image"></div>
-    <div class="card-title">
-      <h2>Headphone</h2>
-    </div>
-    <div class="card-detail"><h3 >in | <span class="date">Eletronics</span></h3></div>
-    <div class="card-text"> <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p></div>
-    <div class="card-product-price">
-      <button type="button">Buy Now</button>
-    </div>
-  </div>
+  <% end %>
 </div>
