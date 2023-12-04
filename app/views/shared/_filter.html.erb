@@ -2,7 +2,7 @@
   <%# <h4>Period</h4> %>
   <ul class="period-list">
     <% Event::PERIOD.each do |period| %>
-      <li class="period-item"><%= link_to period, filter_events_path(@permited_params.merge(period: toggle_period_query_values(period))), class: @permited_params[:period].include?(period) ? "toggle-link-active" : "toggle-link-inactive" %></li>
+      <li class="period-item"><%= link_to period, filter_events_path(@permited_params.merge(period: toggle_period_query_values(period))), class: (@permited_params[:period].present? && @permited_params[:period].include?(period) ? "toggle-link-active" : "toggle-link-inactive") %></li>
     <% end %>
     <% @permited_params %>
   </ul>
@@ -10,7 +10,7 @@
   <%# <h4>Category</h4> %>
   <ul class="category-list">
     <% Event::CATEGORY.each do |category| %>
-      <li class="category-item"><%= link_to category, filter_events_path(@permited_params.merge(category: toggle_category_query_values(category))), class: @permited_params[:category].include?(category) ? "toggle-link-active text-danger" : "toggle-link-inactive" %></li>
+      <li class="category-item"><%= link_to category, filter_events_path(@permited_params.merge(category: toggle_category_query_values(category))), class: (@permited_params[:category].present? && @permited_params[:category].include?(category) ? "toggle-link-active text-danger" : "toggle-link-inactive") %></li>
     <% end %>
   </ul>
   <hr>
