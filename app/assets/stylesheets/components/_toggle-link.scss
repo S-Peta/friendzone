@@ -1,10 +1,10 @@
 .toggle-link  {
   display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #9bcf52;
-  border-radius: 15px;
+  padding: 5px 15px;
+  border: 1px solid #7b7b7b;
+  border-radius: 25px;
   color: #505050;
-  background-color: #a9e159;
+  background-color: #ffffff;
   background-image: linear-gradient(315deg, #9fd554);
   text-align: center;
   text-decoration: none;
@@ -13,8 +13,8 @@
   transition: background-color 0.3s, color 0.3s;
 
   &:hover {
-    background-color: #45a049; /* Cor de fundo um pouco mais escura ao passar o mouse */
-    color: #fff; /* Cor do texto branco ao passar o mouse */
+    background-color: #cee2ce; /* Cor de fundo um pouco mais escura ao passar o mouse */
+    color: #6c826d; /* Cor do texto branco ao passar o mouse */
   }
 }
 
@@ -24,7 +24,7 @@
 
 .toggle-link-active {
   @extend .toggle-link;
-  background-color: #006400 !important;
-  color: #fff !important;
-  border: 2px solid #004d00 !important;
+  background-color: #cee2ce !important;
+  color: #6c826d !important;
+  border: 1px solid #6c826d !important;
 }

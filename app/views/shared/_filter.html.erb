@@ -18,8 +18,8 @@
     <div class="form-date">
       <%# <%= form.number_field :distance, placeholder: 'Range' %>
       <div class="calendar"><%= form.text_field :event_date, data: { controller: "datepicker"} %></div>
-        <%= form.hidden_field :category, value: params[:category] if params[:category].present? %>
-        <%= form.hidden_field :period, value: params[:period] if params[:period].present? %>
+        <% form.hidden_field :category, value: params[:category] if params[:category].present? %>
+        <% form.hidden_field :period, value: params[:period] if params[:period].present? %>
       <%= form.text_field :location, placeholder: 'Choose a location' , class: "w-100"%>
       <%= form.submit "Search", onclick: 'removeEmptyDistance();', class: "friend-btn w-100" %>
     </div>
