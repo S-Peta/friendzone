@@ -62,6 +62,66 @@ span.bar:last-child {
 	max-width: 1200px;
 }
 
+.new-event {
+	background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url('https://images.unsplash.com/photo-1485872299829-c673f5194813?q=80&w=2054&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+	background-size: cover;
+	border-radius: 10px 0 0 10px;
+	flex-basis: 50%;
+	height: 100%;
+}
+
+.new-event blockquote {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.new-event blockquote p {
+	color: #fff;
+	font-size: 1.9rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+.new-event blockquote p.author {
+	font-size: 1rem;
+	font-weight: 100;
+	margin-top: 7px;
+	text-align: right;
+	width: 90%;
+}
+
+.sign-up {
+	background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+	background-size: cover;
+	border-radius: 10px 0 0 10px;
+	flex-basis: 50%;
+	height: 100%;
+}
+
+.sign-up blockquote {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.sign-up blockquote p {
+	color: #fff;
+	font-size: 1.9rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+.sign-up blockquote p.author {
+	font-size: 1rem;
+	font-weight: 100;
+	margin-top: 7px;
+	text-align: right;
+	width: 90%;
+}
+
 .quote-wrapper {
 	background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url('https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg') no-repeat center center;
 	background-size: cover;
