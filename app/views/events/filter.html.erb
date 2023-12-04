@@ -2,14 +2,14 @@
 
 
 <div class="row">
-  <div class="col-3 bg-light">
-    <div class="container">
+  <div class="col-3 bg-light filter-fixed">
+    <div class="container" data-action="scroll@window->navbar#fixFilter">
 
       <%= render "shared/filter" %>
     </div>
   </div>
 
-  <div class="col-9 d-flex">
+  <div class="col-9 fixed-cards">
     <ul>
       <div class="container">
         <div class="pack-grid">
@@ -28,25 +28,11 @@
               <% else %>
                 <h4><%= link_to 'Details', event_path(event), class: 'custom-btn friend-btn' %></h4>
               <% end %>
-            <% end %>
           </div>
         </div>
+          <% end %>
       </div>
     </div>
     </ul>
-  </div>
-</div>
-
-<div  id="card">
-  <div class="card">
-    <div class="card-image"></div>
-    <div class="card-title">
-      <h2>Headphone</h2>
-    </div>
-    <div class="card-detail"><h3 >in | <span class="date">Eletronics</span></h3></div>
-    <div class="card-text"> <p>Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p></div>
-    <div class="card-product-price">
-      <button type="button">Buy Now</button>
-    </div>
   </div>
 </div>

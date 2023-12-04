@@ -2,12 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["banner", "nav"]
+  static targets = ["nav"]
 
   connect() {
     console.log("oi")
-    console.log(this.bannerTarget.offsetHeight)
-    console.log(this.navTarget);
   }
 
   updateColor() {
@@ -17,4 +15,9 @@ export default class extends Controller {
       this.navTarget.classList.add("nav-transparent")
     }
   }
+
+  fixFilter() {
+    console.log(this.navTarget.offsetHeight);
+  }
+
 }

@@ -1,9 +1,8 @@
 .page-event {
-  background-color: #212121;
+  // background-color: #212121;
   min-height: 100vh;
   // padding-top: 50px;
   padding-bottom: 40px;
-  font-family: "Varela Round", sans-serif;
 
   .upcoming-sec {
     padding: 5vh 0;
@@ -16,7 +15,7 @@
   }
 
   .upcoming-event-list {
-    color: #ccc;
+    // color: #ccc;
 
     .event-block {
       padding: 20vh 0;
@@ -116,6 +115,10 @@
   .page-heading::first-letter {
     color: #db2d8e;
   }
+}
+
+.filter-show-page {
+  background-color: #db2d8e;
 }
 
 @media (min-width: 992px) {

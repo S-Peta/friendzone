@@ -40,6 +40,7 @@ class EventsController < ApplicationController
 
   def filter
     @events = Event.all
+    @fixed = true
     # usar ajax em cada filtro ?
 
     if params[:category].present?
