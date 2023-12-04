@@ -32,6 +32,11 @@ class EventsController < ApplicationController
     @event = Event.find(params[:event_id])
     @message = Message.new
     @participant = @event.participants
+    @markers =
+      {
+        lat: @event.latitude,
+        lng: @event.longitude
+      }
   end
 
   def user
