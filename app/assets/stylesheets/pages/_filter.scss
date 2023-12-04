@@ -83,6 +83,10 @@
   grid-area: title;
 }
 
+.card-link {
+  text-decoration: none;
+}
+
 #card .card-detail {
   grid-area: detail;
 }
@@ -97,7 +101,6 @@
 
 #card .card-image {
   grid-area: image;
-  background: url("https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-position: center;
@@ -135,7 +138,6 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
-
 
 #card .card-text  {
   grid-area: text;
@@ -179,7 +181,6 @@
   background-color: #ffd84e;
 }
 
-
 #card .card:hover {
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
@@ -187,4 +188,87 @@
   transition: 0.5s ease;
   cursor: pointer;
   margin:30px;
+}
+
+-----------------------------
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.card-list {
+	width: 90%;
+	max-width: 400px;
+}
+
+.card {
+	background-color: #FFF;
+	box-shadow: 0 0 0 1px rgba(#000, .05), 0 20px 50px 0 rgba(#000, .1);
+	border-radius: 15px;
+	overflow: hidden;
+	padding: 1.25rem;
+	position: relative;
+	transition: .15s ease-in;
+
+	&:hover, &:focus-within {
+		box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(#000, .1);
+			transform: translatey(-5px);
+	}
+}
+
+.card-image {
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.card-header {
+	margin-top: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	a {
+		font-weight: 600;
+		font-size: 1.375rem;
+		line-height: 1.25;
+		padding-right: 1rem;
+		text-decoration: none;
+		color: inherit;
+		will-change: transform;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+
+}
+
+.card-footer {
+	margin-top: 1.25rem;
+	border-top: 1px solid #ddd;
+	padding-top: 1.25rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.card-meta {
+	display: flex;
+	align-items: center;
+	color: #787878;
+	&:first-child:after {
+		display: block;
+		content: "";
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background-color: currentcolor;
+		margin-left: .75rem;
+		margin-right: .75rem;
+	}
 }
