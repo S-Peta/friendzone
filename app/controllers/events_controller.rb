@@ -26,6 +26,11 @@ class EventsController < ApplicationController
       return
     end
     @participant = Participant.new
+    @markers =
+      {
+        lat: @event.latitude,
+        lng: @event.longitude
+      }
   end
 
   def chat

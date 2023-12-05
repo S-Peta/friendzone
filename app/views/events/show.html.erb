@@ -14,6 +14,13 @@
         <i class="fa fa-map-marker"></i>
         <p class="show-text-center"><%= @event.location %></p>
       </div>
+
+      <div class="map-show" style="width: 100%; height: 200px;"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
       <%= simple_form_for [@event, @participant] do |f| %>
         <%= f.submit 'Join this event', class: "btn friend-btn btn-light btn-block" %>
       <% end %>
