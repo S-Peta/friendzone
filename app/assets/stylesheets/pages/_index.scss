@@ -47,16 +47,43 @@
   margin: 20px;
 }
 
+.cards-container {
+  width: 100%;
+  overflow: hidden;
+}
+
 .cards-city {
   display: flex;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-content: space-around;
   margin: 80px 100px;
+  overflow-x: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  position: relative;
+}
+
+// .cards-city::after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 100px; /* Ajuste a largura conforme necessário */
+//   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+//   pointer-events: none;
+//   z-index: 1; /* Certifique-se de que o degradê tem um z-index maior do que os cards para que fique na frente deles */
+// }
+
+.cards-city::-webkit-scrollbar {
+  display: none;
 }
 
 .card-2 {
   position: relative;
+  flex: 0 0 auto;
+  margin-right: 30px;
   width: 350px;
   height: 330px;
   color: #a18a96;
@@ -151,11 +178,13 @@
 }
 
 .friend-btn {
-  background-color: #a9e159;
-  background-image: linear-gradient(315deg, #9fd554);
+  background-color: #4e8d51 !important;
+  color: #fff !important;
+  border: 1px solid #6c826d;
   line-height: 42px;
   padding: 0;
   border: none;
+  border-radius: 5px;
 }
 
 .friend-btn:hover{
@@ -214,4 +243,140 @@
      -moz-box-shadow: 0 0 0 0 rgba(255, 171, 171, 0);
      box-shadow: 0 0 0 0 rgba(255, 171, 171, 0);
   }
+}
+
+
+
+
+.flex-row {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: row !important;
+  flex-direction: row !important;
+    display: flex;
+  }
+
+
+.card-index{
+    position: relative;
+    z-index: 1;
+    display: block;
+    background: transparent;
+    min-width: 270px;
+    max-width: 250px;
+  border-radius: 15px;
+  box-shadow: 20px 20px 30px -20px #00000040;
+}
+
+.card-content-index{
+  clear: both;
+  background-color: #fff;
+  padding: 15px;
+  border-bottom-right-radius:15px;
+  border-bottom-left-radius: 15px;
+}
+
+.head-card {
+    position: relative;
+    z-index: 1;
+}
+.img-mask{
+  height: 170px;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: 200ms height ease;
+  position: relative;
+  z-index: -1;
+}
+
+.img-mask:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.9) 230%);
+
+}
+
+.card-index:hover > .img-mask:after{
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.9) 530%);
+}
+
+.card-index:hover > .img-mask{
+  height: 180px;
+}
+
+.img-mask > img{
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+.rate{
+  position: absolute;
+  height: 17px;
+  background-color: #ffffff85;
+  border-radius: 20px;
+  font-size: 12px;
+  max-width: 150px;
+  width: 110px;
+  line-height: 1.5;
+  text-align: center;
+  top: 15px;
+  left: 15px;
+  box-shadow: 20px 20px 30px -20px #00000040;
+}
+
+.rate > i:hover{
+  color: #ff6a00;
+}
+
+.rate > i{
+    font-size: 14px;
+    clear: both;
+    float: left;
+    position: relative;
+    left: 10%;
+  transition: 0.3s color;
+  cursor: pointer;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2.title-index {
+    font-size: 15px;
+    margin-bottom: 25px;
+    max-width: 128px;
+    width: 128px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+p.description-index {
+    line-height: 1.77em;
+    padding: 0;
+    margin: 0;
+    max-height: 100px;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    overflow: hidden;
 }

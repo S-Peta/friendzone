@@ -1,173 +1,59 @@
-.page-event {
-  // background-color: #212121;
-  min-height: 100vh;
-  // padding-top: 50px;
-  padding-bottom: 40px;
-
-  .upcoming-sec {
-    padding: 5vh 0;
-    border-bottom: 1px solid #ccc;
-
-    .heading {
-      font-size: 30px;
-      color: #fff;
-    }
-  }
-
-  .upcoming-event-list {
-    // color: #ccc;
-
-    .event-block {
-      padding: 20vh 0;
-      // border-bottom: 1px solid #ccc;
-
-      .sec-1,
-      .sec-2 {
-        padding-bottom: 3vh;
-      }
-
-      .sec-1 {
-        table {
-          .month {
-            text-transform: uppercase;
-            color: #db2d8e;
-            font-size: 30px;
-          }
-          .month-date-devider {
-            width: 5vh;
-            margin: 1vh 0;
-            background-color: #3cbfaf;
-            height: 5px;
-          }
-          .date {
-            font-size: 60px;
-            font-weight: bolder;
-            line-height: normal;
-          }
-          .title {
-            padding-left: 20px;
-            vertical-align: top;
-            font-size: 30px;
-          }
-        }
-      }
-
-      .sec-2 {
-        img {
-          width: 100%;
-        }
-      }
-
-      .sec-3 {
-        .title {
-          font-size: 30px;
-          padding-bottom: 2vh;
-        }
-        .venue {
-          table {
-            td {
-              vertical-align: top;
-
-              i {
-                color: #db2d8e;
-                padding-left: 3px;
-                padding-right: 10px;
-              }
-
-              .dim-color {
-                a {
-                  color: rgba(204, 204, 204, 0.30);
-                }
-              }
-            }
-          }
-        }
-        .time {
-          padding-bottom: 3vh;
-
-          table {
-            td {
-              vertical-align: top;
-
-              i {
-                color: #db2d8e;
-                padding-right: 10px;
-              }
-
-              .dim-color {
-                color: rgba(204, 204, 204, 0.30);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .page-heading {
-    text-transform: uppercase;
-    color: #fff;
-    padding-bottom: 17px;
-    word-break: break-all;
-    padding: 10px;
-  }
-
-  .page-heading::first-letter {
-    color: #db2d8e;
-  }
+body {
+  // background-image: url(https://img.freepik.com/vetores-premium/elemento-de-onda-abstrata-para-design-em-fundo-branco_213860-715.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.filter-show-page {
-  background-color: #db2d8e;
+.flex-container {
+  display: flex;
+  height: 700px;
 }
 
-@media (min-width: 992px) {
-  .upcoming-event-list {
-    .event-block {
-      .sec-1 {
-        table {
-          .title {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
+.show-product {
+  flex-basis: 50%;
+  overflow: hidden;
 }
 
-@media (max-width: 991px) {
-  .upcoming-event-list {
-    .event-block {
-      .sec-3 {
-        .title {
-          display: none;
-        }
-      }
-    }
-  }
+.show-product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px; /* Ajuste para arredondar os cantos superiores */
 }
 
-@media (max-width: 575px) {
-  .page-event {
-    .upcoming-event-list {
-      .event-block {
-        .sec-1 {
-          table {
-            .month {
-              font-size: 14px;
-            }
-            .date {
-              font-size: 36px;
-            }
-            .title {
-              padding-left: 20px;
-              font-size: 20px;
-              vertical-align: top;
-            }
-          }
-        }
-      }
-    }
-  }
+.event-details {
+  display: flex;
+  flex-basis: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ffffff; /* Altere para a cor branca desejada */
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-show {
+  margin-top: 20px;
+}
+
+
+.location-container {
+  display: flex;
+  align-items: center;
+}
+
+.location-container i {
+  margin-left: auto; /* Ajuste conforme necessário */
+}
+
+.date-show, .location-container {
+  margin: 0;
+}
+
+.btn-block {
+  width: 100%;
 }
