@@ -16,11 +16,12 @@ puts "Seeding events..."
 #Sao Paulo Events
 
 # Event 1
+# Event 1
 event1 = Event.create(
   name: "Samba Night at Bar Brahma",
   location: "Av. São João, 677 - Centro, São Paulo - SP",
   category: "Nightlife",
-  event_date: "12/12/2023",
+  event_date: Date.new(2023, 12, 10),
   period: "Night",
   user_id: user1.id
 )
@@ -30,7 +31,7 @@ event2 = Event.create(
   name: "Electro Dance Party at D-Edge",
   location: "Alameda Olga, 170 - Barra Funda, São Paulo - SP",
   category: "Nightlife",
-  event_date: "12/21/2023",
+  event_date: Date.new(2023, 12, 20),
   period: "Night",
   user_id: user3.id
 )
@@ -40,7 +41,7 @@ event3 = Event.create(
   name: "Live Music at Bourbon Street Music Club",
   location: "R. dos Chanés, 127 - Moema, São Paulo - SP",
   category: "Nightlife",
-  event_date: "12/30/2023",
+  event_date: Date.new(2023, 12, 30),
   period: "Night",
   user_id: user3.id
 )
@@ -50,7 +51,7 @@ event4 = Event.create(
   name: "Exhibition at Pinacoteca do Estado",
   location: "Praça da Luz, 2 - Luz, São Paulo - SP",
   category: "Visual Arts",
-  event_date: "12/07/2023",
+  event_date: Date.new(2023, 12, 7),
   period: "Afternoon",
   user_id: user2.id
 )
@@ -60,7 +61,7 @@ event5 = Event.create(
   name: "Street Art Tour in Vila Madalena",
   location: "Vila Madalena, São Paulo - SP",
   category: "Visual Arts",
-  event_date: "12/11/2023",
+  event_date: Date.new(2023, 12, 11),
   period: "Morning",
   user_id: user1.id
 )
@@ -70,7 +71,7 @@ event6 = Event.create(
   name: "Visit to MASP - Museu de Arte de São Paulo",
   location: "Av. Paulista, 1578 - Bela Vista, São Paulo - SP",
   category: "Visual Arts",
-  event_date: "12/29/2023",
+  event_date: Date.new(2023, 12, 29),
   period: "Afternoon",
   user_id: user2.id
 )
@@ -80,7 +81,7 @@ event7 = Event.create(
   name: "Football Match at Allianz Parque",
   location: "Av. Francisco Matarazzo, 1705 - Água Branca, São Paulo - SP",
   category: "Sports",
-  event_date: "12/11/2023",
+  event_date: Date.new(2023, 12, 11),
   period: "Night",
   user_id: user3.id
 )
@@ -90,7 +91,7 @@ event8 = Event.create(
   name: "Tennis Tournament at Clube Paineiras do Morumby",
   location: "Av. Dr. Alberto Penteado, 605 - Morumbi, São Paulo - SP",
   category: "Sports",
-  event_date: "12/15/2023",
+  event_date: Date.new(2023, 12, 15),
   period: "Afternoon",
   user_id: user1.id
 )
@@ -100,7 +101,7 @@ event9 = Event.create(
   name: "Running Marathon at Ibirapuera Park",
   location: "Av. Pedro Álvares Cabral - Vila Mariana, São Paulo - SP",
   category: "Sports",
-  event_date: "12/25/2023",
+  event_date: Date.new(2023, 12, 25),
   period: "Morning",
   user_id: user2.id
 )
@@ -110,7 +111,7 @@ event10 = Event.create(
   name: "Food Tasting at Mercado Municipal de São Paulo",
   location: "R. da Cantareira, 306 - Centro Histórico de São Paulo, São Paulo - SP",
   category: "Culinary",
-  event_date: "12/20/2023",
+  event_date: Date.new(2023, 12, 20),
   period: "Morning",
   user_id: user1.id
 )
@@ -120,7 +121,7 @@ event11 = Event.create(
   name: "Gastronomic Tour in Liberdade",
   location: "Liberdade, São Paulo - SP",
   category: "Culinary",
-  event_date: "12/23/2023",
+  event_date: Date.new(2023, 12, 23),
   period: "Afternoon",
   user_id: user3.id
 )
@@ -130,7 +131,7 @@ event12 = Event.create(
   name: "Dinner at Fogo de Chão",
   location: "Av. dos Bandeirantes, 538 - Vila Olímpia, São Paulo - SP",
   category: "Culinary",
-  event_date: "12/27/2023",
+  event_date: Date.new(2023, 12, 27),
   period: "Night",
   user_id: user2.id
 )
@@ -140,7 +141,7 @@ event13 = Event.create(
   name: "Zoo Day at Parque Zoologico de São Paulo",
   location: "Av. Miguel Estefno, 4241 - Água Funda, São Paulo - SP",
   category: "Outdoors",
-  event_date: "12/28/2023",
+  event_date: Date.new(2023, 12, 28),
   period: "Afternoon",
   user_id: user2.id
 )
@@ -150,7 +151,7 @@ event14 = Event.create(
   name: "Hiking at Pico do Jaraguá",
   location: "Pico do Jaraguá, São Paulo - SP",
   category: "Outdoors",
-  event_date: "12/30/2023",
+  event_date: Date.new(2023, 12, 30),
   period: "Morning",
   user_id: user1.id
 )
@@ -160,7 +161,7 @@ event15 = Event.create(
   name: "Cycling in Parque Ibirapuera",
   location: "Av. Pedro Álvares Cabral - Vila Mariana, São Paulo - SP",
   category: "Outdoors",
-  event_date: "12/31/2023",
+  event_date: Date.new(2023, 12, 31),
   period: "Afternoon",
   user_id: user3.id
 )
@@ -170,7 +171,7 @@ event16 = Event.create(
   name: "Theater Show at Theatro Municipal de São Paulo",
   location: "Praça Ramos de Azevedo, s/n - República, São Paulo - SP",
   category: "Cultural",
-  event_date: "12/10/2023",
+  event_date: Date.new(2023, 7, 10),
   period: "Morning",
   user_id: user1.id
 )
@@ -180,7 +181,7 @@ event17 = Event.create(
   name: "Cultural Fair at Praça da Sé",
   location: "Praça da Sé - Sé, São Paulo - SP",
   category: "Cultural",
-  event_date: "12/14/2023",
+  event_date: Date.new(2023, 12, 14),
   period: "Afternoon",
   user_id: user2.id
 )
@@ -190,7 +191,7 @@ event18 = Event.create(
   name: "Opera Night at Theatro Municipal de São Paulo",
   location: "Praça Ramos de Azevedo, s/n - República, São Paulo - SP",
   category: "Cultural",
-  event_date: "12/18/2023",
+  event_date: Date.new(2023, 12, 18),
   period: "Night",
   user_id: user3.id
 )
@@ -294,7 +295,7 @@ event19 = Event.create(
   name: "Samba Night at Rio Scenarium",
   location: "Rua do Lavradio, 20 - Centro, Rio de Janeiro - RJ",
   category: "Nightlife",
-  event_date: "12/12/2023",
+  event_date: Date.new(2023, 12, 12),
   period: "Night",
   user_id: user1.id
 )
@@ -304,7 +305,7 @@ event20 = Event.create(
   name: "Funky Party at Pedra do Sal",
   location: "Rua Argemiro Bulcão, 38 - Saúde, Rio de Janeiro - RJ",
   category: "Nightlife",
-  event_date: "12/21/2023",
+  event_date: Date.new(2023, 12, 21),
   period: "Night",
   user_id: user2.id
 )
@@ -314,7 +315,7 @@ event21 = Event.create(
   name: "Live Music at Carioca da Gema",
   location: "Av. Mem de Sá, 79 - Centro, Rio de Janeiro - RJ",
   category: "Nightlife",
-  event_date: "12/30/2023",
+  event_date: Date.new(2023, 12, 30),
   period: "Night",
   user_id: user3.id
 )
@@ -322,9 +323,9 @@ event21 = Event.create(
 # Event 22
 event22 = Event.create(
   name: "Art Gallery Tour in Santa Teresa",
-  location: "Santa Teresa, Rio de Janeiro - RJ",
+  location: "Praça Floriano, 7 - Centro, Rio de Janeiro - RJ",
   category: "Visual Arts",
-  event_date: "12/07/2023",
+  event_date: Date.new(2023, 12, 7),
   period: "Afternoon",
   user_id: user2.id
 )
@@ -334,7 +335,7 @@ event23 = Event.create(
   name: "Visit to CCBB - Centro Cultural Banco do Brasil",
   location: "Rua Primeiro de Março, 66 - Centro, Rio de Janeiro - RJ",
   category: "Visual Arts",
-  event_date: "12/11/2023",
+  event_date: Date.new(2023, 12, 11),
   period: "Morning",
   user_id: user1.id
 )
@@ -344,7 +345,7 @@ event24 = Event.create(
   name: "Street Art Exploration in Lapa",
   location: "Lapa, Rio de Janeiro - RJ",
   category: "Visual Arts",
-  event_date: "12/29/2023",
+  event_date: Date.new(2023, 12, 29),
   period: "Afternoon",
   user_id: user3.id
 )
@@ -354,7 +355,7 @@ event25 = Event.create(
   name: "Beach Volleyball at Copacabana",
   location: "Copacabana Beach, Rio de Janeiro - RJ",
   category: "Sports",
-  event_date: "12/11/2023",
+  event_date: Date.new(2023, 12, 11),
   period: "Morning",
   user_id: user3.id
 )
@@ -364,7 +365,7 @@ event26 = Event.create(
   name: "Surfing Day at Prainha",
   location: "Prainha, Rio de Janeiro - RJ",
   category: "Sports",
-  event_date: "12/15/2023",
+  event_date: Date.new(2023, 12, 15),
   period: "Afternoon",
   user_id: user1.id
 )
@@ -374,7 +375,7 @@ event27 = Event.create(
   name: "Soccer Match at Maracanã Stadium",
   location: "Av. Pres. Castelo Branco, Portão 3 - Maracanã, Rio de Janeiro - RJ",
   category: "Sports",
-  event_date: "12/25/2023",
+  event_date: Date.new(2023, 12, 25),
   period: "Night",
   user_id: user2.id
 )
@@ -384,7 +385,7 @@ event28 = Event.create(
   name: "Feijoada Experience at Casa da Feijoada",
   location: "Rua Prudente de Morais, 10 - Ipanema, Rio de Janeiro - RJ",
   category: "Culinary",
-  event_date: "12/20/2023",
+  event_date: Date.new(2023, 12, 20),
   period: "Morning",
   user_id: user1.id
 )
@@ -394,7 +395,7 @@ event29 = Event.create(
   name: "Seafood Dinner at Garota de Ipanema",
   location: "Rua Vinícius de Moraes, 49 - Ipanema, Rio de Janeiro - RJ",
   category: "Culinary",
-  event_date: "12/23/2023",
+  event_date: Date.new(2023, 12, 23),
   period: "Afternoon",
   user_id: user3.id
 )
@@ -404,7 +405,7 @@ event30 = Event.create(
   name: "Carioca Cuisine at Aprazível",
   location: "Rua Aprazível, 62 - Santa Teresa, Rio de Janeiro - RJ",
   category: "Culinary",
-  event_date: "12/27/2023",
+  event_date: Date.new(2023, 12, 27),
   period: "Night",
   user_id: user2.id
 )
@@ -414,7 +415,7 @@ event31 = Event.create(
   name: "Sugarloaf Mountain Hike",
   location: "Praia Vermelha, Rio de Janeiro - RJ",
   category: "Outdoors",
-  event_date: "12/28/2023",
+  event_date: Date.new(2023, 12, 28),
   period: "Afternoon",
   user_id: user2.id
 )
@@ -424,7 +425,7 @@ event32 = Event.create(
   name: "Hang Gliding at Pedra Bonita",
   location: "Estrada da Pedra Bonita, Rio de Janeiro - RJ",
   category: "Outdoors",
-  event_date: "12/30/2023",
+  event_date: Date.new(2023, 12, 30),
   period: "Morning",
   user_id: user1.id
 )
@@ -434,7 +435,7 @@ event33 = Event.create(
   name: "Biking in Parque Lage",
   location: "Rua Jardim Botânico, 414 - Jardim Botânico, Rio de Janeiro - RJ",
   category: "Outdoors",
-  event_date: "12/31/2023",
+  event_date: Date.new(2023, 12, 31),
   period: "Afternoon",
   user_id: user3.id
 )
@@ -444,7 +445,7 @@ event34 = Event.create(
   name: "Theater Play at Teatro Municipal do Rio de Janeiro",
   location: "Praça Floriano, S/N - Centro, Rio de Janeiro - RJ",
   category: "Cultural",
-  event_date: "12/10/2023",
+  event_date: Date.new(2023, 12, 10),
   period: "Morning",
   user_id: user1.id
 )
@@ -454,7 +455,7 @@ event35 = Event.create(
   name: "Rio Carnival Experience at Sambadrome",
   location: "Passarela do Samba Prof. Darcy Ribeiro, Rio de Janeiro - RJ",
   category: "Cultural",
-  event_date: "12/14/2023",
+  event_date: Date.new(2023, 12, 14),
   period: "Afternoon",
   user_id: user2.id
 )
@@ -464,7 +465,7 @@ event36 = Event.create(
   name: "Opera Night at Theatro Municipal do Rio de Janeiro",
   location: "Praça Floriano, S/N - Centro, Rio de Janeiro - RJ",
   category: "Cultural",
-  event_date: "12/18/2023",
+  event_date: Date.new(2023, 12, 18),
   period: "Night",
   user_id: user3.id
 )
