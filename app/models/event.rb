@@ -18,6 +18,13 @@ class Event < ApplicationRecord
   validates :event_date, presence: true
   validates :photo, presence: true
 
+  include PgSearch::Model
+    pg_search_scope :search_by_name,
+      against: [:name],
+      using: {
+        tsearch: { prefix: true }
+      }
+
   private
 
   def insert_owner_in_participants
