@@ -43,6 +43,7 @@ class EventsController < ApplicationController
     @events = current_user.events.all
   end
 
+
   def filter
     @events = Event.all
     @fixed = true

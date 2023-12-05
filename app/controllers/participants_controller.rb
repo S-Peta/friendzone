@@ -15,4 +15,8 @@ class ParticipantsController < ApplicationController
     @participant.destroy
     redirect_to events_path, status: :see_other
   end
+
+  def index
+    @events = current_user.event_participants # eventos que sou participante
+  end
 end
