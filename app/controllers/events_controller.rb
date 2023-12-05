@@ -48,6 +48,14 @@ class EventsController < ApplicationController
     @fixed = true
     # usar ajax em cada filtro ?
 
+    if params[:name].present?
+      @events = Event.search_by_name(params[:name])
+      
+
+      # PGSearch com ilike
+    end
+
+
     if params[:category].present?
       categories = params[:category].split('&')
       @events = @events.where(category: categories)
@@ -64,11 +72,7 @@ class EventsController < ApplicationController
       @events = @events.where(period: periods)
     end
 
-    if params[:name].present?
-      @events = @events.where(name: params[:name])
 
-      # PGSearch com ilike
-    end
 
     if params[:location].present?
       @events = @events.near(params[:location], (params[:distance].present? ? params[:distance] : 10), unit: :km)

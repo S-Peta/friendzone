@@ -16,4 +16,12 @@ class Event < ApplicationRecord
   validates :location, presence: true
   validates :event_date, presence: true
   validates :photo, presence: true
+
+  include PgSearch::Model
+    pg_search_scope :search_by_name,
+      against: [:name],
+      using: {
+        tsearch: { prefix: true }
+      }
+
 end
