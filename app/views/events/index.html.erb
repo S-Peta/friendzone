@@ -5,8 +5,8 @@
       <h3>Find your people!!!</h3>
       <hr>
       <%= form_with url: filter_events_path, method: :get, class: "d-flex flex-column" do %>
-      <%= text_field_tag :query,
-            params[:query],
+      <%= text_field_tag :name,
+            params[:name],
             class: "form-control",
             style: "width: 300px",
             placeholder: "Type a keyword"

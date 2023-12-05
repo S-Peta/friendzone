@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :events, dependent: :destroy
   has_one_attached :photo
+  has_many :participants, dependent: :destroy
+  has_many :event_participants, through: :participants, source: 'event'
 
 
   devise :database_authenticatable, :registerable,

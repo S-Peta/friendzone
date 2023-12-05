@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+
+
+
   resources :events, only: %i[new create index show delete] do
     get "chat", to: "events#chat"
     resources :messages, only: %i[new create]
@@ -16,4 +19,6 @@ Rails.application.routes.draw do
   end
 
   resources :participants, only: %i[destroy]
+
+  get "participants", to: "participants#index"
 end

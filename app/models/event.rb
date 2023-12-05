@@ -3,6 +3,7 @@ class Event < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :participants, dependent: :destroy
   has_one_attached :photo
+  after_create :insert_owner_in_participants
 
   PERIOD = ['Morning', 'Afternoon', 'Night']
   CATEGORY = ['Nightlife', 'Visual Arts', 'Sports', 'Culinary', 'Sightseeing', 'Cultural', 'Outdoors']
@@ -16,4 +17,17 @@ class Event < ApplicationRecord
   validates :location, presence: true
   validates :event_date, presence: true
   validates :photo, presence: true
+
+  include PgSearch::Model
+    pg_search_scope :search_by_name,
+      against: [:name],
+      using: {
+        tsearch: { prefix: true }
+      }
+
+  private
+
+  def insert_owner_in_participants
+    Participant.create(event: self, user: user)
+  end
 end
