@@ -1,31 +1,9 @@
-<div class="message row">
-  <div class="col-3 border-end">
-    <p><strong><%= message.user.email %></strong></p>
+<li class="<%= message.id.even? ? 'even' : 'odd' %>">
+  <div class="name">
+    <span class=""><%= message.user.nickname %></span>
   </div>
-  <div class="col-9">
+  <div class="message">
     <p><%= message.content %></p>
+    <span class="msg-time"><%= message.created_at&.strftime("%l:%M %p") %></span>
   </div>
-</div>
-
-
-
-<div class="chat-list">
-  <div class="messages">
-    <ul class="ul-chat">
-      <% @event.messages.each_with_index do |message, index| %>
-        <li class="<%= message.user == current_user ? 'me' : '' %>" style="background-color: <%= index.even? ? 'rgb(255, 255, 255)' : '#f6fbee' %>;">
-          <div class="name">
-            <span class=""><%= message.user.nickname %></span>
-          </div>
-          <div class="message">
-            <p><%= message.content %></p>
-            <span class="msg-time"><%= message.created_at.strftime("%l:%M %p") %></span>
-          </div>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
-
-
+</li>

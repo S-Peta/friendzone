@@ -10,7 +10,11 @@ class MessagesController < ApplicationController
     @message.user = current_user
 
     if @message.save
-      broadcast_message
+      EventChannel.broadcast_to(
+        @event,
+        render_to_string(partial: "message", locals: {message: @message})
+      )
+      head :ok
     else
       render "events/show", status: :unprocessable_entity
     end
@@ -22,14 +26,4 @@ class MessagesController < ApplicationController
     params.require(:message).permit(:content)
   end
 
-  def broadcast_message
-    # Utilize o Turbo Streams para enviar a mensagem para os clientes
-    turbo_stream.append(
-      @event,
-      target: "messages",
-      position: "beforeend",
-      partial: "messages/message",
-      locals: { message: @message }
-    )
-  end
 end

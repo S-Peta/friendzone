@@ -7,6 +7,8 @@ export default class extends Controller {
   static targets = ["messages"]
 
   connect() {
+    // console.log("controller conectado");
+    // console.log(this.eventIdValue);
     this.channel = createConsumer().subscriptions.create(
       { channel:"EventChannel", id: this.eventIdValue },
       { received: data => this.#insertMessageAndScrollDown(data) }
@@ -14,12 +16,13 @@ export default class extends Controller {
   }
 
   #insertMessageAndScrollDown(data){
+    console.log(data);
     this.messagesTarget.insertAdjacentHTML("beforeend", data)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
   }
 
   resetForm(event) {
     event.target.reset()
-    Turbo.visit(window.location.href, { action: "replace" });
+    // Turbo.visit(window.location.href, { action: "replace" });
   }
 }
