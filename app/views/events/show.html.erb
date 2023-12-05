@@ -7,12 +7,15 @@
         <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGV2ZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"/>
       <% end %>
     </div>
-    <div class="form-wrapper event-details">
-      <h1 class="form-title"><%= @event.name %></h1>
-      <h4 class="form-title"><%= @event.location %></h4>
-      <h4 class="form-title"><%= @event.event_date %></h4>
+    <div class="event-details">
+      <p class="text-center date"><%= @event.event_date %></p>
+      <h1 class="text-center title"><%= @event.name %></h1>
+      <div class="location-container">
+        <i class="fa fa-map-marker"></i>
+        <p class="text-center"><%= @event.location %></p>
+      </div>
       <%= simple_form_for [@event, @participant] do |f| %>
-        <%= f.submit 'Join this event', class: "btn btn-primary mt-3" %>
+        <%= f.submit 'Join this event', class: "btn friend-btn btn-light btn-block" %>
       <% end %>
     </div>
   </div>

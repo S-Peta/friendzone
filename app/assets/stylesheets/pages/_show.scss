@@ -17,13 +17,39 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px; /* Ajuste para arredondar os cantos superiores */
 }
 
 .event-details {
+  display: flex;
   flex-basis: 50%;
   padding: 20px;
   box-sizing: border-box;
-  background-color: #f5f5f5;
+  background-color: #ffffff; /* Altere para a cor branca desejada */
   border-radius: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-top: 0;
+}
+
+
+.location-container {
+  display: flex;
+  align-items: center;
+}
+
+.location-container i {
+  margin-right: 5px; /* Ajuste conforme necessário */
+}
+
+.date, .location {
+  margin: 0;
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 30px;
 }

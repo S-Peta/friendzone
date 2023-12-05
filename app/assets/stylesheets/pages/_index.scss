@@ -61,7 +61,20 @@
   overflow-x: auto;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  position: relative;
 }
+
+// .cards-city::after {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 100px; /* Ajuste a largura conforme necessário */
+//   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+//   pointer-events: none;
+//   z-index: 1; /* Certifique-se de que o degradê tem um z-index maior do que os cards para que fique na frente deles */
+// }
 
 .cards-city::-webkit-scrollbar {
   display: none;
