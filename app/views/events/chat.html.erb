@@ -1,136 +1,127 @@
 <body class="chat">
-<div class="window-wrapper">
-
-		<div class="window-area">
-			<div class="conversation-list">
-				<ul class="ul-chat">
-					<li class="item active"><a href="#"><i class="fa fa-list-alt"></i><span>Friends chat</span></a></li>
-            <li><a href="#"><i class="fas fa-crown" style="color: yellow;"></i><i class="fa fa-circle-o online"></i></i><span><%= @event.user.nickname %></span><i class="fa fa-times"></i></a></li>
-          <% @participant.each do |p|%>
-            <li><a href="#"><i class="fa fa-circle-o online"></i><i class="fa fa-user"></i><span><%= p.user.nickname %></span><i class="fa fa-times"></i></a></li>
-          <% end %>
-				</ul>
-
-
-
-				<div class="my-account">
-					<div class="image">
-						<img src="https://secure.gravatar.com/avatar/de76e03aa6b5b0bf675c1e8a990da52f?s=64">
-						<i class="fa fa-circle online"></i>
-					</div>
-					<div class="name">
-						<span><%= current_user.first_name.capitalize %></span>
-						<i class="fa fa-angle-down"></i>
-						<span class="availability">Available</span>
-					</div>
-
-				</div>
-			</div>
-
-			<div class="chat-area">
-				<div class="title text-center"><b><%= @event.name %></b></div>
-
-      <div class="chat-list">
-        <div class="messages">
+  <div class="row h-75">
+  <%# chat-list %>
+    <div class="col-2">
+        <div class="conversation-list">
           <ul class="ul-chat">
-            <% @event.messages.each_with_index do |message, index| %>
-              <li class="<%= index.even? ? 'even' : 'odd' %>">
-                <div class="name">
-                  <span class=""><%= message.user.nickname %></span>
-                </div>
-                <div class="message">
-                  <p><%= message.content %></p>
-                  <span class="msg-time"><%= message.created_at&.strftime("%l:%M %p") %></span>
-                </div>
-              </li>
+            <li class="item active"><a href="#"><i class="fa fa-list-alt"></i><span>Friends chat</span></a></li>
+              <li><a href="#"><i class="fas fa-crown" style="color: yellow;"></i></i><span><%= @event.user.nickname %></span></a></li>
+            <% @participant.each do |p|%>
+              <li><a href="#"><i class="fa fa-circle-o online"></i><i class="fa fa-user"></i><span><%= p.user.nickname %></span></a></li>
             <% end %>
           </ul>
-        </div>
-      </div>
-
-
-<div class="input-area">
-  <div class="input-wrapper">
-    <%= simple_form_for [@event, @message],
-      html: { data: { action: "turbo:submit-end->event-subscription#resetForm" }, class: "d-flex" } do |f| %>
-      <%= f.input :content,
-        label: false,
-        placeholder: "Type a message",
-        wrapper_html: { class: "flex-grow-1" } %>
-      <i class="fa fa-smile-o"></i>
-      <i class="fa fa-paperclip"></i>
-      <%= f.button :submit, "Send", class: "send-btn" %>
-    <% end %>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-			</div>
-			<div class="right-tabs">
-
-              <div class="container event-row">
-              <h5 class="justified-text"><%= @event.name %></h5>
-              <h6><%= @event.event_date&.strftime("%B %d - %Y") %></h6>
-              <p><%= @event.period %></p>
-              <p><%= @event.location %></p>
-              <p><%= cl_image_tag @event.photo.key, width: 120, crop: :fill, gravity: :center %></p>
-              <%= link_to 'Leave this event', events_path  %>
+          <div class="my-account">
+            <div class="image">
+              <img src="https://secure.gravatar.com/avatar/de76e03aa6b5b0bf675c1e8a990da52f?s=64">
+              <i class="fa fa-circle online"></i>
             </div>
-
-            <div style="width: 100%; height: 200px;"
-              data-controller="map"
-              data-map-markers-value="<%= @markers.to_json %>"
-              data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            <div class="name">
+              <span><%= current_user.first_name.capitalize %></span>
+              <i class="fa fa-angle-down"></i>
+              <span class="availability">Available</span>
             </div>
 
           </div>
-			</div>
-		</div>
-	</div>
+        </div>
+    </div>
+
+  <%# chat área %>
+    <div class="col-7">
+      <div class="chat-area">
+        <div class="title text-center"><b><%= @event.name %></b></div>
+        <div>
+          <div class="chat-list">
+            <div class="messages">
+              <ul class="ul-chat">
+                <% @event.messages.each_with_index do |message, index| %>
+                  <li class="<%= index.even? ? 'even' : 'odd' %>">
+                    <div class="name">
+                      <span class=""><%= message.user.nickname %></span>
+                    </div>
+                    <div class="message">
+                      <p><%= message.content %></p>
+                      <span class="msg-time"><%= message.created_at&.strftime("%l:%M %p") %></span>
+                    </div>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+          <div class="input-area">
+            <div class="input-wrapper">
+              <%= simple_form_for [@event, @message],
+                html: { data: { action: "turbo:submit-end->event-subscription#resetForm" }, class: "d-flex" } do |f| %>
+                <%= f.input :content,
+                  label: false,
+                  placeholder: "Type a message",
+                  wrapper_html: { class: "flex-grow-1" } %>
+                <i class="fa fa-smile-o"></i>
+                <i class="fa fa-paperclip"></i>
+                <%= f.button :submit, "Send", class: "send-btn" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <%# barra lateral direita %>
+    <div class="col-3">
+      <div class="right-tabs">
+        <div class="container event-row">
+          <h5 class="justified-text"><%= @event.name %></h5>
+          <h6><%= @event.event_date&.strftime("%B %d - %Y") %></h6>
+          <p><%= @event.period %></p>
+          <p><%= @event.location %></p>
+          <p><%= cl_image_tag @event.photo.key, width: 120, crop: :fill, gravity: :center %></p>
+          <%= link_to 'Leave this event', events_path  %>
+        </div>
+
+        <div style="width: 100%; height: 200px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-  <!-- Seu código JavaScript -->
-<script>
-  $(function(){
-    var chatList = $('.chat-area > .chat-list');
+    <!-- Seu código JavaScript -->
+  <script>
+    $(function(){
+      var chatList = $('.chat-area > .chat-list');
 
-    // Inicialize o jScrollPane
-    chatList.jScrollPane({
-      mouseWheelSpeed: 30
+      // Inicialize o jScrollPane
+      chatList.jScrollPane({
+        mouseWheelSpeed: 30
+      });
+
+      // Função para rolar até o final
+      function scrollToBottom() {
+        chatList.data('jsp').scrollToBottom();
+      }
+
+      // Exemplo de como você poderia usar isso após enviar uma mensagem
+      $('#new_message').on('ajax:success', function(event) {
+        // Lógica para enviar a mensagem aqui
+        // ...
+
+        // Após enviar a mensagem com sucesso, role até o final
+        scrollToBottom();
+      });
     });
+  </script>
 
-    // Função para rolar até o final
-    function scrollToBottom() {
-      chatList.data('jsp').scrollToBottom();
-    }
+  <script>
+    document.addEventListener('turbo:load', function() {
+      // Este evento será acionado sempre que houver uma atualização do Turbo Streams
 
-    // Exemplo de como você poderia usar isso após enviar uma mensagem
-    $('#new_message').on('ajax:success', function(event) {
-      // Lógica para enviar a mensagem aqui
-      // ...
-
-      // Após enviar a mensagem com sucesso, role até o final
-      scrollToBottom();
+      // Rola até o final após cada atualização do Turbo Streams
+      var chatList = document.querySelector('.chat-area > .chat-list');
+      chatList.scrollTop = chatList.scrollHeight;
     });
-  });
-</script>
-
-<script>
-  document.addEventListener('turbo:load', function() {
-    // Este evento será acionado sempre que houver uma atualização do Turbo Streams
-
-    // Rola até o final após cada atualização do Turbo Streams
-    var chatList = document.querySelector('.chat-area > .chat-list');
-    chatList.scrollTop = chatList.scrollHeight;
-  });
-</script>
+  </script>
 
 </body>
