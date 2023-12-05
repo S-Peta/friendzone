@@ -14,8 +14,8 @@ puts "Seeding events..."
 
 
 event1 = Event.create(name: "Stroll in Ibirapuera Park", location: "Av. Pedro Álvares Cabral - Vila Mariana, São Paulo - SP, 04094-050", category: "Outdoors", event_date: "12/12/2023", period: "Morning", user_id: user1.id)
-event2 = Event.create(name: "See the Memorial of Latin America", location: "Av. Mário de Andrade, 664 - Barra Funda, São Paulo - SP, 01156-001",  category: "Historic",event_date: "12/07/2023", period:  "Afternoon", user_id: user2.id)
-event3 = Event.create(name: "Checkout Beco do Batman", location: "R. Medeiros de Albuquerque, 82-154 - Jardim das Bandeiras, São Paulo - SP, 05436-060",  category: "Nightlife", event_date: "12/22/2023", period: "Night" , user_id: user3.id)
+event2 = Event.create(name: "See the Memorial of Latin America", location: "Av. Mário de Andrade, 664 - Barra Funda, São Paulo - SP, 01156-001", category: "Historic", event_date: "12/07/2023", period:  "Afternoon", user_id: user2.id)
+event3 = Event.create(name: "Checkout Beco do Batman", location: "R. Medeiros de Albuquerque, 82-154 - Jardim das Bandeiras, São Paulo - SP, 05436-060", category: "Nightlife", event_date: "12/21/2023", period: "Night" , user_id: user3.id)
 event4 = Event.create(name: "See the Museum of Futebol", location: "Praça Charles Miller, s/n - Pacaembu, São Paulo - SP, 01234-010",  category: "Perfoming & Visual Arts", event_date: "12/11/2023", period: "Morning", user_id: user1.id)
 event5 = Event.create(name: "Checkout the Zoo of Sao Paulo", location: "Av. Miguel Estefno, 4241 - Água Funda, São Paulo - SP, 04301-905",  category: "Outdoors", event_date: "12/28/2023", period: "Afternoon", user_id: user2.id)
 event6 = Event.create(name: "Watch a game at Allianz Park", location: "Avenida Francisco Matarazzo, 1705, R. Palestra Itália, 200 - Água Branca, São Paulo - SP, 05001-200",  category: "Sports", event_date: "12/11/2023", period: "Night" , user_id: user3.id)
