@@ -115,11 +115,11 @@
   <div class="pack-grid">
     <% @events.each do |event| %>
       <div class="event-card">
-         <% if event.photo.attached? %>
-           <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
-         <% else %>
-           <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
-         <% end %>
+        <% if event.photo.attached? %>
+          <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
+        <% else %>
+          <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
+        <% end %>
         <div class="card-info text-center">
           <h4><%= event.name %></h4>
           <p><%= event.event_date %></p>
@@ -131,5 +131,22 @@
         </div>
       </div>
     <% end %>
+  </div>
+</div>
+
+<div class="flex-row">
+  <div class="card-index">
+    <div class="head-card shimmer">
+      <span class="rate"><i class="far fa-star" aria-hidden="true"></i> 4.5/5 (50)</span>
+    </div>
+    <div class="img-mask">
+      <img src="https://www.visitdubai.com/-/media/gathercontent/poi/k/kite-beach/fallback-image/kite-beach-by-meraas-poi-shutterstock-v4.jpg" alt="">
+    </div>
+    <div class="card-content-index">
+      <div class="card-header">
+        <h2 class="title-index">Lorem ipsumsssssssssssss</h2>
+      </div>
+      <p class="description-index">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A eos cupiditate in eum vero porro rerum nihil, architecto exercitationem, aspernatur expedita similique.</p>
+    </div>
   </div>
 </div>

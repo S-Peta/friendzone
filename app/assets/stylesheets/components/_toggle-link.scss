@@ -14,7 +14,7 @@
 
   &:hover {
     background-color: #cee2ce; /* Cor de fundo um pouco mais escura ao passar o mouse */
-    color: #6c826d; /* Cor do texto branco ao passar o mouse */
+    color: #4e8d51; /* Cor do texto branco ao passar o mouse */
   }
 }
 
@@ -25,6 +25,6 @@
 .toggle-link-active {
   @extend .toggle-link;
   background-color: #cee2ce !important;
-  color: #6c826d !important;
-  border: 1px solid #6c826d !important;
+  color: #4e8d51 !important;
+  border: 1px solid #4e8d51 !important;
 }
