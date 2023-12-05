@@ -1,10 +1,12 @@
 .dementiawalk {
   display: inline-flex;
-    height: 230px;
+  height: 230px;
   width: 500px;
   position: relative;
   margin: 15px;
   font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: {
     webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -37,11 +39,12 @@ line-height: 80px;
   font-size: 58px;
 }
 
-.date {
+.date-user {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   background: #FFFFFF99;
+  border-radius: 3px;
 	position: relative;
   padding: 10px 10px 10px 10px;
   text-align: center;
@@ -52,9 +55,10 @@ line-height: 80px;
   color:black;
 }
 
-.description {
+.description-user {
   text-align: center;
   background: white;
+  border-radius: 3px;
   opacity: 0.8;
   padding: 0px;
   margin: 15px;
@@ -66,10 +70,11 @@ line-height: 80px;
   text-align: center;
   padding: 6px;
   background: white;
+  border-radius: 3px;
   opacity: 0.8;
   flex-grow: 1;
   font-size: 20px;
-  color: #B28437;
+  color: #6c826d;
   margin: 15px;
 }
 
@@ -81,11 +86,14 @@ line-height: 80px;
 
 .bookingbutton {
   text-align: center;
-  background: rgb(178,132,55);
+  background: #6c826d;
   color:white;
   padding:2px;
   margin: 15px;
   height: 22.5px;
-  width: 100%;
   text-decoration: none;
+}
+
+.bookingbutton a {
+  width: 100%;
 }
