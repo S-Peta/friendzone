@@ -56,13 +56,29 @@
   </div>
 </div>
 
+###
 
-<%# <ul class="chat-thread">
-	<li>Are we meeting today?</li>
-	<li>yes, what time suits you?</li>
-	<li>I was thinking after lunch, I have a meeting in the morning</li>
-</ul>
+<div class="chat-list">
 
-<form class="chat-window">
-	<input class="chat-window-message" name="chat-window-message" type="text" autocomplete="off" autofocus />
-</form> %>
+<ul class="ul-chat">
+  <li class="me">
+    <div class="name">
+      <span class="">Cucu Ionel</span>
+    </div>
+
+    <div class="message">
+      <p>Hey, do you like the new interface? It's done with Font Awesome.</p>
+      <span class="msg-time">5:00 pm</span>
+    </div>
+  </li>
+
+  <li class="">
+    <div class="name">
+      <span class="">Christian Smith</span>
+    </div>
+    <div class="message">
+      <p><span class="blue-label">Cucu Ionel</span> I see what you did there.</p>
+      <span class="msg-time">5:01 pm</span>
+    </div>
+  </li>
+
