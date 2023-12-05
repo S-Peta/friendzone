@@ -471,91 +471,91 @@ event36 = Event.create(
 
 
 # Event 19
-file19 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file19 = URI.open("https://images.unsplash.com/photo-1563980337510-bfdd2649a4bc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2FtYmF8ZW58MHx8MHx8fDI%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event19.photo.attach(io: file19, filename: "19.png", content_type: "image/png")
 event19.save
 
 # Event 20
-file20 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file20 = URI.open("https://images.unsplash.com/photo-1572148633314-0550e55cb6c4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHN0cmVldCUyMGJhcnxlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event20.photo.attach(io: file20, filename: "20.png", content_type: "image/png")
 event20.save
 
 # Event 21
-file21 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file21 = URI.open("https://images.unsplash.com/photo-1526749464606-83091e34a261?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxpdmUlMjBtdXNpY3xlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event21.photo.attach(io: file21, filename: "21.png", content_type: "image/png")
 event21.save
 
 # Event 22
-file22 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file22 = URI.open("https://images.unsplash.com/photo-1619226860903-e69df46e3e20?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2FudGElMjB0ZXJlc2ElMjByaW8lMjBkZSUyMGphbmVpcm98ZW58MHx8MHx8fDI%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event22.photo.attach(io: file22, filename: "22.png", content_type: "image/png")
 event22.save
 
 # Event 23
-file23 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file23 = URI.open("https://images.unsplash.com/photo-1665365465070-547bcdd5aa1b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q0NCQnxlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event23.photo.attach(io: file23, filename: "23.png", content_type: "image/png")
 event23.save
 
 # Event 24
-file24 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file24 = URI.open("https://images.unsplash.com/photo-1693498171657-abc317e7c136?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGxhcGF8ZW58MHx8MHx8fDI%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event24.photo.attach(io: file24, filename: "24.png", content_type: "image/png")
 event24.save
 
 # Event 25
-file25 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file25 = URI.open("https://images.unsplash.com/photo-1521138054413-5a47d349b7af?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dm9sbGV5YmFsbHxlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event25.photo.attach(io: file25, filename: "25.png", content_type: "image/png")
 event25.save
 
 # Event 26
-file26 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file26 = URI.open("https://images.unsplash.com/photo-1513737567531-bc431c8e5e85?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHN1cmYlMjBhcnBvYWRvcnxlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event26.photo.attach(io: file26, filename: "26.png", content_type: "image/png")
 event26.save
 
 # Event 27
-file27 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file27 = URI.open("https://c0.wallpaperflare.com/preview/929/352/977/football-brasil-brazil-rio-de-janiero.jpg")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event27.photo.attach(io: file27, filename: "27.png", content_type: "image/png")
 event27.save
 
 # Event 28
-file28 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file28 = URI.open("https://c0.wallpaperflare.com/preview/725/541/270/brazil-state-of-rio-de-janeiro-baixa-gastronomia-food.jpg")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event28.photo.attach(io: file28, filename: "28.png", content_type: "image/png")
 event28.save
 
 # Event 29
-file29 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file29 = URI.open("https://images.unsplash.com/photo-1579783411194-f697db862dcd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2VhZm9vZHxlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event29.photo.attach(io: file29, filename: "29.png", content_type: "image/png")
 event29.save
 
 # Event 30
-file30 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file30 = URI.open("https://images.unsplash.com/photo-1571167366136-b57e07761625?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFNlYWZvb2R8ZW58MHx8MHx8fDI%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event30.photo.attach(io: file30, filename: "30.png", content_type: "image/png")
 event30.save
 
 # Event 31
-file31 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file31 = URI.open("https://images.unsplash.com/photo-1627218369827-c6c7e2a71d80?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8U3VnYXJsb2FmfGVufDB8fDB8fHwy")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event31.photo.attach(io: file31, filename: "31.png", content_type: "image/png")
 event31.save
 
 # Event 32
-file32 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file32 = URI.open("https://images.unsplash.com/photo-1656858131382-a83ed0d1a760?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fEhhbmclMjBHbGlkaW5nJTIwcmlvfGVufDB8fDB8fHwy")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event32.photo.attach(io: file32, filename: "32.png", content_type: "image/png")
 event32.save
 
 # Event 33
-file33 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file33 = URI.open("https://images.unsplash.com/photo-1660699944953-7fa97cd88ea0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UGFycXVlJTIwTGFnZXxlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event33.photo.attach(io: file33, filename: "33.png", content_type: "image/png")
 event33.save
 
 # Event 34
-file34 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file34 = URI.open("https://images.unsplash.com/photo-1658700202493-b94659349fd8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGhlYXRlciUyMHJpb3xlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event34.photo.attach(io: file34, filename: "34.png", content_type: "image/png")
 event34.save
 
 # Event 35
-file35 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file35 = URI.open("https://images.unsplash.com/photo-1680442302920-6b5703538aa0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fFNhbWJhfGVufDB8fDB8fHwy")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event35.photo.attach(io: file35, filename: "35.png", content_type: "image/png")
 event35.save
 
 # Event 36
-file36 = URI.open("DIRECT_LINK_TO_IMAGE")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+file36 = URI.open("https://images.unsplash.com/photo-1665320136996-b66570e5f53a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIwfHxPcGVyYXxlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event36.photo.attach(io: file36, filename: "36.png", content_type: "image/png")
 event36.save
