@@ -5,7 +5,7 @@ class Event < ApplicationRecord
   has_one_attached :photo
 
   PERIOD = ['Morning', 'Afternoon', 'Night']
-  CATEGORY = ['Nightlife', 'Visual Arts', 'Sports', 'Culinary', 'Sightseeing', 'Religious', 'Outdoors']
+  CATEGORY = ['Nightlife', 'Visual Arts', 'Sports', 'Culinary', 'Sightseeing', 'Cultural', 'Outdoors']
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?

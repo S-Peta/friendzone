@@ -21,7 +21,7 @@
   <div class="cards-city">
     <div class="card-2" style="background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/fe/64/8d/masp-en-la-avenida-paulista.jpg?w=1200&h=1200&s=1);">
       <div class="card-content2">
-        <h4 class="card-title">Sao Paulo</h4>
+        <h4 class="card-title">São Paulo</h4>
         <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo quisquam totam minima non maxime ipsum laboriosam magnam tenetur consectetur modi possimus, suscipit nisi quis, impedit neque fugit. Harum, error?</p>
       </div>
     </div>
@@ -35,7 +35,7 @@
 
     <div class="card-2" style="background-image: url(https://cdn.panrotas.com.br/portal-panrotas-statics/media-files-cache/303528/83cbacbd1c82d803f372ae5bc6ffca7flucabravotack3nspye0unsplash/0,94,2560,1528/1206,720,0.20/0/default.jpg);">
       <div class="card-content2">
-        <h4 class="card-title">Nova York</h4>
+        <h4 class="card-title">New York</h4>
         <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo quisquam totam minima non maxime ipsum laboriosam magnam tenetur consectetur modi possimus, suscipit nisi quis, impedit neque fugit. Harum, error?</p>
       </div>
     </div>
@@ -84,24 +84,11 @@
 
     <div class="card-2" style="background-image: url(https://www.gotokyo.org/es/plan/tokyo-outline/images/main.jpg);">
       <div class="card-content2">
-        <h4 class="card-title">Dublin</h4>
-        <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo quisquam totam minima non maxime ipsum laboriosam magnam tenetur consectetur modi possimus, suscipit nisi quis, impedit neque fugit. Harum, error?</p>
-      </div>
-    </div>
-
-    <div class="card-2" style="background-image: url(https://www.gotokyo.org/es/plan/tokyo-outline/images/main.jpg);">
-      <div class="card-content2">
         <h4 class="card-title">Las vegas</h4>
         <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo quisquam totam minima non maxime ipsum laboriosam magnam tenetur consectetur modi possimus, suscipit nisi quis, impedit neque fugit. Harum, error?</p>
       </div>
     </div>
 
-    <div class="card-2" style="background-image: url(https://www.gotokyo.org/es/plan/tokyo-outline/images/main.jpg);">
-      <div class="card-content2">
-        <h4 class="card-title">Boston</h4>
-        <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid explicabo quisquam totam minima non maxime ipsum laboriosam magnam tenetur consectetur modi possimus, suscipit nisi quis, impedit neque fugit. Harum, error?</p>
-      </div>
-    </div>
   </div>
 </div>
 
@@ -111,33 +98,43 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="pack-grid">
-    <% @events.each do |event| %>
-      <div class="event-card">
-        <% if event.photo.attached? %>
-          <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
-        <% else %>
-          <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
-        <% end %>
-        <div class="card-info text-center">
-          <h4><%= event.name %></h4>
-          <p><%= event.event_date %></p>
-          <% if event.user == current_user %>
-            <h4><%= link_to 'Details', event_chat_path(event), class: 'custom-btn friend-btn' %></h4>
-          <% else %>
-            <h4><%= link_to 'Details', event_path(event), class: 'custom-btn friend-btn' %></h4>
-          <% end %>
-        </div>
+<div class="flex-row container pack-grid">
+  <% @events.each do |event| %>
+    <div class="card-index event-card">
+      <div class="head-card shimmer">
+        <!-- You can modify this part based on your requirements -->
+        <span class="rate">4.5/5</span>
       </div>
-    <% end %>
-  </div>
+      <div class="img-mask">
+        <% if event.photo.attached? %>
+          <%= cl_image_tag event.photo.key, alt: event.name %>
+        <% else %>
+          <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg" alt="">
+        <% end %>
+      </div>
+      <div class="card-content-index">
+        <div class="card-header">
+          <h2 class="title-index"><%= event.name %></h2>
+        </div>
+        <p class="description-index"><%= event.event_date %></p>
+        <% if event.user == current_user %>
+          <h4 class="description-index"><%= link_to 'Details', event_chat_path(event), class: 'custom-btn friend-btn' %></h4>
+        <% else %>
+          <h4 class="description-index"><%= link_to 'Details', event_path(event), class: 'custom-btn friend-btn' %></h4>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>
+
+
+
+------------------------------------------------------------------------------------------------------------------
 
 <div class="flex-row">
   <div class="card-index">
     <div class="head-card shimmer">
-      <span class="rate"><i class="far fa-star" aria-hidden="true"></i> 4.5/5 (50)</span>
+      <span class="rate">3/5</span>
     </div>
     <div class="img-mask">
       <img src="https://www.visitdubai.com/-/media/gathercontent/poi/k/kite-beach/fallback-image/kite-beach-by-meraas-poi-shutterstock-v4.jpg" alt="">
