@@ -6,7 +6,7 @@ class Event < ApplicationRecord
   after_create :insert_owner_in_participants
 
   PERIOD = ['Morning', 'Afternoon', 'Night']
-  CATEGORY = ['Nightlife', 'Visual Arts', 'Sports', 'Culinary', 'Sightseeing', 'Religious', 'Outdoors']
+  CATEGORY = ['Nightlife', 'Visual Arts', 'Sports', 'Culinary', 'Sightseeing', 'Cultural', 'Outdoors']
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
