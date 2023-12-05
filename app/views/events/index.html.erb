@@ -23,8 +23,7 @@
       <div class="card-content2">
         <h4 class="card-title">São Paulo</h4>
         <p class="card-description">Brazil's bustling metropolis, is renowned for its vibrant cultural scene, diverse cuisine, and towering skyscrapers, making it a dynamic global city.
-
-</p>
+        </p>
       </div>
     </div>
 
@@ -96,73 +95,58 @@
 
 <div class="inner-banner">
   <div class="">
-    <h3>Join 34,892 other users and discover what the plan is for today</h3>
   </div>
 </div>
 
-<div class="flex-row container pack-grid">
+
+<div class="flex-row">
   <% @events.each do |event| %>
-    <div class="card-index event-card">
-      <div class="head-card shimmer">
-        <!-- You can modify this part based on your requirements -->
-        <span class="rate">4.5/5</span>
-      </div>
-      <div class="img-mask">
-        <% if event.photo.attached? %>
-          <%= cl_image_tag event.photo.key, alt: event.name %>
-        <% else %>
-          <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg" alt="">
-        <% end %>
-      </div>
-      <div class="card-content-index">
-        <div class="card-header">
-          <h2 class="title-index"><%= event.name %></h2>
+    <% if event.user == current_user %>
+      <%= link_to event_chat_path(event) do %>
+        <div class="card-index">
+          <div class="head-card shimmer">
+            <span class="rate"><%= event.participants.count %> participants </span>
+          </div>
+          <div class="img-mask">
+            <% if event.photo.attached? %>
+              <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
+            <% else %>
+              <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
+            <% end %>    </div>
+          <div class="card-content-index">
+            <div class="card-header">
+              <h2 class="title-index"><%= event.name %></h2>
+            </div>
+            <div class="description-index">
+              <p><svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg>
+              <%= event.event_date&.strftime("%B %d, %Y") %></p>
+            </div>
+          </div>
         </div>
-        <p class="description-index"><%= event.event_date %></p>
-        <% if event.user == current_user %>
-          <h4 class="description-index"><%= link_to 'Details', event_chat_path(event), class: 'custom-btn friend-btn' %></h4>
-        <% else %>
-          <h4 class="description-index"><%= link_to 'Details', event_path(event), class: 'custom-btn friend-btn' %></h4>
-        <% end %>
-      </div>
-    </div>
+      <% end %>
+    <% else %>
+      <%= link_to event_path(event) do %>
+        <div class="card-index">
+          <div class="head-card shimmer">
+            <span class="rate"><%= event.participants.count %> participants </span>
+          </div>
+          <div class="img-mask">
+            <% if event.photo.attached? %>
+              <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
+            <% else %>
+              <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
+            <% end %>    </div>
+          <div class="card-content-index">
+            <div class="card-header">
+              <h2 class="title-index"><%= event.name %></h2>
+            </div>
+            <div class="description-index">
+              <p><svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg>
+              <%= event.event_date&.strftime("%B %d, %Y") %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   <% end %>
-</div>
-
-
-
-------------------------------------------------------------------------------------------------------------------
-
-<div class="flex-row">
-  <div class="card-index">
-    <div class="head-card shimmer">
-      <span class="rate">3/5</span>
-    </div>
-    <div class="img-mask">
-      <img src="https://www.visitdubai.com/-/media/gathercontent/poi/k/kite-beach/fallback-image/kite-beach-by-meraas-poi-shutterstock-v4.jpg" alt="">
-    </div>
-    <div class="card-content-index">
-      <div class="card-header">
-        <h2 class="title-index">Lorem ipsumsssssssssssss</h2>
-      </div>
-      <p class="description-index">e.</p>
-    </div>
-  </div>
-</div>
-
-<div class="flex-row">
-  <div class="card-index">
-    <div class="head-card shimmer">
-      <span class="rate">3/5</span>
-    </div>
-    <div class="img-mask">
-      <img src="https://www.visitdubai.com/-/media/gathercontent/poi/k/kite-beach/fallback-image/kite-beach-by-meraas-poi-shutterstock-v4.jpg" alt="">
-    </div>
-    <div class="card-content-index">
-      <div class="card-header">
-        <h2 class="title-index">Lorem ipsumsssssssssssss</h2>
-      </div>
-      <p class="description-index">e.</p>
-    </div>
-  </div>
 </div>
