@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 class="text-center">My Events</h1>
+  <div class="row justify-content-center">
+    <% @events.each do |event| %>
+        <%= event.id %>
+        <%=  event.name %>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 class="text-center">My Events</h1>
+  <div class="row justify-content-center">
+    <% @events.each do |event| %>
+      <div class="col-md-6">
+        <div class="d-flex flex-column align-items-center mb-4">
+          <div class="dementiawalk" style="background-image: url('<%= cl_image_path(event.photo.key, height: 300, crop: :fill) %>');">
+            <div class="datebox">
+              <p class="date"><span class="datenumber"><%= event.event_date %></span> <span class="datemonth">Oct</span></p>
+            </div>
+            <div class="containerbox">
+              <h5 class="eventtitle"><%= event.name %></h5>
+              <p class="description"><%= event.location %></p>
+              <p><%= link_to 'Event Chatroom', event_chat_path(event), class:"bookingbutton", style: "width: 100%"%></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -79,7 +79,7 @@
 
               <div class="container event-row">
               <h5 class="justified-text"><%= @event.name %></h5>
-              <h6><%= @event.event_date.strftime("%B %d - %Y") %></h6>
+              <h6><%= @event.event_date&.strftime("%B %d - %Y") %></h6>
               <p><%= @event.period %></p>
               <p><%= @event.location %></p>
               <p><%= cl_image_tag @event.photo.key, width: 120, crop: :fill, gravity: :center %></p>
