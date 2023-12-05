@@ -9,12 +9,10 @@
     </div>
     <div class="event-details">
       <div class="event-info-show">
-        <p class="show-text-center date-show"><%= @event.event_date %></p>
         <h1 class="show-text-center title-show"><%= @event.name %></h1>
-        <div class="location-container">
-          <p><i class="fa fa-map-marker"></i></p>
-          <p class="show-text-center"><%= @event.location %></p>
-        </div>
+            <p class="show-text-center"><i class="fa fa-map-marker"></i><%= @event.location %></p>
+            <p class="show-text-center"><i class="fa-solid fa-calendar"></i><%= @event.event_date&.strftime("%B %d, %Y") %></p>
+            <p class="show-text-center"><i class="fa-solid fa-clock"></i><%= @event.period %></p>
       </div>
 
       <div class="map-show"
