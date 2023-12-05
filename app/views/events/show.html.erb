@@ -8,12 +8,21 @@
       <% end %>
     </div>
     <div class="event-details">
-      <p class="show-text-center date-show"><%= @event.event_date %></p>
-      <h1 class="show-text-center title-show"><%= @event.name %></h1>
-      <div class="location-container">
-        <i class="fa fa-map-marker"></i>
-        <p class="show-text-center"><%= @event.location %></p>
+      <div class="event-info-show">
+        <p class="show-text-center date-show"><%= @event.event_date %></p>
+        <h1 class="show-text-center title-show"><%= @event.name %></h1>
+        <div class="location-container">
+          <p><i class="fa fa-map-marker"></i></p>
+          <p class="show-text-center"><%= @event.location %></p>
+        </div>
       </div>
+
+      <div class="map-show"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
       <%= simple_form_for [@event, @participant] do |f| %>
         <%= f.submit 'Join this event', class: "btn friend-btn btn-light btn-block" %>
       <% end %>

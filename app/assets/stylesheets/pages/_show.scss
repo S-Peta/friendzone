@@ -2,6 +2,9 @@ body {
   // background-image: url(https://img.freepik.com/vetores-premium/elemento-de-onda-abstrata-para-design-em-fundo-branco_213860-715.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .wrapper {
   max-width: 1200px;
@@ -10,7 +13,7 @@ body {
 
 .flex-container {
   display: flex;
-  height: 700px;
+  height: 75vh;
 }
 
 .show-product {
@@ -32,8 +35,8 @@ body {
   box-sizing: border-box;
   background-color: #ffffff; /* Altere para a cor branca desejada */
   border-radius: 0 10px 10px 0;
-  display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .title-show {
@@ -44,6 +47,7 @@ body {
 .location-container {
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
 .location-container i {
@@ -56,4 +60,10 @@ body {
 
 .btn-block {
   width: 100%;
+}
+
+.map-show {
+  width: 100%;
+  flex-grow: 1;
+margin-bottom: 32px;
 }
