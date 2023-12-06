@@ -16,7 +16,7 @@ class Event < ApplicationRecord
   validates :category, presence: true, inclusion: { in: CATEGORY }
   validates :location, presence: true
   validates :event_date, presence: true
-  validates :photo, presence: true
+  validates :photo, presence: false
 
   include PgSearch::Model
     pg_search_scope :search_by_name_and_location,

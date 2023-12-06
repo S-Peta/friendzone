@@ -20,6 +20,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @show_search_box = true
     @event = Event.find(params[:id])
     if Participant.find_by(event: @event, user: current_user).present?
       redirect_to event_chat_path(@event)
@@ -50,6 +51,7 @@ class EventsController < ApplicationController
 
 
   def filter
+    @show_search_box = true
     @events = Event.all
     @fixed = true
 
@@ -93,9 +95,4 @@ class EventsController < ApplicationController
     params.require(:event).permit(:name, :location, :event_date, :period, :category, :photo)
   end
 
-  # def authenticate_user!
-  #   unless user_signed_in?
-  #     redirect_to new_user_session_path, alert: 'You need to sign in to access this page.'
-  #   end
-  # end
 end

@@ -1,8 +1,3 @@
-.row {
-  // display: flex;
-  scrollbar-gutter: 0;
-}
-
 .chat-row {
   // background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230814/pngtree-the-gray-abstract-texture-of-the-polished-concrete-image_13053271.jpg);
   background-color: rgb(50,50,50);
@@ -117,14 +112,6 @@
 	vertical-align: baseline;
 }
 
-
-body.chat {
-	background: #ececec;
-	font-family: 'Open Sans', Arial, sans-serif;
-	font-size: 12px;
-	color: #333f4d;
-}
-
 b{
 	font-weight: bold;
 }
@@ -180,7 +167,7 @@ b{
 }
 .conversation-list{
 	background: #505d71;
-  height: 75vh;
+  height: 100%; //
   display: flex;
     flex-direction: column;
 
@@ -355,11 +342,29 @@ b{
     flex-basis: 50%;
     padding: 4px;
     box-sizing: border-box;
-    background-color: #ffffff; /* Altere para a cor branca desejada */
     flex-direction: column;
     justify-content: space-between;
   }
 }
+
+ .input-message {
+  height: 20px;
+  margin-bottom: 0;
+  width: 700px;
+
+ }
+
+.event-photo {
+  background-size: cover;
+}
+
+.chat-details {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .right-tabs{
 	overflow: hidden;
 	border-left: 1px solid #cfdae1;
@@ -368,7 +373,7 @@ b{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 75vh;
+  height: 100%; //
 }
 .right-tabs > ul.tabs{
 	overflow: hidden;
