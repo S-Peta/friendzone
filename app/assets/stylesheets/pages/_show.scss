@@ -65,6 +65,10 @@ body {
   width: 100%;
   flex-grow: 1;
   // margin-bottom: 32px;
+  .mapboxgl-canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
 
 .show-text-center {

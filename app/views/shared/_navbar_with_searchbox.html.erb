@@ -4,24 +4,10 @@
       <%= image_tag "logo.png" %>
     <% end %>
 
-          <% if @show_search_box  %>
-            <%= form_with url: filter_events_path, method: :get, class: "d-flex w-25" do %>
-              <%= text_field_tag :name,
-                params[:name],
-                class: "form-control w-100",
-                placeholder: "Find event"
-              %>
-              <%= button_tag( :class => "btn btn-search-navbar") do %>
-                <i class='fa-solid fa-magnifying-glass'></i>
-              <% end %>
-            <% end %>
-          <% end %>
-
-
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,6 +16,16 @@
           <li class="nav-item active">
             <%= link_to "Current Events", participants_path, class: "nav-link" %>
           </li>
+
+            <%= form_with url: filter_events_path, method: :get, class: "d-flex flex-column" do %>
+             <%= text_field_tag :name,
+               params[:name],
+               class: "form-control",
+               style: "width: 300px",
+               placeholder: "Type a keyword"
+              %>
+              <%= submit_tag "Search", name: "", class:"btn btn-outline-light w-100 mt-3" %>
+            <% end %>
 
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

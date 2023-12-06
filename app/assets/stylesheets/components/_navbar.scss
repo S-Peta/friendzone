@@ -22,3 +22,14 @@
   float: right;
   margin-right: 80px;
 }
+
+.btn-search-navbar {
+  border: 1px solid #dee2e6;
+  color: #dee2e6;
+
+
+  &:hover {
+    background-color: #4e8d51;
+    color: #fff;
+  }
+}
