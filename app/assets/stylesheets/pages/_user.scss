@@ -9,16 +9,15 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: {
     webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
+  background-repeat: no-repeat;
 }
 
 .dementiawalk img {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:center;
+  width: 50px;
 }
 
 .datebox {

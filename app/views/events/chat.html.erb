@@ -12,7 +12,13 @@
           </ul>
           <div class="my-account">
             <div class="image">
-              <img src="https://secure.gravatar.com/avatar/de76e03aa6b5b0bf675c1e8a990da52f?s=64">
+
+              <% if current_user.photo.key.present? %>
+                <%= cl_image_tag current_user.photo.key , class: "avatar", alt: "dropdown menu" %>
+              <% else %>
+                <%= image_tag "default-user-pic.jpg" , class: "avatar", alt: "dropdown menu" %>
+              <% end %>
+
               <i class="fa fa-circle online"></i>
             </div>
             <div class="name">
