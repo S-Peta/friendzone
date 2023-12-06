@@ -17,7 +17,8 @@
 }
 
 .dementiawalk img {
-  width: 50px;
+  width: 300px;
+  background-size: cover;
 }
 
 .datebox {
@@ -30,7 +31,7 @@
 }
 
 .datenumber {
-font-size: 72px;
+font-size: 32px;
 line-height: 80px;
 }
 
@@ -80,7 +81,6 @@ line-height: 80px;
 .containerbox {
   display: block;
   width: 300px;
-  margin: 0 15px 0 0;
 }
 
 .bookingbutton {
