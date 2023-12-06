@@ -4,7 +4,7 @@ import { createConsumer } from "@rails/actioncable";
 // Connects to data-controller="event-subscription"
 export default class extends Controller {
   static values = { eventId: Number }
-  static targets = ["messages"]
+  static targets = ["messages", 'container']
 
   connect() {
     // console.log("controller conectado");
@@ -18,7 +18,7 @@ export default class extends Controller {
   #insertMessageAndScrollDown(data){
     console.log(data);
     this.messagesTarget.insertAdjacentHTML("beforeend", data)
-    this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
+    this.containerTarget.scrollTo(0, this.containerTarget.scrollHeight)
   }
 
   resetForm(event) {

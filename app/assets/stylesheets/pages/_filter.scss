@@ -1,3 +1,7 @@
+.container-filter-page {
+  margin-right: 150px;
+}
+
 .filters {
   margin: 30px auto;
   li {
@@ -46,19 +50,28 @@
   gap: 20px;
 }
 
-.filter-fixed {
-  position: fixed;
+.filter-sticky {
+  position: sticky;
   top: 80px;
+  height: 100vh;
+  background-color: #dadada;
+  // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGy9Wz-wROXEgyjP3khyAs3M6ZjvAKZR3mBmZsv_tCkPJ8wvSsojHKSgk6rXuRT1x114g&usqp=CAU);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+}
+
+.title-filter {
+  margin-top: 115px;
 }
 
 .flex-row-filter {
   // position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 60px;
-  margin-top: 200px;
-  margin-left: 600px;
-  justify-content: space-between;
+  margin-top: 50px;
+  gap: 20px;
+  // margin-left: 600px;
+  // justify-content: space-between;
 }
 
 .calendar {
