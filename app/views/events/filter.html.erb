@@ -1,8 +1,6 @@
 <% @permited_params = params.permit(:category, :event_date, :period, :name, :location, :distance) %>
-
-
 <div class="row">
-  <div class="col-3 filter-fixed">
+  <div class="col-3 filter-sticky">
     <div class="container" data-action="scroll@window->navbar#fixFilter">
 
       <%= render "shared/filter" %>
@@ -10,7 +8,7 @@
   </div>
 
   <div class="col-9">
-    <div><h1>Find more events for you</h1></div>
+    <h1 class="title-filter">Find more events for you</h1>
     <div class="flex-row-filter">
       <% @events.each do |event| %>
         <a href="<%= event.user == current_user ? event_chat_path(event) : event_path(event) %>" class="card-index">

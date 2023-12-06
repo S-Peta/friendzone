@@ -291,7 +291,6 @@
 .card-index{
   position: relative;
   z-index: 1;
-  display: block;
   background: transparent;
   border-radius: 15px;
   box-shadow: 20px 20px 30px -20px #00000040;
@@ -383,7 +382,7 @@
   justify-content: space-between;
 }
 
-h2.title-index {
+.title-index {
   font-size: 20px;
   margin-bottom: 25px;
   white-space: nowrap;
