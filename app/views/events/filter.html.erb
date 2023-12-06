@@ -9,33 +9,32 @@
     </div>
   </div>
 
-  <div class="col-9 fixed-cards">
-  <div class="container">
-    <div class="row">
+  <div class="col-9">
+    <div><h1>Find more events for you</h1></div>
+    <div class="flex-row-filter">
       <% @events.each do |event| %>
-        <div class="col-md-4 mb-4">
-          <a href="<%= event.user == current_user ? event_chat_path(event) : event_path(event) %>" class="card-link">
-            <div class="card card-image" style="width: 18rem">
-              <% if event.photo.attached? %>
-                <%= link_to(cl_image_tag(event.photo.key, class: "card-img-top", height: 200, crop: :fill), event.user == current_user ? event_chat_path(event) : event_path(event), class: 'card-link') %>
-              <% else %>
-                <%= link_to(image_tag("https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg", class: "card-img-top", alt: "Default Image", height: 200), event.user == current_user ? event_chat_path(event) : event_path(event), class: 'card-link') %>
-              <% end %>
-              <div class="card-body">
-                <h5 class="card-title">
-                  <%= link_to event.name, event.user == current_user ? event_chat_path(event) : event_path(event), class: 'card-link' %>
-                </h5>
-                <hr>
-                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg>
-                <p class="card-text"><%= event.event_date&.strftime("%B %d, %Y") %></p>
-              </div>
+        <a href="<%= event.user == current_user ? event_chat_path(event) : event_path(event) %>" class="card-index">
+          <div class="head-card shimmer">
+            <span class="rate"><%= event.participants.count %> participants </span>
+          </div>
+          <div class="img-mask">
+            <% if event.photo.attached? %>
+              <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
+            <% else %>
+              <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
+            <% end %>
+          </div>
+          <div class="card-content-index">
+            <div class="card-header">
+              <h2 class="title-index"><%= event.name %></h2>
             </div>
-          </a>
-        </div>
+            <div class="description-index">
+              <p><svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg>
+              <%= event.event_date&.strftime("%B %d, %Y") %></p>
+            </div>
+          </div>
+        </a>
       <% end %>
     </div>
   </div>
-</div>
-
-
 </div>
