@@ -268,26 +268,6 @@
   }
 }
 
-
-.flex-row {
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-  -ms-flex-direction: row !important;
-  flex-direction: row !important;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 50px;
-  // justify-content: space-between;
-  margin: 100px;
-
-  a {
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-
 .card-index{
   position: relative;
   z-index: 1;

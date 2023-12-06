@@ -1,5 +1,4 @@
 body {
-  // background-image: url(https://img.freepik.com/vetores-premium/elemento-de-onda-abstrata-para-design-em-fundo-branco_213860-715.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -65,5 +64,17 @@ body {
 .map-show {
   width: 100%;
   flex-grow: 1;
-  margin-bottom: 32px;
+  // margin-bottom: 32px;
+}
+
+.show-text-center {
+  i {
+    margin-right: 5px;
+  }
+}
+
+.btn-secondary {
+  background-color: rgb(194, 193, 193);
+  border: none;
+  margin-bottom: 20px;
 }
