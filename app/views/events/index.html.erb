@@ -105,11 +105,11 @@
         <div class="col-4 mb-4">
           <a href="<%= event.user == current_user ? event_chat_path(event) : event_path(event) %>" class="card-index">
             <div class="head-card shimmer">
-              <span class="rate"><%= event.participants.count %> participants </span>
+              <span class="rate"><%= event.participants.count %> <%= event.participants.count > 1 ? "participants" : "participant" %></span>
             </div>
             <div class="img-mask">
               <% if event.photo.attached? %>
-                <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
+                <%= cl_image_tag event.photo.key %>
               <% else %>
                 <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
               <% end %>
@@ -132,7 +132,7 @@
 
 <div class="row">
   <div class="inner-banner container">
-    <div class="text-center align-items-center">
+    <div class="d-flex flex-column text-center justify-content-center h-100">
       <h2>Join to another 23.736 users and</h2>
       <h1>LET'S MEET</h1>
     </div>

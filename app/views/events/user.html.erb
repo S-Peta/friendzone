@@ -4,14 +4,16 @@
     <% @events.each do |event| %>
       <div class="col-md-6">
         <div class="d-flex flex-column align-items-center mb-4">
-          <div class="dementiawalk" style="background-image: url('<%= cl_image_path(event.photo.key, height: 300, crop: :fill) %>');">
-            <div class="datebox text-center">
+          <div class="dementiawalk">
+            <div class="datebox text-center" style="background-image: url('<%= cl_image_path(event.photo.key, height: 300, crop: :fill) %>');">
               <p class="date-user"><span class="datenumber"><%= event.event_date %></span> <span class="datemonth">Oct</span></p>
             </div>
             <div class="containerbox text-center">
               <h5 class="eventtitle"><%= event.name %></h5>
               <p class="description-user"><%= event.location %></p>
-              <%= link_to 'Event Chatroom', event_chat_path(event), class:"bookingbutton friend-btn", style: "width: 100%" %>
+              <div class="user-link-chatroom">
+                <%= link_to 'Event Chatroom', event_chat_path(event), class:"bookingbutton friend-btn btn-block" %>
+              </div>
             </div>
           </div>
         </div>
