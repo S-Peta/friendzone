@@ -20,6 +20,7 @@
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
+      <%= link_to "Get Directions", "https://www.google.com/maps/dir/?api=1&destination=#{@event.latitude},#{@event.longitude}", target: "_blank", class: "btn btn-secondary" %>
 
       <%= simple_form_for [@event, @participant] do |f| %>
         <%= f.submit 'Join this event', class: "btn friend-btn btn-light btn-block" %>
