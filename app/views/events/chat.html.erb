@@ -27,22 +27,14 @@
 
   <%# chat área %>
     <div class="col-7">
-      <div class="chat-area">
+      <div class="chat-area" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.id %>">
         <div class="title text-center"><b><%= @event.name %></b></div>
         <div>
           <div class="chat-list">
             <div class="messages">
-              <ul class="ul-chat">
-                <% @event.messages.each_with_index do |message, index| %>
-                  <li class="<%= index.even? ? 'even' : 'odd' %>">
-                    <div class="name">
-                      <span class=""><%= message.user.nickname %></span>
-                    </div>
-                    <div class="message">
-                      <p><%= message.content %></p>
-                      <span class="msg-time"><%= message.created_at&.strftime("%l:%M %p") %></span>
-                    </div>
-                  </li>
+              <ul class="ul-chat" data-event-subscription-target="messages">
+                <% @event.messages.each do |message| %>
+                  <%= render "messages/message", message: message %>
                 <% end %>
               </ul>
             </div>
@@ -85,43 +77,5 @@
       </div>
     </div>
   </div>
-
-
-
-    <!-- Seu código JavaScript -->
-  <script>
-    $(function(){
-      var chatList = $('.chat-area > .chat-list');
-
-      // Inicialize o jScrollPane
-      chatList.jScrollPane({
-        mouseWheelSpeed: 30
-      });
-
-      // Função para rolar até o final
-      function scrollToBottom() {
-        chatList.data('jsp').scrollToBottom();
-      }
-
-      // Exemplo de como você poderia usar isso após enviar uma mensagem
-      $('#new_message').on('ajax:success', function(event) {
-        // Lógica para enviar a mensagem aqui
-        // ...
-
-        // Após enviar a mensagem com sucesso, role até o final
-        scrollToBottom();
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener('turbo:load', function() {
-      // Este evento será acionado sempre que houver uma atualização do Turbo Streams
-
-      // Rola até o final após cada atualização do Turbo Streams
-      var chatList = document.querySelector('.chat-area > .chat-list');
-      chatList.scrollTop = chatList.scrollHeight;
-    });
-  </script>
 
 </body>

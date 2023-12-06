@@ -96,6 +96,8 @@
 
 .messages {
   overflow: hidden;
+  max-height: 63vh; // Ajuste conforme necessário
+  overflow-y: auto;
 }
 
 .message {
@@ -238,6 +240,7 @@ b{
   flex-direction: column;
   justify-content: space-between;
 
+
     .title{
         padding: 10px;
         overflow: hidden;
@@ -269,9 +272,7 @@ b{
 	overflow: hidden;
 	position: relative;
 }
-// .chat-area ul > li.me{
-// 	background: #e4eaee;
-// }
+
 .chat-area ul > li:first-child{
 	border-top: none;
 }
