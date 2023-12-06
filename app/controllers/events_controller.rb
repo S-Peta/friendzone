@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :filter, :show ]
 
   def index
-    @events = Event.all
+    @events = Event.all.limit(12)
   end
 
   def new

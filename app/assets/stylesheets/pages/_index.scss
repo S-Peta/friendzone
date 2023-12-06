@@ -31,30 +31,14 @@
 }
 
 .inner-banner {
-  background-image: url(https://images.unsplash.com/photo-1444210971048-6130cf0c46cf?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-color: rgba(255, 255, 255, 0.8);
-  background-position: center bottom 1000px;
-  height: 500px;
-  width: 50%;
-  margin-bottom: 80px;
-  opacity: 0.7;
-}
-
-// .inner-banner-box {
-//   color: #505050;
-//   justify-content: center;
-//   margin-left: 80px;
-// }
-
-.inner-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: end;
-}
-
-.inner-content h2 {
-  margin-bottom: 0; /* Remove a margem inferior padrão do h2 */
+  height: 200px;
+  // background-image: url(https://images.unsplash.com/photo-1444210971048-6130cf0c46cf?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  // background-color: rgba(255, 255, 255, 0.3);
+  // background-color: #fff;
+  // background-position: center bottom 1000px;
+  // width: 100%;
+  // margin-bottom: 80px;
+  // opacity: 0.7;
 }
 
 .pack-grid{
@@ -268,25 +252,15 @@
   }
 }
 
-
-.flex-row {
-  -webkit-box-orient: horizontal !important;
-  -webkit-box-direction: normal !important;
-  -ms-flex-direction: row !important;
-  flex-direction: row !important;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 50px;
-  // justify-content: space-between;
-  margin: 100px;
-
-  a {
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-  }
+.background-cards {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGy9Wz-wROXEgyjP3khyAs3M6ZjvAKZR3mBmZsv_tCkPJ8wvSsojHKSgk6rXuRT1x114g&usqp=CAU);
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-color: #121712;
+  margin-top: 80px;
+  padding: 40px 0;
+  color: #fff;
 }
-
 
 .card-index{
   position: relative;
@@ -348,15 +322,16 @@
 
 .rate{
   position: absolute;
-  height: 17px;
+  height: 28px;
   background-color: #ffffff85;
   color: #303030;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 20px;
   width: 180px;
   line-height: 1.5;
   text-align: center;
   align-items: center;
+  justify-content: center;
   top: 15px;
   left: 15px;
   box-shadow: 20px 20px 30px -20px #00000040;
@@ -389,7 +364,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   color: #303030;
+  h2 {
   text-decoration: none;
+  }
 }
 
 .description-index p {
