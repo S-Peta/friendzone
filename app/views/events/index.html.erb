@@ -18,10 +18,10 @@
 </div>
 
 <div class="background-cards-index">
-  <div><h2>Main destinations</h2></div>
+  <h2 class="text-center mt-5">Main destinations</h2>
   <div class="cards-container">
 
-    <div class="cards-city">
+    <div class="cards-city mb-3">
       <div class="card-2" style="background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/fe/64/8d/masp-en-la-avenida-paulista.jpg?w=1200&h=1200&s=1);">
         <div class="card-content2">
           <h4 class="card-title">São Paulo</h4>
@@ -95,40 +95,44 @@
     </div>
   </div>
 
-  <div class="row">
+  <%# <div class="row">
     <div class="col-6 inner-content container">
       <h2>Join to another 23.736 users and</h2>
       <h1>LET'S MEET</h1>
     </div>
     <div class="col-6 inner-banner">
     </div>
-  </div>
+  </div> %>
 </div>
 
 
-  <h2>tsdusgduy</h2>
-<div class="flex-row">
-  <% @events.each do |event| %>
-    <a href="<%= event.user == current_user ? event_chat_path(event) : event_path(event) %>" class="card-index">
-      <div class="head-card shimmer">
-        <span class="rate"><%= event.participants.count %> participants </span>
+<div class="container">
+  <h2 class="text-center mt-5">tsdusgduy</h2>
+  <div class="row">
+    <% @events.each do |event| %>
+      <div class="col-4 mb-4">
+        <a href="<%= event.user == current_user ? event_chat_path(event) : event_path(event) %>" class="card-index">
+          <div class="head-card shimmer">
+            <span class="rate"><%= event.participants.count %> participants </span>
+          </div>
+          <div class="img-mask">
+            <% if event.photo.attached? %>
+              <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
+            <% else %>
+              <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
+            <% end %>
+          </div>
+          <div class="card-content-index">
+            <div class="card-header">
+              <h2 class="title-index"><%= event.name %></h2>
+            </div>
+            <div class="description-index">
+              <p><svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg>
+              <%= event.event_date&.strftime("%B %d, %Y") %></p>
+            </div>
+          </div>
+        </a>
       </div>
-      <div class="img-mask">
-        <% if event.photo.attached? %>
-          <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
-        <% else %>
-          <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
-        <% end %>
-      </div>
-      <div class="card-content-index">
-        <div class="card-header">
-          <h2 class="title-index"><%= event.name %></h2>
-        </div>
-        <div class="description-index">
-          <p><svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg>
-          <%= event.event_date&.strftime("%B %d, %Y") %></p>
-        </div>
-      </div>
-    </a>
-  <% end %>
+    <% end %>
+  </div>
 </div>
