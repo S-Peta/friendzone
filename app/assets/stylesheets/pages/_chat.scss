@@ -349,15 +349,26 @@ b{
 	cursor: pointer;
 	font-family: 'Open Sans', Arial, sans-serif;
    outline: none;
+
+   .chat-details {
+    display: flex;
+    flex-basis: 50%;
+    padding: 4px;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Altere para a cor branca desejada */
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 .right-tabs{
 	overflow: hidden;
 	border-left: 1px solid #cfdae1;
 	border-top: 1px solid #cfdae1;
+  background-color: #ffffff; /* Altere para a cor branca desejada */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  height: 75vh;
 }
 .right-tabs > ul.tabs{
 	overflow: hidden;
