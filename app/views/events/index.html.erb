@@ -9,7 +9,7 @@
         params[:name],
         class: "form-control",
         style: "width: 300px",
-        placeholder: "Type a keyword"
+        placeholder: "Find an event"
       %>
       <%= submit_tag "Search", name: "", class:"btn btn-outline-light w-100 mt-3" %>
     <% end %>
@@ -18,7 +18,7 @@
 </div>
 
 <div class="background-cards-index">
-  <h1 class="text-center mt-5">Main destinations</h1>
+  <h1 class="text-center my-5">Main destinations</h1>
   <div class="cards-container">
 
     <div class="cards-city mb-3">
@@ -99,7 +99,7 @@
 
 <div class="background-cards">
   <div class="container">
-    <h1 class="text-center my-2">Events for you</h1>
+    <h1 class="text-center my-5">Events for you</h1>
     <div class="row">
       <% @events.each do |event| %>
         <div class="col-4 mb-4">

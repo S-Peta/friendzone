@@ -9,15 +9,15 @@
 
   <div class="col-9">
     <h1 class="title-filter">Find more events for you</h1>
-    <div class="flex-row-filter">
+    <div class="flex-row-filter ml-5">
       <% @events.each do |event| %>
         <a href="<%= event.user == current_user ? event_chat_path(event) : event_path(event) %>" class="card-index">
           <div class="head-card shimmer">
-            <span class="rate"><%= event.participants.count %> participants </span>
+            <span class="rate"><%= event.participants.count %> <%= event.participants.count > 1 ? "participants" : "participant" %></span>
           </div>
           <div class="img-mask">
             <% if event.photo.attached? %>
-              <%= cl_image_tag event.photo.key, height: 300, crop: :fill %>
+              <%= cl_image_tag event.photo.key %>
             <% else %>
               <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
             <% end %>
