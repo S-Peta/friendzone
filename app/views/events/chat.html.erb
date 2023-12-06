@@ -1,12 +1,20 @@
 <div class="row h-100">
   <%# chat-list %>
-    <div class="col-2">
+    <div class="col-2 p-0">
         <div class="conversation-list">
           <ul class="ul-chat">
             <li class="item active"><a href="#"><i class="fa fa-list-alt"></i><span>Friends chat</span></a></li>
-              <li><a href="#"><i class="fas fa-crown" style="color: yellow;"></i></i><span><%= @event.user.nickname %></span></a></li>
             <% @participant.each do |p|%>
-              <li><a href="#"><i class="fa fa-circle-o online"></i><i class="fa fa-user"></i><span><%= p.user.nickname %></span></a></li>
+              <li>
+                <a href="#">
+                  <% if p.user == p.event.user %>
+                    <i class="fas fa-crown" style="color: yellow;"></i>
+                  <% else %>
+                    <i class="fa fa-user"></i>
+                  <% end %>
+                  <span><%= p.user.nickname %></span>
+                </a>
+              </li>
             <% end %>
           </ul>
           <div class="my-account">
@@ -31,12 +39,12 @@
     </div>
 
   <%# chat área %>
-    <div class="col-7">
+    <div class="col-7 p-0">
       <div class="chat-area" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.id %>">
         <div class="title text-center"><b><%= @event.name %></b></div>
         <div>
           <div class="chat-list">
-            <div class="messages">
+            <div class="messages" data-event-subscription-target="container">
               <ul class="ul-chat" data-event-subscription-target="messages">
                 <% @event.messages.each do |message| %>
                   <%= render "messages/message", message: message %>
@@ -47,7 +55,7 @@
           <div class="input-area">
             <div class="input-wrapper d-flex w-100 align-items-center">
               <%= simple_form_for [@event, @message],
-                html: { data: { action: "turbo:submit-end->event-subscription#resetForm" }, class: "d-flex" } do |f| %>
+                html: { data: { action: "turbo:submit-end->event-subscription#resetForm" }, class: "d-flex w-100" } do |f| %>
                 <%= f.input :content,
                   label: false,
                   placeholder: "Type a message",
@@ -61,7 +69,7 @@
     </div>
 
   <%# barra lateral direita %>
-    <div class="col-3">
+    <div class="col-3 p-0">
       <div class="right-tabs">
         <div class="h-100 event-photo" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@event.photo.key)%>);">
           <div class="container event-row">
@@ -73,11 +81,12 @@
             </div>
           </div>
         </div>
-        <div style="width: 100%; height: 450px;"
+        <div style="width: 100%; height: 450px; margin-top: 30px"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
+        <%= link_to "Get Directions", "https://www.google.com/maps/dir/?api=1&destination=#{@event.latitude},#{@event.longitude}", target: "_blank", class: "btn btn-secondary chat-button" %>
       </div>
     </div>
 </div>
