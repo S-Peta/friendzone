@@ -52,13 +52,9 @@ class EventsController < ApplicationController
   def filter
     @events = Event.all
     @fixed = true
-    # usar ajax em cada filtro ?
 
     if params[:name].present?
       @events = Event.search_by_name_and_location(params[:name])
-
-
-      # PGSearch com ilike
     end
 
 

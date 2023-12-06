@@ -22,76 +22,77 @@
   <div class="cards-container">
 
     <div class="cards-city mb-3">
-      <div class="card-2" style="background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/fe/64/8d/masp-en-la-avenida-paulista.jpg?w=1200&h=1200&s=1);">
-        <div class="card-content2">
+
+        <%= link_to filter_events_path(name: "São Paulo"), class: "card-2", style: "background-image: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/fe/64/8d/masp-en-la-avenida-paulista.jpg?w=1200&h=1200&s=1);" do %>
+          <div class="card-content2">
           <h4 class="card-title">São Paulo</h4>
-          <p class="card-description">Brazil's bustling metropolis, is renowned for its vibrant cultural scene, diverse cuisine, and towering skyscrapers, making it a dynamic global city.
-          </p>
-        </div>
-      </div>
+          <p class="card-description">Brazil's bustling metropolis, is renowned for its vibrant cultural scene, diverse cuisine, and towering skyscrapers, making it a dynamic global city.</p>
+          </div>
+        <% end %>
 
-      <div class="card-2" style="background-image: url(https://toptransferbrasil.com.br/wp-content/uploads/2019/10/cristo-redentor-3.jpg);">
-        <div class="card-content2">
-          <h4 class="card-title">Rio de Janeiro</h4>
-          <p class="card-description">Rio de Janeiro, famed for its breathtaking beaches and iconic Christ the Redeemer statue, captures the essence of Brazilian zest for life, hosting lively carnivals and offering stunning natural landscapes.</p>
-        </div>
-      </div>
+        <%= link_to filter_events_path(name: "Rio de Janeiro"), class: "card-2", style: "background-image: url(https://toptransferbrasil.com.br/wp-content/uploads/2019/10/cristo-redentor-3.jpg);" do %>
+          <div class="card-content2">
+            <h4 class="card-title">Rio de Janeiro</h4>
+            <p class="card-description">Rio de Janeiro, famed for its breathtaking beaches and iconic Christ the Redeemer statue, captures the essence of Brazilian zest for life, hosting lively carnivals and offering stunning natural landscapes.</p>
+          </div>
+        <% end %>
 
-      <div class="card-2" style="background-image: url(https://cdn.panrotas.com.br/portal-panrotas-statics/media-files-cache/303528/83cbacbd1c82d803f372ae5bc6ffca7flucabravotack3nspye0unsplash/0,94,2560,1528/1206,720,0.20/0/default.jpg);">
-        <div class="card-content2">
-          <h4 class="card-title">New York</h4>
-          <p class="card-description"> The epitome of urban sophistication, boasts iconic landmarks like Times Square and Central Park, while its diverse neighborhoods showcase a melting pot of cultures and a thriving arts scene.</p>
-        </div>
-      </div>
+        <%= link_to filter_events_path(name: "New York"), class: "card-2", style: "background-image: url(https://cdn.panrotas.com.br/portal-panrotas-statics/media-files-cache/303528/83cbacbd1c82d803f372ae5bc6ffca7flucabravotack3nspye0unsplash/0,94,2560,1528/1206,720,0.20/0/default.jpg);" do %>
+          <div class="card-content2">
+            <h4 class="card-title">New York</h4>
+            <p class="card-description"> The epitome of urban sophistication, boasts iconic landmarks like Times Square and Central Park, while its diverse neighborhoods showcase a melting pot of cultures and a thriving arts scene.</p>
+          </div>
+        <% end %>
 
-      <div class="card-2" style="background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/04/10/13/tokyo-main.jpg);">
-        <div class="card-content2">
-          <h4 class="card-title">Tokyo</h4>
-          <p class="card-description">Tokyo, Japan's vibrant capital, seamlessly blends modern innovation with traditional charm, featuring futuristic skyscrapers, ancient temples, and a culinary scene that delights the senses.</p>
-        </div>
-      </div>
+        <%= link_to filter_events_path(name: "Tokyo"), class: "card-2", style: "background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/04/10/13/tokyo-main.jpg);" do %>
+          <div class="card-content2">
+            <h4 class="card-title">Tokyo</h4>
+            <p class="card-description">Tokyo, Japan's vibrant capital, seamlessly blends modern innovation with traditional charm, featuring futuristic skyscrapers, ancient temples, and a culinary scene that delights the senses.</p>
+          </div>
+        <% end %>
 
-      <div class="card-2" style="background-image: url(https://thumbs.dreamstime.com/b/big-ben-london-autumn-leaves-32915756.jpg);">
-        <div class="card-content2">
-          <h4 class="card-title">London</h4>
-          <p class="card-description">London, the historic capital of the United Kingdom, showcases a rich tapestry of history, from the Tower of London to Buckingham Palace, and is a global hub for finance, fashion, and the arts.</p>
-        </div>
-      </div>
+        <%= link_to filter_events_path(name: "London"), class: "card-2", style: "background-image: url(https://thumbs.dreamstime.com/b/big-ben-london-autumn-leaves-32915756.jpg);" do %>
+          <div class="card-content2">
+            <h4 class="card-title">London</h4>
+            <p class="card-description">London, the historic capital of the United Kingdom, showcases a rich tapestry of history, from the Tower of London to Buckingham Palace, and is a global hub for finance, fashion, and the arts.</p>
+          </div>
+        <% end %>
 
-      <div class="card-2" style="background-image: url(https://media.istockphoto.com/id/1369814693/photo/los-angeles.jpg?s=612x612&w=0&k=20&c=DFV2MZegN9dGw--BF-24os350UwlrCgs25x93AH99Do=);">
-        <div class="card-content2">
-          <h4 class="card-title">Los Angeles</h4>
-          <p class="card-description">Los Angeles, the entertainment capital of the world, is synonymous with Hollywood glamour, palm-lined boulevards, and diverse neighborhoods, offering a sun-soaked lifestyle.</p>
-        </div>
-      </div>
+        <%= link_to filter_events_path(name: "Los Angeles"), class: "card-2", style: "background-image: url(https://media.istockphoto.com/id/1369814693/photo/los-angeles.jpg?s=612x612&w=0&k=20&c=DFV2MZegN9dGw--BF-24os350UwlrCgs25x93AH99Do=);" do %>
+          <div class="card-content2">
+            <h4 class="card-title">Los Angeles</h4>
+            <p class="card-description">Los Angeles, the entertainment capital of the world, is synonymous with Hollywood glamour, palm-lined boulevards, and diverse neighborhoods, offering a sun-soaked lifestyle.</p>
+          </div>
+        <% end %>
 
-      <div class="card-2" style="background-image: url(https://images.pexels.com/photos/1823681/pexels-photo-1823681.jpeg?cs=srgb&dl=pexels-chait-goli-1823681.jpg&fm=jpg);">
-        <div class="card-content2">
-          <h4 class="card-title">Chicago</h4>
-          <p class="card-description">Chicago, the Windy City, is celebrated for its architectural marvels, including the Willis Tower, deep-dish pizza, and a vibrant blues music scene against the backdrop of Lake Michigan.</p>
-        </div>
-      </div>
+        <%= link_to filter_events_path(name: "Chicago"), class: "card-2", style: "background-image: url(https://images.pexels.com/photos/1823681/pexels-photo-1823681.jpeg?cs=srgb&dl=pexels-chait-goli-1823681.jpg&fm=jpg);" do %>
+          <div class="card-content2">
+            <h4 class="card-title">Chicago</h4>
+            <p class="card-description">Chicago, the Windy City, is celebrated for its architectural marvels, including the Willis Tower, deep-dish pizza, and a vibrant blues music scene against the backdrop of Lake Michigan.</p>
+          </div>
+        <% end %>
 
-      <div class="card-2" style="background-image: url(https://images.unsplash.com/photo-1541464522988-31b420f688b9?q=80&w=2971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
-        <div class="card-content2">
-          <h4 class="card-title">San Francisco</h4>
-          <p class="card-description">San Francisco, nestled amid iconic hills and the Golden Gate Bridge, is known for its progressive culture, tech innovation, and the historic cable cars that traverse its picturesque streets.</p>
-        </div>
-      </div>
+        <%= link_to filter_events_path(name: "San Francisco"), class: "card-2", style: "background-image: url(https://images.unsplash.com/photo-1541464522988-31b420f688b9?q=80&w=2971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);" do %>
+          <div class="card-content2">
+            <h4 class="card-title">San Francisco</h4>
+            <p class="card-description">San Francisco, nestled amid iconic hills and the Golden Gate Bridge, is known for its progressive culture, tech innovation, and the historic cable cars that traverse its picturesque streets.</p>
+          </div>
+        <% end %>
 
-      <div class="card-2" style="background-image: url(https://aws-tiqets-cdn.imgix.net/images/content/900cc3f30ee04bfa8bd57c1fc145a2a3.jpeg?auto=format&fit=crop&ixlib=python-3.2.1&q=70&s=726d41bbcd3101ba56dd98ce129217de);">
-        <div class="card-content2">
-          <h4 class="card-title">Miami</h4>
-          <p class="card-description">Miami, Florida's vibrant coastal city, entices with its tropical climate, glamorous South Beach, and a diverse blend of Cuban, Caribbean, and Latin American influences.</p>
-        </div>
-      </div>
+        <%= link_to filter_events_path(name: "Miami"), class: "card-2", style: "background-image: url(https://aws-tiqets-cdn.imgix.net/images/content/900cc3f30ee04bfa8bd57c1fc145a2a3.jpeg?auto=format&fit=crop&ixlib=python-3.2.1&q=70&s=726d41bbcd3101ba56dd98ce129217d);" do %>
+          <div class="card-content2">
+            <h4 class="card-title">Miami</h4>
+            <p class="card-description">Miami, Florida's vibrant coastal city, entices with its tropical climate, glamorous South Beach, and a diverse blend of Cuban, Caribbean, and Latin American influences.</p>
+          </div>
+        <% end %>
 
-      <div class="card-2" style="background-image: url(https://vegasexperience.com/wp-content/uploads/2023/01/Photo-of-Las-Vegas-Downtown-1920x1280.jpg);">
-        <div class="card-content2">
-          <h4 class="card-title">Las vegas</h4>
-          <p class="card-description">Las Vegas, the entertainment capital of the world, dazzles with its iconic Strip, where world-class shows, extravagant hotels, and round-the-clock excitement define the city's unique allure.</p>
-        </div>
-      </div>
+        <%= link_to filter_events_path(name: "Las vegas"), class: "card-2", style: "background-image: url(https://vegasexperience.com/wp-content/uploads/2023/01/Photo-of-Las-Vegas-Downtown-1920x1280.jpg);" do %>
+          <div class="card-content2">
+            <h4 class="card-title">Las vegas</h4>
+            <p class="card-description">Las Vegas, the entertainment capital of the world, dazzles with its iconic Strip, where world-class shows, extravagant hotels, and round-the-clock excitement define the city's unique allure.</p>
+          </div>
+        <% end %>
+
     </div>
   </div>
 </div>
