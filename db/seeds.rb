@@ -9,13 +9,38 @@ puts "Seeding users..."
 user1 = User.create(first_name: "eduardo", last_name: "segantine", nickname: "dudu", email: "eduardo@gmail.com", password: "123456" )
 user2 = User.create(first_name: "stefany", last_name: "santos", nickname: "ste", email: "ste@gmail.com", password: "123456" )
 user3 = User.create(first_name: "felipi", last_name: "freo", nickname: "lipe", email: "felipi@gmail.com", password: "123456" )
-user4 = User.create(first_name: "sam", last_name: "smith", nickname: "sam", email: "sam@gmail.com", password: "123456" )
+user4 = User.create(first_name: "yan", last_name: "smith", nickname: "lau", email: "yan@gmail.com", password: "123456" )
+user5 = User.create(first_name: "joca", last_name: "almeida", nickname: "joca", email: "joca@gmail.com", password: "123456" )
+user6 = User.create(first_name: "everaldo", last_name: "nunes", nickname: "eve", email: "eve@gmail.com", password: "123456" )
+user7 = User.create(first_name: "salatiel", last_name: "pereira", nickname: "sal", email: "sal@gmail.com", password: "123456" )
+user8 = User.create(first_name: "maria", last_name: "olivia", nickname: "oli", email: "maria@gmail.com", password: "123456" )
+user9 = User.create(first_name: "dalva", last_name: "coelho", nickname: "dalvinha", email: "dalva@gmail.com", password: "123456" )
+user10 = User.create(first_name: "serena", last_name: "vasconcelos", nickname: "sereia", email: "serena@gmail.com", password: "123456" )
+
+# User 1
+file1 = URI.open("/Users/eduardosegantine/Downloads/dudu.jpg")
+user1.photo.attach(io: user1, filename: "user1.png", content_type: "image/png")
+user1.save
+
+# User 2
+file1 = URI.open("/Users/eduardosegantine/Downloads/ste.jpg")
+user2.photo.attach(io: user2, name: "user2.png", content_type: "image/png")
+user2.save
+
+# User 3
+file1 = URI.open("/Users/eduardosegantine/Downloads/lipe.jpg")
+user3.photo.attach(io: user3, filename: "user3.png", content_type: "image/png")
+user3.save
+
+# User 4
+file1 = URI.open("/Users/eduardosegantine/Downloads/lau.jpg")
+user4.photo.attach(io: user4, filename: "user3.png", content_type: "image/png")
+user4.save
 
 puts "Seeding events..."
 
 #Sao Paulo Events
 
-# Event 1
 # Event 1
 event1 = Event.create(
   name: "Samba Night at Bar Brahma",
@@ -51,7 +76,7 @@ event4 = Event.create(
   name: "Exhibition at Pinacoteca do Estado",
   location: "Praça da Luz, 2 - Luz, São Paulo - SP",
   category: "Visual Arts",
-  event_date: Date.new(2023, 12, 7),
+  event_date: Date.new(2023, 12, 23),
   period: "Afternoon",
   user_id: user2.id
 )
@@ -325,7 +350,7 @@ event22 = Event.create(
   name: "Art Gallery Tour in Santa Teresa",
   location: "Praça Floriano, 7 - Centro, Rio de Janeiro - RJ",
   category: "Visual Arts",
-  event_date: Date.new(2023, 12, 7),
+  event_date: Date.new(2023, 12, 13),
   period: "Afternoon",
   user_id: user2.id
 )

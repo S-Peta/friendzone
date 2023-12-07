@@ -1,11 +1,10 @@
 <div class="row h-100">
-  <%# chat-list %>
     <div class="col-2 p-0">
         <div class="conversation-list">
           <ul class="ul-chat">
-            <li class="item active"><a href="#"><i class="fa fa-list-alt mx-3"></i><span>Friends chat</span></a></li>
+            <li class="item active mx-3"><a href="#"><i class="fa fa-list-alt mx-3"></i><span>Friends chat</span></a></li>
             <% @participant.each do |p|%>
-              <li>
+              <li class="mx-3">
                 <a href="#">
                   <% if p.user == p.event.user %>
                     <i class="fas fa-crown mx-3" style="color: yellow;"></i>
@@ -17,7 +16,7 @@
               </li>
             <% end %>
           </ul>
-          <div class="my-account">
+          <div class="my-account mb-2 ml-2">
             <div class="image">
 
               <% if current_user.photo.key.present? %>
@@ -38,11 +37,10 @@
         </div>
     </div>
 
-  <%# chat área %>
     <div class="col-7 p-0">
       <div class="chat-area" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.id %>">
-        <p class="title text-center my-2"><%= @event.name %></p>
-        <div>
+        <div class="flex-grow-1">
+          <p class="title text-center my-2"><%= @event.name %></p>
           <div class="chat-list">
             <div class="messages" data-event-subscription-target="container">
               <ul class="ul-chat" data-event-subscription-target="messages">
@@ -52,6 +50,8 @@
               </ul>
             </div>
           </div>
+        </div>
+        <div>
           <div class="input-area">
             <div class="input-wrapper d-flex w-100 align-items-center">
               <%= simple_form_for [@event, @message],
@@ -68,7 +68,7 @@
       </div>
     </div>
 
-  <%# barra lateral direita %>
+
     <div class="col-3 p-0">
       <div class="right-tabs">
         <div class="h-100 event-photo" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@event.photo.key)%>);">
@@ -76,15 +76,15 @@
             <div class="chat-details p-4">
               <h3 class="text-center my-4"><%= @event.name %></h3 class="text-center my-3">
               <p><i class="fa fa-map-marker m-2"></i> <%= @event.location %></p>
-              <p><i class="fa-solid fa-calendar m-2"></i> <%= @event.event_date&.strftime("%B %d - %Y") %></p>
+              <p><i class="fa-solid fa-calendar m-2"></i> <%= @event.event_date&.strftime("%B %d, %Y") %></p>
               <p><i class="fa-solid fa-clock m-2"></i> <%= @event.period %></p>
             </div>
-            <div class="justify-content-center" style="width: 85%; height: 450px; margin-top: 30px"
+            <div class="chat-map mx-4"
               data-controller="map"
               data-map-markers-value="<%= @markers.to_json %>"
               data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
             </div>
-            <%= link_to "Get Directions", "https://www.google.com/maps/dir/?api=1&destination=#{@event.latitude},#{@event.longitude}", target: "_blank", class: "btn btn-light chat-button btn-block" %>
+            <%= link_to "Get Directions", "https://www.google.com/maps/dir/?api=1&destination=#{@event.latitude},#{@event.longitude}", target: "_blank", class: "btn btn-light btn-block btn-map mb-5 mx-4" %>
           </div>
         </div>
       </div>

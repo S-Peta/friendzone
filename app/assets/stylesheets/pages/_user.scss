@@ -5,8 +5,9 @@
   position: relative;
   margin: 15px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
   transition: {
     webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -16,10 +17,39 @@
   background-repeat: no-repeat;
 }
 
+// .dementiawalk img {
+//   width: 300px;
+//   background-size: cover;
+//   border-radius: 3px;
+//   background-color: white;
+// }
+
 .dementiawalk img {
-  width: 300px;
-  background-size: cover;
+  border-radius: 5px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
+
+// .datebox {
+//   width: 200px;
+//   box-sizing: border-box;
+//   margin: 15px;
+//   height: 200px;
+//   max-height: 100%;
+//   position: relative;
+// }
+
+// .datebox {
+//   width: 200px;
+//   box-sizing: border-box;
+//   margin: 15px;
+//   height: 200px;
+//   max-height: 100%;
+//   position: relative;
+//   border-radius: 5px; /* Adiciona o border-radius aqui */
+//   overflow: hidden; /* Certifica-se de que a imagem não ultrapasse os cantos arredondados */
+// }
 
 .datebox {
   width: 200px;
@@ -28,32 +58,57 @@
   height: 200px;
   max-height: 100%;
   position: relative;
+  border-radius: 3px; /* Adiciona o border-radius aqui */
+  overflow: hidden; /* Certifica-se de que a imagem não ultrapasse os cantos arredondados */
+  background: white; /* Use branco sólido ou ajuste conforme necessário */
+  padding: 10px; /* Adiciona padding ao invés de margin para evitar espaçamento esbranquiçado ao redor da imagem */
+  text-align: center; /* Centraliza o conteúdo */
 }
+
+
 
 .datenumber {
 font-size: 32px;
 line-height: 80px;
+color: white;
 }
 
 .datemonth{
   font-size: 58px;
 }
 
+// .date-user {
+//   width: 100%;
+//   height: 100%;
+//   box-sizing: border-box;
+//   background: #FFFFFF99;
+//   border-radius: 3px;
+// 	position: relative;
+//   padding: 10px 10px 10px 10px;
+//   text-align: center;
+//   margin: 0px;
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   color:black;
+// }
+
 .date-user {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  background: #FFFFFF99;
+  background: rgba(16, 16, 16, 0.4); /* Altere o último valor (0.8) para ajustar a opacidade (de 0 a 1) */
   border-radius: 3px;
-	position: relative;
-  padding: 10px 10px 10px 10px;
+  position: relative;
+  padding: 10px;
   text-align: center;
-  margin: 0px;
+  margin: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  color:black;
+  color: black;
 }
+
 
 .description-user {
   text-align: center;
@@ -81,6 +136,7 @@ line-height: 80px;
 .containerbox {
   display: block;
   width: 300px;
+  padding: 0 15px 0 0;
   a {
     width: 100%;
   }
@@ -91,9 +147,12 @@ line-height: 80px;
   background: #6c826d;
   color:white;
   padding:2px;
-  margin: 15px;
-  height: 22.5px;
   text-decoration: none;
+
+  &:hover {
+    background: #90b392;
+
+  }
   // width: 100%;
 }
 

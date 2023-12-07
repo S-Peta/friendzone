@@ -1,0 +1,47 @@
+/* Adicione essas classes no seu arquivo de estilo CSS */
+
+.profile-card-container {
+  max-width: 1200px; /* Triplicou a largura original */
+  margin: 24px auto 0; /* Adicionada uma margem no topo */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-avatar-container {
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 300px; /* Três vezes a largura original */
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  overflow: hidden;
+}
+
+.profile-details {
+  text-align: center;
+}
+
+.profile-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  margin: 8px 0;
+}
+
+.profile-bio {
+  font-style: italic;
+  color: #666;
+}
