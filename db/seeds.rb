@@ -6,9 +6,6 @@ Message.destroy_all
 
 puts "Seeding users..."
 
-user10 = User.create(first_name: "eduardo", last_name: "segantine", nickname: "dudu", email: "eduardo@gmail.com", password: "123456" )
-user9 = User.create(first_name: "stefany", last_name: "santos", nickname: "ste", email: "ste@gmail.com", password: "123456" )
-user8 = User.create(first_name: "felipi", last_name: "freo", nickname: "lipe", email: "felipi@gmail.com", password: "123456" )
 user4 = User.create(first_name: "yan", last_name: "smith", nickname: "lau", email: "yan@gmail.com", password: "123456" )
 user5 = User.create(first_name: "joca", last_name: "almeida", nickname: "joca", email: "joca@gmail.com", password: "123456" )
 user6 = User.create(first_name: "everaldo", last_name: "nunes", nickname: "eve", email: "eve@gmail.com", password: "123456" )
@@ -16,21 +13,6 @@ user7 = User.create(first_name: "salatiel", last_name: "pereira", nickname: "sal
 user1 = User.create(first_name: "maria", last_name: "olivia", nickname: "oli", email: "maria@gmail.com", password: "123456" )
 user2 = User.create(first_name: "dalva", last_name: "coelho", nickname: "dalvinha", email: "dalva@gmail.com", password: "123456" )
 user3 = User.create(first_name: "matheus", last_name: "segantine", nickname: "theus", email: "matheus@gmail.com", password: "123456" )
-
-# User 10
-file40 = URI.open("app/assets/images/dudu.jpg")
-user10.photo.attach(io: user1, filename: "user1.png", content_type: "image/png")
-user10.save
-
-# User 9
-file41 = URI.open("app/assets/images/ste.jpg")
-user9.photo.attach(io: user2, name: "user2.png", content_type: "image/png")
-user9.save
-
-# User 8
-file42 = URI.open("app/assets/images/lipe.jpg")
-user8.photo.attach(io: user3, filename: "user3.png", content_type: "image/png")
-user8.save
 
 puts "Seeding events..."
 
