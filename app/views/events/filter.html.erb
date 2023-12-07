@@ -1,38 +1,36 @@
 <% @permited_params = params.permit(:category, :event_date, :period, :name, :location, :distance) %>
-<div class="row container-filter-page">
-  <div class="col-3 filter-sticky flex-filter">
-    <div class="container" data-action="scroll@window->navbar#fixFilter">
+<div class="d-flex background-filter">
 
-      <%= render "shared/filter" %>
-    </div>
+  <%= render "shared/filter" %>
+  <div class="container-filter">
+  <h1 class= "text-center">Find more events for you</h1>
+
+  <div class="cards-grid-filter">
+    <% @events.each do |event| %>
+      <a href="<%= event.user == current_user ? event_chat_path(event) : event_path(event) %>" class="card-index">
+        <div class="head-card shimmer">
+          <span class="rate"><%= event.participants.count %> <%= event.participants.count > 1 ? "participants" : "participant" %></span>
+        </div>
+        <div class="img-mask">
+          <% if event.photo.attached? %>
+            <%= cl_image_tag event.photo.key %>
+          <% else %>
+            <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
+          <% end %>
+        </div>
+        <div class="card-content-filter">
+
+            <h3 class="text-center"><%= event.name %></h3>
+
+            <div class="card-date-time">
+              <p class=""><i class="fa-solid fa-calendar m-2"></i> <%= event.event_date&.strftime("%B %d - %Y") %> |
+              <i class="fa-solid fa-clock m-2"></i> <%= event.period %></p>
+            </div>
+
+        </div>
+      </a>
+    <% end %>
+  </div>
   </div>
 
-  <div class="col-9 flex-filter-cards">
-    <h1 class="title-filter">Find more events for you</h1>
-    <div class="flex-row-filter ml-5">
-      <% @events.each do |event| %>
-        <a href="<%= event.user == current_user ? event_chat_path(event) : event_path(event) %>" class="card-index">
-          <div class="head-card shimmer">
-            <span class="rate"><%= event.participants.count %> <%= event.participants.count > 1 ? "participants" : "participant" %></span>
-          </div>
-          <div class="img-mask">
-            <% if event.photo.attached? %>
-              <%= cl_image_tag event.photo.key %>
-            <% else %>
-              <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
-            <% end %>
-          </div>
-          <div class="card-content-index">
-            <div class="card-header text-align">
-              <h2 class="title-index"><%= event.name %></h2>
-            </div>
-            <div class="description-index">
-              <p class="show-text-center"><i class="fa-solid fa-calendar"></i> <%= event.event_date&.strftime("%B %d - %Y") %> |
-              <i class="fa-solid fa-clock"></i> <%= event.period %></p>
-            </div>
-          </div>
-        </a>
-      <% end %>
-    </div>
-  </div>
 </div>
