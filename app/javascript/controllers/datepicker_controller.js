@@ -9,7 +9,7 @@ export default class extends Controller {
       minDate: "today",
       altInput: true,
       altFormat: "F j, Y",
-      dateFormat: "Y/d/m",
+      dateFormat: "Y/m/d",
       inline: true,
 
       "locale": {
