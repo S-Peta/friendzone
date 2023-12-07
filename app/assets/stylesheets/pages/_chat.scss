@@ -129,11 +129,15 @@ b{
 	padding: 14px;
 	position: relative;
 
-    > .title{
-        overflow: hidden;
-        text-align: center;
-      font-weight: bold;
-    }
+  > .title{
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.title {
+  font-size: 24px;
 }
 
 .dots{
@@ -196,7 +200,7 @@ b{
 
                 span{
                     display: inline-block;
-                    margin-left: 14px;
+                    // margin-left: 14px;
                 }
 
                 &:hover{
@@ -334,10 +338,9 @@ b{
 	height: 36px;
 	line-height: 30px;
 	cursor: pointer;
-	font-family: 'Open Sans', Arial, sans-serif;
-   outline: none;
+  outline: none;
 
-   .chat-details {
+  .chat-details {
     display: flex;
     flex-basis: 50%;
     padding: 4px;
@@ -347,11 +350,11 @@ b{
   }
 }
 
- .input-message {
-  height: 35px;
-  margin-bottom: 0 !important;
-  width: 100%;
- }
+  .input-message {
+    height: 35px;
+    margin-bottom: 0 !important;
+    width: 100%;
+  }
 
 .event-photo {
   background-size: cover;
@@ -366,6 +369,9 @@ b{
   display: flex;
   flex-direction: column;
   height: 100%;
+  p {
+    font-size: 18px;
+  }
 }
 
 .right-tabs{

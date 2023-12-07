@@ -9,7 +9,7 @@
     </div>
     <div class="event-details">
       <div class="event-info-show">
-        <h1 class="show-text-center title-show"><%= @event.name %></h1>
+        <h1 class="show-text-center text-center title-show my-3"><%= @event.name %></h1>
             <p class="show-text-center"><i class="fa fa-map-marker"></i><%= @event.location %></p>
             <p class="show-text-center"><i class="fa-solid fa-calendar"></i><%= @event.event_date&.strftime("%B %d, %Y") %></p>
             <p class="show-text-center"><i class="fa-solid fa-clock"></i><%= @event.period %></p>
@@ -20,7 +20,7 @@
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-      <%= link_to "Get Directions", "https://www.google.com/maps/dir/?api=1&destination=#{@event.latitude},#{@event.longitude}", target: "_blank", class: "btn btn-secondary" %>
+      <%= link_to "Get Directions", "https://www.google.com/maps/dir/?api=1&destination=#{@event.latitude},#{@event.longitude}", target: "_blank", class: "btn btn-outline-secondary mb-3" %>
 
       <%= simple_form_for [@event, @participant] do |f| %>
         <%= f.submit 'Join this event', class: "btn friend-btn btn-light btn-block" %>
