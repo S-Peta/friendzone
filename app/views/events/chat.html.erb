@@ -1,5 +1,4 @@
 <div class="row h-100">
-  <%# chat-list %>
     <div class="col-2 p-0">
         <div class="conversation-list">
           <ul class="ul-chat">
@@ -38,7 +37,6 @@
         </div>
     </div>
 
-  <%# chat área %>
     <div class="col-7 p-0">
       <div class="chat-area" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.id %>">
         <div class="flex-grow-1">
@@ -70,7 +68,7 @@
       </div>
     </div>
 
-  <%# barra lateral direita %>
+
     <div class="col-3 p-0">
       <div class="right-tabs">
         <div class="h-100 event-photo" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@event.photo.key)%>);">
@@ -81,7 +79,7 @@
               <p><i class="fa-solid fa-calendar m-2"></i> <%= @event.event_date&.strftime("%B %d - %Y") %></p>
               <p><i class="fa-solid fa-clock m-2"></i> <%= @event.period %></p>
             </div>
-            <div class="justify-content-center" style="width: 85%; height: 450px; margin-top: 30px"
+            <div class="justify-content-center chat-map"
               data-controller="map"
               data-map-markers-value="<%= @markers.to_json %>"
               data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
