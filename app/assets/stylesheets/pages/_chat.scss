@@ -24,14 +24,12 @@
   width: 40px;
 }
 
-.my-account {
-  box-sizing: content-box; /* Ou qualquer outro valor desejado para box-sizing */
+.btn-map{
+  width: 84% !important;
 }
 
-
-.input-area .input-wrapper input[type="submit"].send-btn {
-  height: auto;
-  line-height: normal; /* ou remova esta linha se não for necessário */
+.my-account {
+  box-sizing: content-box;
   min-width: 100px;
 }
 
@@ -45,10 +43,7 @@
   height: 100%;
   border: none;
   outline: none;
-  margin: 0; /* Remova margens para evitar espaçamento indesejado */
-  padding: 0 10px;
-  box-sizing: border-box;
-  vertical-align: middle;
+  margin: 0;
 }
 
 .input-area .input-wrapper .fa {
@@ -95,7 +90,7 @@
 
 .messages {
   overflow: hidden;
-  max-height: 78.6vh; // Ajuste conforme necessário
+  max-height: 78.6vh;
   overflow-y: auto;
 }
 
@@ -141,8 +136,8 @@ b{
 }
 
 .chat-map {
-  width: 100%;
-  height: 200px;
+  width: 84%;
+  height: 350px;
 }
 
 .title {
@@ -186,20 +181,19 @@ b{
 
     ul li {
         &.active a{
-            background: #445166;
 	        color: #fff;
         }
             a{
             padding: 15px;
-            color: #bcc3d0;
+            color: #ffffff;
             text-decoration: none;
             display: block;
             position: relative;
 
-            border-bottom: 2px solid #586476;
+            border-bottom: 2px solid rgb(255, 255, 255);
             transition: all 0.2s linear;
                 i{
-                    color: #79889d;
+                    color: #ffffff;
                     font-size: 1.2em;
 
                     &.fa-times{
@@ -213,7 +207,7 @@ b{
                 }
 
                 &:hover{
-                    background: #445166;
+                    background: #6a7464;
                     color: #fff;
                 }
         }
@@ -296,17 +290,17 @@ b{
 	line-height: 20px;
 }
 .chat-area ul .message > p > .blue-label{
-	background: #6ea0ff;
+	// background: #6ea0ff;
 	color: #fff;
 	padding: 2px 5px;
 	border-radius: 3px;
 }
 .chat-area ul .message .msg-time{
-	color: #738ba3;
+	// color: #738ba3;
 	font-size: 9px;
 }
 .input-area{
-	background: #e4eaee;
+	background: #ffffff;
 	padding: 6px;
 	overflow: hidden;
 	border-top: 1px solid #cfdae1;
@@ -320,7 +314,7 @@ b{
 	float: left;
 }
 .input-area .input-wrapper input{
-	height: 30px;
+	// height: 30px;
 	line-height: 30px;
 	border: 0;
 	margin: 0;
@@ -462,11 +456,8 @@ ul.tabs-container{
 .my-account{
   height: 34px;
   padding: 8px 8px 8px 22px;
-  background: #445166;
   margin-top: auto;
   display: flex;
-
-
 
   > .image{
     width: 30px;
@@ -495,13 +486,13 @@ ul.tabs-container{
     .availability{
       display: block;
       font-weight: normal;
-      color: #8391a1;
+      color: #ffffff;
       margin-top: 5px;
     }
   }
 }
 .jspDrag{
-	background: #A1AFC4;
+	background: #ffffff;
 	border-radius: 10px;
 }
 .jspVerticalBar{
