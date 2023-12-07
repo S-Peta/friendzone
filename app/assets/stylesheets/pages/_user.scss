@@ -136,6 +136,7 @@ color: white;
 .containerbox {
   display: block;
   width: 300px;
+  padding: 0 15px 0 0;
   a {
     width: 100%;
   }
@@ -146,9 +147,12 @@ color: white;
   background: #6c826d;
   color:white;
   padding:2px;
-  margin: 15px;
-  height: 22.5px;
   text-decoration: none;
+
+  &:hover {
+    background: #90b392;
+
+  }
   // width: 100%;
 }
 
