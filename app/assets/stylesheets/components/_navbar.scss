@@ -1,6 +1,5 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
   height: 80px;
 }
 
@@ -37,4 +36,12 @@
 
 .search-bar-nav {
   display: block !important;
+}
+
+.nav-white {
+  background: white;
+}
+
+.navbar-brand-home {
+  opacity: 0;
 }
