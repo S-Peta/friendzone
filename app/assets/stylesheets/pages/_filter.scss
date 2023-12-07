@@ -81,15 +81,23 @@
 }
 
 
+.background-filter {
+  position: relative;
+}
 
-
-
-
-
-
-
-
-
+.background-filter::before {
+  content: "";
+  position: absolute; /* Posiciona o pseudo-elemento absolutamente em relação ao elemento pai */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGy9Wz-wROXEgyjP3khyAs3M6ZjvAKZR3mBmZsv_tCkPJ8wvSsojHKSgk6rXuRT1x114g&usqp=CAU);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo principal */
+}
 
 
 .container-filter {
@@ -108,7 +116,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: #505050;
+  color: #000000;
   padding: 15px;
   border-bottom-right-radius:15px;
   border-bottom-left-radius: 15px;
