@@ -170,7 +170,7 @@ b{
 	padding-left: 176px;
 }
 .conversation-list{
-	background: #505d71;
+	background: $chat-background;
   height: 100%; //
   display: flex;
     flex-direction: column;
@@ -362,6 +362,7 @@ b{
 
 .chat-button {
   margin-bottom: 0 !important;
+  background-color: $chat-background !important;
 }
 
 .chat-details {
@@ -378,7 +379,7 @@ b{
 	overflow: hidden;
 	border-left: 1px solid #cfdae1;
 	border-top: 1px solid #cfdae1;
-  background-color: #ffffff; /* Altere para a cor branca desejada */
+  background-color: $chat-background;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
