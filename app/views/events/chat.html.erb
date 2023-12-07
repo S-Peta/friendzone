@@ -41,8 +41,8 @@
   <%# chat área %>
     <div class="col-7 p-0">
       <div class="chat-area" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.id %>">
-        <p class="title text-center my-2"><%= @event.name %></p>
-        <div>
+        <div class="flex-grow-1">
+          <p class="title text-center my-2"><%= @event.name %></p>
           <div class="chat-list">
             <div class="messages" data-event-subscription-target="container">
               <ul class="ul-chat" data-event-subscription-target="messages">
@@ -52,6 +52,8 @@
               </ul>
             </div>
           </div>
+        </div>
+        <div>
           <div class="input-area">
             <div class="input-wrapper d-flex w-100 align-items-center">
               <%= simple_form_for [@event, @message],
