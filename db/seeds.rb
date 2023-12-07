@@ -18,17 +18,17 @@ user2 = User.create(first_name: "dalva", last_name: "coelho", nickname: "dalvinh
 user3 = User.create(first_name: "matheus", last_name: "segantine", nickname: "theus", email: "matheus@gmail.com", password: "123456" )
 
 # User 10
-file1 = URI.open("app/assets/images/dudu.jpg")
+file40 = URI.open("app/assets/images/dudu.jpg")
 user10.photo.attach(io: user1, filename: "user1.png", content_type: "image/png")
 user10.save
 
 # User 9
-file1 = URI.open("app/assets/images/ste.jpg")
+file41 = URI.open("app/assets/images/ste.jpg")
 user9.photo.attach(io: user2, name: "user2.png", content_type: "image/png")
 user9.save
 
 # User 8
-file1 = URI.open("app/assets/images/lipe.jpg")
+file42 = URI.open("app/assets/images/lipe.jpg")
 user8.photo.attach(io: user3, filename: "user3.png", content_type: "image/png")
 user8.save
 
