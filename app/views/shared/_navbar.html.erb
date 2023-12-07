@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%="fixed-top" if @fixed%>" data-navbar-target="nav">
   <div class="container-fluid">
     <%= link_to events_path, class: "navbar-brand" do %>
-      <%= image_tag "logo.png" %>
+      <%= image_tag "logo-black-green.png" %>
     <% end %>
 
           <% if @show_search_box  %>
@@ -9,7 +9,7 @@
               <%= text_field_tag :name,
                 params[:name],
                 class: "form-control w-100 search-bar-nav",
-                placeholder: "Find event"
+                placeholder: "Find an event"
               %>
               <%= button_tag( :class => "btn btn-search-navbar") do %>
                 <i class='fa-solid fa-magnifying-glass'></i>
