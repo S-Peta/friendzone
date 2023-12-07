@@ -66,7 +66,8 @@ class EventsController < ApplicationController
     end
 
     if params[:event_date].present?
-      start_date, end_date = params[:event_date].split('to').map { |date| Date.parse(date)}
+      start_date, end_date = params[:event_date].split('to').map { |date| Date.parse(date) }
+
 
       @events = @events.where(event_date: start_date..end_date)
     end
