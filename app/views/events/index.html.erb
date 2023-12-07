@@ -108,7 +108,7 @@
             <div class="img-mask">
               <% if event.photo.attached? %>
                 <%= cl_image_tag event.photo.key %>
-              <% else %>
+            <% else %>
                 <img src="https://www.shutterstock.com/image-vector/picture-icon-260nw-413647060.jpg"/>
               <% end %>
             </div>
@@ -117,7 +117,7 @@
                 <h2 class="title-index"><%= event.name %></h2>
               </div>
               <div class="description-index">
-                <p class="show-text-center"><i class="fa-solid fa-calendar"></i> <%= event.event_date&.strftime("%B %d - %Y") %>
+                <p class="show-text-center"><i class="fa-solid fa-calendar"></i> <%= event.event_date&.strftime("%B %d, %Y") %>
                 <i class="fa-solid fa-clock"></i> <%= event.period %></p>
               </div>
             </div>
