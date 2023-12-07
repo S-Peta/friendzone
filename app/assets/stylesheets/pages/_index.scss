@@ -51,7 +51,8 @@
 
 .cards-container {
   width: 100%;
-  padding: 0 50px
+  padding: 0 50px;
+  position: relative;
   // overflow: hidden;
 }
 
@@ -66,12 +67,12 @@
   // margin: 80px 0;
 }
 
-.cards-city::after {
+.cards-container::after {
   content: "";
   position: absolute;
-
+  // margin-right: 50px;
   top: 0;
-  right: 0;
+  right: 50px;
   bottom: 0;
   width: 100px; /* Adjust the width as needed */
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
@@ -186,46 +187,22 @@
 }
 
 .friend-btn {
-  background-color: #4e8d51 !important;
-  color: #fff !important;
+  background-color: #4e8d51;
+  color: #fff;
   border: 1px solid #6c826d;
   line-height: 42px;
   padding: 0;
   border: none;
   border-radius: 5px;
+  transition: .3s;
+  &:hover {
+    transition: .3s;
+    background-color: #cee2ce;
+    color: #4e8d51;
+    border: 1px #4e8d51 ;
+  }
 }
 
-.friend-btn:hover{
-  background-color: #c8f885;
-  background-image: linear-gradient(315deg, rgb(148, 196, 82) 0%, rgb(201, 255, 126) 74%);
-}
-
-.friend-btn:before,
-.friend-btn:after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-            -4px -4px 6px 0 rgba(116, 125, 136, .2),
-  inset -4px -4px 6px 0 rgba(255,255,255,.9),
-  inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-  transition: all 0.3s ease;
-}
-.friend-btn:before {
-  height: 0%;
-  width: .1px;
-}
-.friend-btn:after {
-  width: 0%;
-  height: .1px;
-}
-.friend-btn:hover:before {
-  height: 100%;
-}
-.friend-btn:hover:after {
-  width: 100%;
-}
 
 @-webkit-keyframes pulse {
   0% {
@@ -270,20 +247,28 @@
   border-radius: 15px;
   box-shadow: 20px 20px 30px -20px #00000040;
   text-decoration: none;
+  background-color: #fff;
+  height: 400px;
 }
 
 .card-content-index{
-  clear: both;
-  background-color: #fff;
+  // clear: both;
+  color: #505050;
   padding: 15px;
   border-bottom-right-radius:15px;
   border-bottom-left-radius: 15px;
+  background-color: #fff;
+
+  h3 {
+    font-size: 20px;
+  }
 }
 
 .head-card {
   position: relative;
   z-index: 1;
 }
+
 .img-mask{
   height: 250px;
   overflow: hidden;
@@ -292,7 +277,12 @@
   transition: 200ms height ease;
   position: relative;
   z-index: -1;
-  background-size: contain;
+  width: 100%;
+  img {
+    object-fit: cover;
+    height: 260px;
+    width: 100%;
+  }
 }
 
 .img-mask:after {
@@ -362,7 +352,8 @@
 
 .title-index {
   font-size: 24px;
-  margin-bottom: 20px; //
+  margin-bottom: 25px;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -395,4 +386,8 @@
   box-orient: vertical;
   overflow: hidden;
   color: #303030;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 900;
 }
