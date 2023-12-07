@@ -1,8 +1,8 @@
 
-<div class="navbar navbar-expand-sm navbar-lewagon navbar-light nav-white">
+<div class="navbar navbar-expand-sm navbar-lewagon fixed-top navbar-light nav-transparent">
   <div class="container-fluid">
-    <%= link_to events_path, class: "navbar-brand" do %>
-      <%= image_tag "logo-black-green.png" %>
+    <%= link_to events_path, class: "navbar-brand-home" do %>
+      <%= image_tag "logo.png" %>
     <% end %>
 
           <% if @show_search_box  %>
@@ -10,7 +10,7 @@
               <%= text_field_tag :name,
                 params[:name],
                 class: "form-control w-100 search-bar-nav",
-                placeholder: "Find an event"
+                placeholder: "Find event"
               %>
               <%= button_tag( :class => "btn btn-search-navbar") do %>
                 <i class='fa-solid fa-magnifying-glass'></i>
@@ -29,10 +29,10 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "New Event", new_event_path , class: "nav-link" %>
+            <%= link_to "New Event", new_event_path , class: "nav-link text-white" %>
           </li>
           <li class="nav-item active">
-            <%= link_to "My Events", user_events_path, class: "nav-link" %>
+            <%= link_to "My Events", user_events_path, class: "nav-link text-white" %>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

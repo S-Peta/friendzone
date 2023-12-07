@@ -17,7 +17,13 @@
 
   </head>
 
-  <body data-controller="navbar"><%= render "shared/navbar" %>
+  <body>
+    <% if controller_name == 'events' && action_name == 'index' %>
+      <%= render "shared/navbar_home" %>
+    <% else %>
+      <%= render "shared/navbar" %>
+    <% end %>
+
   <%= render "shared/flashes" %>
 
     <%= yield %>
