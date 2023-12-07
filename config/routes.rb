@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-
+  resource :profiles, only: %i[show]
 
 
   resources :events, only: %i[new create index show delete] do

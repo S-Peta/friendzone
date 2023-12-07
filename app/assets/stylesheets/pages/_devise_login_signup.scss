@@ -69,7 +69,7 @@ span.bar:last-child {
 	background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url('https://images.unsplash.com/photo-1485872299829-c673f5194813?q=80&w=2054&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
 	background-size: cover;
 	border-radius: 10px 0 0 10px;
-	flex-basis: 50%;
+	flex-basis: 100%;
 	height: 100%;
 }
 
@@ -99,7 +99,7 @@ span.bar:last-child {
 	background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
 	background-size: cover;
 	border-radius: 10px 0 0 10px;
-	flex-basis: 50%;
+	flex-basis: 100%;
 	height: 100%;
   width: 100vh;
 }
@@ -130,7 +130,7 @@ span.bar:last-child {
 	background: linear-gradient(rgba(26, 26, 26, 0.2), rgba(26, 26, 26, 0.2)), url('https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg') no-repeat center center;
 	background-size: cover;
 	border-radius: 10px 0 0 10px;
-	flex-basis: 50%;
+	flex-basis: 100%;
 	height: 100%;
   width: 100vw;
 }
@@ -168,7 +168,7 @@ h1.form-title {
 	border-radius: 0 10px 10px 0;
 	display: flex;
 	flex-direction: column;
-	flex-basis: 50%;
+	flex-basis: 100%; //
 	height: 100%;
 	justify-content: center;
 	text-align: center;

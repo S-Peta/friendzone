@@ -6,14 +6,14 @@
         <div class="d-flex flex-column align-items-center mb-4">
           <div class="dementiawalk">
             <div class="datebox text-center" style="background-image: url('<%= cl_image_path(event.photo.key, height: 300, crop: :fill) %>');">
-              <p class="date-user"><span class="datenumber"><%= event.event_date&.strftime("%B %d, %Y") %></span></p>
+              <p class="date-user"><span class="datenumber"><strong><%= event.event_date&.strftime("%B %d, %Y") %></span></strong></p>
 
             </div>
             <div class="containerbox text-center">
               <h5 class="eventtitle"><%= event.name %></h5>
               <p class="description-user"><%= event.location %></p>
               <div class="user-link-chatroom">
-                <%= link_to 'Event Chatroom', event_chat_path(event), class:"bookingbutton friend-btn btn-block" %>
+                <%= link_to 'Event Chatroom', event_chat_path(event), class:"bookingbutton btn w-100" %>
               </div>
             </div>
           </div>

@@ -1,0 +1,19 @@
+<div class="profile-card-container">
+  <div class="wrapper wrapper-edit profile-card">
+    <div class="profile-avatar-container">
+      <% if current_user.photo.key.present? %>
+        <%= cl_image_tag current_user.photo.key, class: "profile-avatar rounded-circle", alt: "profile picture" %>
+      <% else %>
+        <%= image_tag "default-user-pic.jpg", class: "profile-avatar rounded-circle", alt: "default profile picture" %>
+      <% end %>
+    </div>
+
+    <div class="profile-details">
+      <h1 class="profile-title">Profile</h1>
+      <p class="profile-name"><%= current_user.first_name %> <%= current_user.last_name %></p>
+      <p class="profile-nickname"><%= current_user.nickname %></p>
+      <p class="profile-email"><%= current_user.email %></p>
+      <p class="profile-bio bio-text">bio - blablabla</p>
+    </div>
+  </div>
+</div>

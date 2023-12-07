@@ -55,9 +55,6 @@
 
   </div>
 </div>
-
-###
-
 <div class="chat-list">
 
 <ul class="ul-chat">
@@ -67,7 +64,7 @@
     </div>
 
     <div class="message">
-      <p>Hey, do you like the new interface? It's done with Font Awesome.</p>
+      <p> "Hey, do you like the new interface? It's done with Font Awesome." </p>
       <span class="msg-time">5:00 pm</span>
     </div>
   </li>
@@ -81,4 +78,5 @@
       <span class="msg-time">5:01 pm</span>
     </div>
   </li>
-
+</ul>
+<div>
