@@ -6,7 +6,8 @@
         <div class="d-flex flex-column align-items-center mb-4">
           <div class="dementiawalk">
             <div class="datebox text-center" style="background-image: url('<%= cl_image_path(event.photo.key, height: 300, crop: :fill) %>');">
-              <p class="date-user"><span class="datenumber"><%= event.event_date %></span> <span class="datemonth">Oct</span></p>
+              <p class="date-user"><span class="datenumber"><%= event.event_date&.strftime("%B %d, %Y") %></span></p>
+
             </div>
             <div class="containerbox text-center">
               <h5 class="eventtitle"><%= event.name %></h5>

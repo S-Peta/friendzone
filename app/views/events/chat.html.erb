@@ -3,14 +3,14 @@
     <div class="col-2 p-0">
         <div class="conversation-list">
           <ul class="ul-chat">
-            <li class="item active"><a href="#"><i class="fa fa-list-alt"></i><span>Friends chat</span></a></li>
+            <li class="item active"><a href="#"><i class="fa fa-list-alt mx-3"></i><span>Friends chat</span></a></li>
             <% @participant.each do |p|%>
               <li>
                 <a href="#">
                   <% if p.user == p.event.user %>
-                    <i class="fas fa-crown" style="color: yellow;"></i>
+                    <i class="fas fa-crown mx-3" style="color: yellow;"></i>
                   <% else %>
-                    <i class="fa fa-user"></i>
+                    <i class="fa fa-user mx-3"></i>
                   <% end %>
                   <span><%= p.user.nickname %></span>
                 </a>
@@ -41,7 +41,7 @@
   <%# chat área %>
     <div class="col-7 p-0">
       <div class="chat-area" data-controller="event-subscription" data-event-subscription-event-id-value="<%= @event.id %>">
-        <div class="title text-center"><b><%= @event.name %></b></div>
+        <p class="title text-center my-2"><%= @event.name %></p>
         <div>
           <div class="chat-list">
             <div class="messages" data-event-subscription-target="container">
@@ -73,20 +73,20 @@
       <div class="right-tabs">
         <div class="h-100 event-photo" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@event.photo.key)%>);">
           <div class="container event-row">
-            <div class="chat-details">
-              <h5><%= @event.name %></h5>
-              <h6><i class="fa fa-map-marker"></i> <%= @event.location %></h6>
-              <h6><i class="fa-solid fa-calendar"></i> <%= @event.event_date&.strftime("%B %d - %Y") %></h6>
-              <p><i class="fa-solid fa-clock"></i> <%= @event.period %></p>
+            <div class="chat-details p-4">
+              <h3 class="text-center my-4"><%= @event.name %></h3 class="text-center my-3">
+              <p><i class="fa fa-map-marker m-2"></i> <%= @event.location %></p>
+              <p><i class="fa-solid fa-calendar m-2"></i> <%= @event.event_date&.strftime("%B %d - %Y") %></p>
+              <p><i class="fa-solid fa-clock m-2"></i> <%= @event.period %></p>
             </div>
+            <div class="justify-content-center" style="width: 85%; height: 450px; margin-top: 30px"
+              data-controller="map"
+              data-map-markers-value="<%= @markers.to_json %>"
+              data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+            <%= link_to "Get Directions", "https://www.google.com/maps/dir/?api=1&destination=#{@event.latitude},#{@event.longitude}", target: "_blank", class: "btn btn-light chat-button btn-block" %>
           </div>
         </div>
-        <div style="width: 100%; height: 450px; margin-top: 30px"
-          data-controller="map"
-          data-map-markers-value="<%= @markers.to_json %>"
-          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
-        <%= link_to "Get Directions", "https://www.google.com/maps/dir/?api=1&destination=#{@event.latitude},#{@event.longitude}", target: "_blank", class: "btn btn-secondary chat-button" %>
       </div>
-    </div>
+  </div>
 </div>
