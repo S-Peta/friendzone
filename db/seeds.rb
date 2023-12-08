@@ -567,7 +567,7 @@ event36.save
 event48 = Event.create(
   name: "Sunset Happy Hour at Rooftop Lounge",
   location: "123 Skyline Avenue, São Paulo - SP",
-  category: "Happy Hour",
+  category: "Nightlife",
   event_date: Date.new(2023, 12, 21),
   period: "Night",
   user_id: user1.id
@@ -576,7 +576,7 @@ event48 = Event.create(
 event49 = Event.create(
   name: "Happy hour Tasting at Bar do Cervejeiro",
   location: "456 Hop Street, São Paulo - SP",
-  category: "Happy Hour",
+  category: "Nightlife",
   event_date: Date.new(2023, 12, 19),
   period: "Night",
   user_id: user2.id
@@ -585,7 +585,7 @@ event49 = Event.create(
 event50 = Event.create(
   name: "Happy hour at Sips and Bites Mixer",
   location: "789 Tapas Terrace, São Paulo - SP",
-  category: "Happy Hour",
+  category: "Nightlife",
   event_date: Date.new(2023, 12, 28),
   period: "Night",
   user_id: user3.id
