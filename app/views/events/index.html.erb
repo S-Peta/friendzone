@@ -1,5 +1,5 @@
 <div>
-  
+
   <div class="banner" data-navbar-target="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
     <div class="container box-banner">
       <%= image_tag 'logo-green2.png', class: "logo-home" %>
@@ -117,7 +117,7 @@
               <div class="card-header text-align">
                 <h2 class="title-index"><%= event.name %></h2>
               </div>
-              <div class="description-index">
+              <div class="description-index mx-auto">
                 <p class="show-text-center"><i class="fa-solid fa-calendar"></i> <%= event.event_date&.strftime("%B %d, %Y") %>
                 <i class="fa-solid fa-clock"></i> <%= event.period %></p>
               </div>
