@@ -3,7 +3,7 @@
 
   <%= render "shared/filter" %>
   <div class="container-filter">
-  <h1 class= "text-center">Find more events for you</h1>
+  <h1 class= "text-center">Find more events</h1>
 
   <div class="cards-grid-filter">
     <% @events.each do |event| %>
@@ -23,8 +23,8 @@
             <h3 class="text-center"><%= event.name %></h3>
 
             <div class="card-date-time">
-              <p class=""><i class="fa-solid fa-calendar m-2"></i> <%= event.event_date&.strftime("%B %d - %Y") %>
-              <i class="fa-solid fa-clock m-2"></i> <%= event.period %></p>
+              <p class=""><i class="fa-solid fa-calendar m-2"></i> <%= event.event_date&.strftime("%B %d, %Y") %>
+              <i class="fa-solid fa-clock m-2 mx-auto"></i> <%= event.period %></p>
             </div>
 
         </div>
