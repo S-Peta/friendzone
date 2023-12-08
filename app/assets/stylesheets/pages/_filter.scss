@@ -87,7 +87,7 @@
 
 .background-filter::before {
   content: "";
-  position: absolute; /* Posiciona o pseudo-elemento absolutamente em relação ao elemento pai */
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -96,12 +96,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
-  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo principal */
+  z-index: -1;
 }
 
 
 .container-filter {
-  margin: 120px 80px;
+  margin: 50px 80px;
 }
 
 .cards-grid-filter {
@@ -127,8 +127,4 @@
   h3 {
     font-size: 20px;
   }
-
-  // .card-date-time{
-  //   justify-self: flex-end;
-  // }
 }
