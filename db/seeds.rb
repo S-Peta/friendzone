@@ -12,7 +12,7 @@ user6 = User.create(first_name: "everaldo", last_name: "nunes", nickname: "eve",
 user7 = User.create(first_name: "salatiel", last_name: "pereira", nickname: "sal", email: "sal@gmail.com", password: "123456" )
 user1 = User.create(first_name: "maria", last_name: "olivia", nickname: "oli", email: "maria@gmail.com", password: "123456" )
 user2 = User.create(first_name: "dalva", last_name: "coelho", nickname: "dalvinha", email: "dalva@gmail.com", password: "123456" )
-user3 = User.create(first_name: "matheus", last_name: "segantine", nickname: "theus", email: "matheus@gmail.com", password: "123456" )
+user3 = User.create(first_name: "felipi", last_name: "freo", nickname: "lipi", email: "felipi@gmail.com", password: "123456" )
 
 puts "Seeding events..."
 
@@ -45,7 +45,7 @@ event3 = Event.create(
   category: "Nightlife",
   event_date: Date.new(2023, 12, 30),
   period: "Night",
-  user_id: user3.id
+  user_id: user2.id
 )
 
 # Event 4
@@ -85,7 +85,7 @@ event7 = Event.create(
   category: "Sports",
   event_date: Date.new(2023, 12, 11),
   period: "Night",
-  user_id: user3.id
+  user_id: user1.id
 )
 
 # Event 8
@@ -125,7 +125,7 @@ event11 = Event.create(
   category: "Culinary",
   event_date: Date.new(2023, 12, 23),
   period: "Afternoon",
-  user_id: user3.id
+  user_id: user2.id
 )
 
 # Event 12
@@ -165,7 +165,7 @@ event15 = Event.create(
   category: "Outdoors",
   event_date: Date.new(2023, 12, 31),
   period: "Afternoon",
-  user_id: user3.id
+  user_id: user1.id
 )
 
 # Event 16
@@ -319,7 +319,7 @@ event21 = Event.create(
   category: "Nightlife",
   event_date: Date.new(2023, 12, 30),
   period: "Night",
-  user_id: user3.id
+  user_id: user1.id
 )
 
 # Event 22
@@ -562,3 +562,46 @@ event35.save
 file36 = URI.open("https://images.unsplash.com/photo-1665320136996-b66570e5f53a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTIwfHxPcGVyYXxlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
 event36.photo.attach(io: file36, filename: "36.png", content_type: "image/png")
 event36.save
+
+
+event48 = Event.create(
+  name: "Sunset Happy Hour at Rooftop Lounge",
+  location: "123 Skyline Avenue, São Paulo - SP",
+  category: "Happy Hour",
+  event_date: Date.new(2023, 12, 21),
+  period: "Night",
+  user_id: user1.id
+)
+
+event49 = Event.create(
+  name: "Happy hour Tasting at Bar do Cervejeiro",
+  location: "456 Hop Street, São Paulo - SP",
+  category: "Happy Hour",
+  event_date: Date.new(2023, 12, 19),
+  period: "Night",
+  user_id: user2.id
+)
+
+event50 = Event.create(
+  name: "Happy hour at Sips and Bites Mixer",
+  location: "789 Tapas Terrace, São Paulo - SP",
+  category: "Happy Hour",
+  event_date: Date.new(2023, 12, 28),
+  period: "Night",
+  user_id: user3.id
+)
+
+# Event 48
+file48 = URI.open("https://images.unsplash.com/photo-1541701851966-739c62ec28a0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhcHB5JTIwaG91cnxlbnwwfHwwfHx8Mg%3D%3D")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+event48.photo.attach(io: file48, filename: "48.png", content_type: "image/png")
+event48.save
+
+# Event 49
+file49 = URI.open("https://images.unsplash.com/photo-1532635235-cefdbdd641fb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aGFwcHklMjBob3VyfGVufDB8fDB8fHwy")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+event49.photo.attach(io: file49, filename: "49.png", content_type: "image/png")
+event49.save
+
+# Event 50
+file50 = URI.open("https://images.unsplash.com/photo-1586124288291-936b6673884a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8aGFwcHklMjBob3VyfGVufDB8fDB8fHwy")  # Replace DIRECT_LINK_TO_IMAGE with the correct URL
+event50.photo.attach(io: file50, filename: "50.png", content_type: "image/png")
+event50.save
